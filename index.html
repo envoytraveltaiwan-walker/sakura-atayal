@@ -18,13 +18,13 @@
             color: #333;
             background-color: var(--bg);
             margin: 0;
-            padding: 0 0 85px 0; /* 留給底部固定按鈕的空間 */
+            padding: 0 0 85px 0;
         }
         .header {
             background: linear-gradient(135deg, #ffd1dc 0%, #ffb6c1 100%);
             color: var(--dark);
             text-align: center;
-            padding: 2.5rem 1.2rem 2.2rem;
+            padding: 2.2rem 1.2rem 2rem;
             border-radius: 0 0 25px 25px;
         }
         .header h1 { margin: 0; font-size: 1.8rem; font-weight: 800; }
@@ -32,7 +32,7 @@
         
         .container { padding: 1.2rem; max-width: 600px; margin: 0 auto; }
         
-        /* 15秒重點卡片 */
+        /* 置頂：樂活族直擊亮點卡片 */
         .fast-read {
             background: #fff;
             border: 2px solid var(--primary);
@@ -42,26 +42,33 @@
             box-shadow: 0 8px 20px rgba(214, 100, 121, 0.15);
         }
         .fast-read h3 {
-            margin: 0 0 10px 0;
+            margin: 0 0 12px 0;
             color: var(--primary);
-            font-size: 1.15rem;
+            font-size: 1.2rem;
             display: flex;
             align-items: center;
             gap: 6px;
+            font-weight: bold;
         }
-        .fast-read-tags {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
+        .lohas-features {
+            display: flex;
+            flex-direction: column;
             gap: 10px;
         }
-        .tag-item {
+        .lohas-item {
             background: var(--primary-light);
-            padding: 10px;
-            border-radius: 10px;
-            font-size: 0.95rem;
+            padding: 10px 14px;
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-size: 0.98rem;
             font-weight: bold;
             color: var(--dark);
-            text-align: center;
+        }
+        .lohas-icon {
+            font-size: 1.2rem;
+            flex-shrink: 0;
         }
 
         .section-title {
@@ -74,26 +81,46 @@
             font-weight: bold;
         }
 
-        /* 達人引言 */
+        /* 達人故事卡片 */
         .expert-card {
             background: #fff;
             border-radius: 16px;
-            padding: 1.2rem;
+            padding: 1.4rem;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+            border-top: 4px solid var(--primary);
+        }
+        .expert-header {
             display: flex;
             align-items: center;
             gap: 1rem;
-            box-shadow: 0 4px 12px rgba(0,0,0,0.04);
+            margin-bottom: 1rem;
         }
         .expert-img {
-            width: 75px;
-            height: 75px;
+            width: 70px;
+            height: 70px;
             border-radius: 50%;
             border: 3px solid var(--primary);
             flex-shrink: 0;
             object-fit: cover;
         }
-        .expert-text h4 { margin: 0; font-size: 1.1rem; color: var(--dark); }
-        .expert-text p { margin: 4px 0 0; font-size: 0.9rem; color: var(--gray); line-height: 1.5; }
+        .expert-header h4 { margin: 0; font-size: 1.15rem; color: var(--dark); font-weight: bold; }
+        .expert-tag { font-size: 0.85rem; color: var(--primary); font-weight: bold; margin-top: 2px; }
+        
+        .expert-story p {
+            margin: 0 0 0.8rem 0;
+            font-size: 0.96rem;
+            color: #444;
+            line-height: 1.65;
+        }
+        .expert-story p:last-child { margin-bottom: 0; }
+        .expert-story .highlight-text {
+            background: var(--primary-light);
+            padding: 10px 12px;
+            border-radius: 10px;
+            color: var(--dark);
+            font-weight: 500;
+            border-left: 3px solid var(--primary);
+        }
 
         /* 樂活主題重點（去時間軸與第一/二天包裝） */
         .story-card {
@@ -186,28 +213,47 @@
 
 <div class="container">
 
-    <!-- 15秒樂活族重點極速看 -->
+    <!-- 15秒直擊樂活族亮點（置頂核心誘因） -->
     <div class="fast-read">
-        <h3>⚡ 15秒掌握行程重點</h3>
-        <div class="fast-read-tags">
-            <div class="tag-item">🚌 台北直達免開車</div>
-            <div class="tag-item">🍵 櫻花樹下泰雅茶席</div>
-            <div class="tag-item">🌿 6人成團/精緻小團</div>
-            <div class="tag-item">🌌 零光害觀星與雲海</div>
+        <h3>✨ 樂活族首選！無憂賞櫻 4 大保障</h3>
+        <div class="lohas-features">
+            <div class="lohas-item">
+                <span class="lohas-icon">🚌</span>
+                <span><strong>台北直達免開車：</strong>專業司機接送，免除山路駕駛與停車疲勞</span>
+            </div>
+            <div class="lohas-item">
+                <span class="lohas-icon">🍵</span>
+                <span><strong>櫻花樹下泰雅茶席：</strong>擺脫走馬看花，優雅喝茶品嚐部落微醺點心</span>
+            </div>
+            <div class="lohas-item">
+                <span class="lohas-icon">🌿</span>
+                <span><strong>平日獨享精緻小團：</strong>6人成團、最多20人，避開假日人潮人聲鼎沸</span>
+            </div>
+            <div class="lohas-item">
+                <span class="lohas-icon">🌌</span>
+                <span><strong>慢活親民不累腳：</strong>平緩步道散策，夜觀零光害星空與壯麗雲海</span>
+            </div>
         </div>
     </div>
 
-    <!-- 達人靈魂帶路 -->
+    <!-- 達人故事帶路（強化預約誘因） -->
     <div class="section-title">👩‍💼 達人靈魂帶路</div>
     <div class="expert-card">
-        <img class="expert-img" src="https://raw.githubusercontent.com/envoytraveltaiwan-walker/sakura-atayal/main/%E8%8E%89%E6%A2%85%E5%A7%90.png" alt="莉梅姐">
-        <div class="expert-text">
-            <h4>資深旅遊顧問 莉梅姐</h4>
-            <p>「樂活歲月，就該把時間花在美好事物上。避開假日人潮，帶您在粉紅花海下優雅喝茶、品嚐馬告山珍。」</p>
+        <div class="expert-header">
+            <img class="expert-img" src="https://raw.githubusercontent.com/envoytraveltaiwan-walker/sakura-atayal/main/%E8%8E%89%E6%A2%85%E5%A7%90.png" alt="莉梅姐">
+            <div>
+                <h4>資深旅遊顧問 莉梅姐</h4>
+                <div class="expert-tag">35年深耕原鄉文化專家</div>
+            </div>
+        </div>
+        <div class="expert-story">
+            <p>「走過半個地球，看過無數景致，我常跟朋友說：<strong>台灣最震撼心靈的風景，其實藏在部落的櫻花樹下。</strong>」</p>
+            <p>白蘭部落是我藏在口袋裡很久的泰雅秘境。那裡沒有商業喧囂，只有滿山粉紅櫻花、浩瀚雲海與無光害星空。幾年前我第一次在櫻花樹下接過族人遞來的熱茶，那一刻的平靜與感動，至今依然深刻。</p>
+            <p class="highlight-text">「好風景值得優雅對待。為了避開人潮擠壓，我堅持只帶<strong>『平日精緻小團』</strong>。每梯次名額非常有限，2027 年的櫻花雨，邀請您提早預約這份歲月靜好。」</p>
         </div>
     </div>
 
-    <!-- 主題式樂活重點（無時間軸、無第一/二天分段） -->
+    <!-- 主題式樂活重點（去時間軸與第一/二天包裝） -->
     <div class="section-title">✨ 旅程三大樂活重點體驗</div>
     
     <div class="story-card">
@@ -286,12 +332,12 @@
     <!-- 樂活族貼心 QA -->
     <div class="section-title">💡 貼心小解答</div>
     <div class="qa-item">
-        <div class="qa-q">Q: 一個人也可以參加嗎？</div>
-        <div class="qa-a">可以！我們提供單人報名與湊團服務，非常多樂活朋友獨自報名，輕鬆結交喜愛山林的新朋友。</div>
+        <div class="qa-q">Q: 一個人也可以報名參加嗎？</div>
+        <div class="qa-a">當然可以！我們非常鼓勵單人報名，並會協助進行湊團，很多樂活朋友獨自報名後都結交到了喜愛山林的新朋友。</div>
     </div>
     <div class="qa-item">
         <div class="qa-q">Q: 行程會不會走很多路、體力負擔大？</div>
-        <div class="qa-a">完全不會。行程專為樂活族群設計，步調慢活不緊湊，以靜態茶席、平緩步道漫步與品嚐美食為主。</div>
+        <div class="qa-a">完全不會。行程專為樂活族群設計，步調慢活不緊湊，以靜態櫻花茶席、平緩步道漫步與品嚐在地美食為主。</div>
     </div>
     <div class="qa-item">
         <div class="qa-q">Q: 山路開車會不會很辛苦？</div>
