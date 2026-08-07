@@ -8,7 +8,7 @@
         :root {
             --primary: #d66479;
             --primary-light: #fff0f3;
-            --dark: #4a3539;
+            --dark: #5a3c43;
             --gray: #666;
             --bg: #fcfafb;
         }
@@ -18,17 +18,17 @@
             color: #333;
             background-color: var(--bg);
             margin: 0;
-            padding: 0 0 80px 0; /* 留給底部固定按鈕的空間 */
+            padding: 0 0 85px 0; /* 留給底部固定按鈕的空間 */
         }
         .header {
             background: linear-gradient(135deg, #ffd1dc 0%, #ffb6c1 100%);
             color: var(--dark);
             text-align: center;
-            padding: 2.5rem 1.2rem 2rem;
+            padding: 2.5rem 1.2rem 2.2rem;
             border-radius: 0 0 25px 25px;
         }
         .header h1 { margin: 0; font-size: 1.8rem; font-weight: 800; }
-        .header p { margin: 8px 0 0; font-size: 1.1rem; font-weight: bold; opacity: 0.9; }
+        .header p { margin: 8px 0 0; font-size: 1.05rem; font-weight: bold; opacity: 0.9; }
         
         .container { padding: 1.2rem; max-width: 600px; margin: 0 auto; }
         
@@ -44,7 +44,7 @@
         .fast-read h3 {
             margin: 0 0 10px 0;
             color: var(--primary);
-            font-size: 1.2rem;
+            font-size: 1.15rem;
             display: flex;
             align-items: center;
             gap: 6px;
@@ -56,20 +56,22 @@
         }
         .tag-item {
             background: var(--primary-light);
-            padding: 8px 12px;
+            padding: 10px;
             border-radius: 10px;
             font-size: 0.95rem;
             font-weight: bold;
             color: var(--dark);
+            text-align: center;
         }
 
         .section-title {
             color: var(--dark);
-            font-size: 1.4rem;
-            margin: 2rem 0 1rem 0;
+            font-size: 1.35rem;
+            margin: 2rem 0 0.8rem 0;
             display: flex;
             align-items: center;
             gap: 8px;
+            font-weight: bold;
         }
 
         /* 達人引言 */
@@ -80,7 +82,7 @@
             display: flex;
             align-items: center;
             gap: 1rem;
-            box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+            box-shadow: 0 4px 12px rgba(0,0,0,0.04);
         }
         .expert-img {
             width: 75px;
@@ -91,54 +93,59 @@
             object-fit: cover;
         }
         .expert-text h4 { margin: 0; font-size: 1.1rem; color: var(--dark); }
-        .expert-text p { margin: 4px 0 0; font-size: 0.9rem; color: var(--gray); }
+        .expert-text p { margin: 4px 0 0; font-size: 0.9rem; color: var(--gray); line-height: 1.5; }
 
-        /* 樂活體驗故事 */
+        /* 樂活主題重點（去時間軸與第一/二天包裝） */
         .story-card {
             background: #fff;
             border-radius: 16px;
-            padding: 1.2rem;
+            padding: 1.3rem;
             margin-bottom: 1rem;
             box-shadow: 0 4px 12px rgba(0,0,0,0.03);
             border-left: 5px solid var(--primary);
         }
-        .story-card h4 { margin: 0 0 6px 0; font-size: 1.1rem; color: var(--primary); }
-        .story-card p { margin: 0; font-size: 0.95rem; color: #555; }
+        .story-card h4 { margin: 0 0 8px 0; font-size: 1.15rem; color: var(--primary); }
+        .story-card p { margin: 0; font-size: 0.98rem; color: #444; line-height: 1.7; }
 
-        /* 梯次卡片優化 (樂活好讀版) */
+        /* 梯次卡片 (大字好點擊、樂活優化) */
         .batch-card {
             background: #fff;
             border: 1px solid #ffe0e6;
-            border-radius: 12px;
-            padding: 1rem;
-            margin-bottom: 10px;
+            border-radius: 14px;
+            padding: 1.1rem;
+            margin-bottom: 12px;
             display: flex;
             justify-content: space-between;
             align-items: center;
             box-shadow: 0 2px 8px rgba(0,0,0,0.02);
         }
+        .batch-info { flex: 1; }
+        .batch-no { font-weight: bold; color: var(--primary); font-size: 0.9rem; margin-bottom: 2px; }
         .batch-date { font-weight: bold; font-size: 1.05rem; color: var(--dark); }
-        .batch-date span { display: block; font-size: 0.85rem; color: var(--gray); font-weight: normal; }
-        .batch-status {
+        .batch-status { font-size: 0.88rem; color: var(--gray); margin-top: 4px; }
+        .batch-tag {
             background: var(--primary);
             color: #fff;
-            padding: 4px 10px;
+            padding: 6px 12px;
             border-radius: 20px;
             font-size: 0.85rem;
             font-weight: bold;
+            white-space: nowrap;
+            margin-left: 10px;
         }
-        .batch-status.highlight { background: #e63946; }
+        .batch-tag.hot { background: #e63946; }
 
         /* 貼心 QA */
         .qa-item {
             background: #fff;
-            padding: 1rem;
-            border-radius: 12px;
-            margin-bottom: 8px;
+            padding: 1.1rem;
+            border-radius: 14px;
+            margin-bottom: 10px;
             font-size: 0.95rem;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.02);
         }
-        .qa-q { font-weight: bold; color: var(--primary); margin-bottom: 4px; }
-        .qa-a { color: #555; margin: 0; }
+        .qa-q { font-weight: bold; color: var(--primary); margin-bottom: 6px; font-size: 1rem; }
+        .qa-a { color: #555; margin: 0; line-height: 1.6; }
 
         /* 底部固定導購按鈕 */
         .fixed-bottom {
@@ -150,7 +157,7 @@
             backdrop-filter: blur(8px);
             border-top: 1px solid #eee;
             padding: 12px 16px;
-            z-50;
+            z-index: 50;
             box-shadow: 0 -4px 15px rgba(0,0,0,0.08);
         }
         .btn-line {
@@ -181,100 +188,122 @@
 
     <!-- 15秒樂活族重點極速看 -->
     <div class="fast-read">
-        <h3>⚡ 15秒看懂這趟行程</h3>
+        <h3>⚡ 15秒掌握行程重點</h3>
         <div class="fast-read-tags">
-            <div class="tag-item">🚌 台北車站直達包車</div>
+            <div class="tag-item">🚌 台北直達免開車</div>
             <div class="tag-item">🍵 櫻花樹下泰雅茶席</div>
-            <div class="tag-item">🌿 6人成團 / 20人上限</div>
-            <div class="tag-item">🌌 平日獨享星空雲海</div>
+            <div class="tag-item">🌿 6人成團/精緻小團</div>
+            <div class="tag-item">🌌 零光害觀星與雲海</div>
         </div>
     </div>
 
     <!-- 達人靈魂帶路 -->
-    <div class="section-title">👩‍💼 達人帶路</div>
+    <div class="section-title">👩‍💼 達人靈魂帶路</div>
     <div class="expert-card">
         <img class="expert-img" src="https://raw.githubusercontent.com/envoytraveltaiwan-walker/sakura-atayal/main/%E8%8E%89%E6%A2%85%E5%A7%90.png" alt="莉梅姐">
         <div class="expert-text">
-            <h4>旅遊資深顧問 莉梅姐</h4>
-            <p>「樂活歲月，就該把時間花在美好的事物上。避開假日人潮，帶您在粉紅花海下優雅喝茶、品嚐馬告山珍。」</p>
+            <h4>資深旅遊顧問 莉梅姐</h4>
+            <p>「樂活歲月，就該把時間花在美好事物上。避開假日人潮，帶您在粉紅花海下優雅喝茶、品嚐馬告山珍。」</p>
         </div>
     </div>
 
+    <!-- 主題式樂活重點（無時間軸、無第一/二天分段） -->
+    <div class="section-title">✨ 旅程三大樂活重點體驗</div>
+    
+    <div class="story-card">
+        <h4>🌸 櫻花樹下的泰雅茶席與慢活時光</h4>
+        <p>台北車站專車直達接送，免去山路開車與找車位的疲勞。抵達新竹五峰【白蘭部落】，在櫻花飄落的樹冠下鋪開茶席，品嚐特調熱茶與部落點心，享受歲月靜好的優雅氛圍。</p>
+    </div>
 
+    <div class="story-card">
+        <h4>🍲 原香舌尖饗宴與星空夜宴</h4>
+        <p>用在地美味記住原鄉的味道！夜晚品嚐暖心的高山椴木香菇特色大鍋菜，中午享用道地的泰雅原香靈魂午宴（含香烤竹筒飯、泰雅馬告山豬肉、香氣濃郁的刺蔥烘蛋）。</p>
+    </div>
 
-    <!-- 梯次卡片 (大字好點擊) -->
+    <div class="story-card">
+        <h4>🌌 零光害觀星與壯麗雲海散策</h4>
+        <p>避開週末人潮，平日獨享山林寧靜。夜晚抬頭即是滿天星斗浪漫入眠；清晨在櫻花與晨光包圍下享用古早味地瓜稀飯，迎著白蘭部落壯觀的雲海漫步步道，帶著滿滿美照輕鬆歸途。</p>
+    </div>
+
+    <!-- 梯次卡片 (大字好點擊、樂活優化) -->
     <div class="section-title">🗓️ 2027 預約梯次（平日限定）</div>
-    <p style="font-size: 0.9rem; color: #666; margin-top: -8px;">全車不超過20人，樂活慢遊不擁擠</p>
+    <p style="font-size: 0.9rem; color: #666; margin-top: -8px;">6人成團，最多20人，給您高品質慢遊體驗</p>
 
     <div class="batch-card">
-        <div class="batch-date">
-            2027 / 02 / 15 (一) - 02 / 16 (二)
-            <span>🌸 山櫻初綻，粉紅漸濃</span>
+        <div class="batch-info">
+            <div class="batch-no">梯次 T01</div>
+            <div class="batch-date">2027 / 02 / 15 (一) - 02 / 16 (二)</div>
+            <div class="batch-status">山櫻花初綻，粉紅漸濃</div>
         </div>
-        <div class="batch-status">T01 梯</div>
+        <div class="batch-tag">預約中</div>
     </div>
 
     <div class="batch-card">
-        <div class="batch-date">
-            2027 / 02 / 17 (三) - 02 / 18 (四)
-            <span>🔥 昭和櫻盛開推薦</span>
+        <div class="batch-info">
+            <div class="batch-no">梯次 T02</div>
+            <div class="batch-date">2027 / 02 / 17 (三) - 02 / 18 (四)</div>
+            <div class="batch-status">昭和櫻、富士櫻盛開期</div>
         </div>
-        <div class="batch-status highlight">T02 梯</div>
+        <div class="batch-tag hot">熱門推薦</div>
     </div>
 
     <div class="batch-card">
-        <div class="batch-date">
-            2027 / 02 / 22 (一) - 02 / 23 (二)
-            <span>🌸 滿開高潮，粉紅花海</span>
+        <div class="batch-info">
+            <div class="batch-no">梯次 T03</div>
+            <div class="batch-date">2027 / 02 / 22 (一) - 02 / 23 (二)</div>
+            <div class="batch-status">滿開高潮期，粉紅花海 🌸</div>
         </div>
-        <div class="batch-status highlight">T03 梯</div>
+        <div class="batch-tag hot">熱門推薦</div>
     </div>
 
     <div class="batch-card">
-        <div class="batch-date">
-            2027 / 02 / 24 (三) - 02 / 25 (四)
-            <span>🌸 滿開高潮，風吹櫻花雨</span>
+        <div class="batch-info">
+            <div class="batch-no">梯次 T04</div>
+            <div class="batch-date">2027 / 02 / 24 (三) - 02 / 25 (四)</div>
+            <div class="batch-status">滿開高潮期，風吹櫻花雨 🌸</div>
         </div>
-        <div class="batch-status highlight">T04 梯</div>
+        <div class="batch-tag hot">熱門推薦</div>
     </div>
 
     <div class="batch-card">
-        <div class="batch-date">
-            2027 / 03 / 01 (一) - 03 / 02 (二)
-            <span>🌸 櫻吹雪浪漫期</span>
+        <div class="batch-info">
+            <div class="batch-no">梯次 T05</div>
+            <div class="batch-date">2027 / 03 / 01 (一) - 03 / 02 (二)</div>
+            <div class="batch-status">櫻吹雪浪漫期，滿地落櫻</div>
         </div>
-        <div class="batch-status highlight">T05 梯</div>
+        <div class="batch-tag hot">熱門推薦</div>
     </div>
 
     <div class="batch-card">
-        <div class="batch-date">
-            2027 / 03 / 03 (三) - 03 / 04 (四)
-            <span>🍃 櫻吹雪尾聲與嫩綠</span>
+        <div class="batch-info">
+            <div class="batch-no">梯次 T06</div>
+            <div class="batch-date">2027 / 03 / 03 (三) - 03 / 04 (四)</div>
+            <div class="batch-status">櫻吹雪尾聲，嫩綠交織</div>
         </div>
-        <div class="batch-status">T06 梯</div>
+        <div class="batch-tag">預約中</div>
     </div>
 
     <!-- 樂活族貼心 QA -->
     <div class="section-title">💡 貼心小解答</div>
     <div class="qa-item">
         <div class="qa-q">Q: 一個人也可以參加嗎？</div>
-        <div class="qa-a">可以！我們很常協助單人旅客湊團，輕鬆結交喜愛山林的新朋友。</div>
+        <div class="qa-a">可以！我們提供單人報名與湊團服務，非常多樂活朋友獨自報名，輕鬆結交喜愛山林的新朋友。</div>
     </div>
     <div class="qa-item">
-        <div class="qa-q">Q: 行程會不會走很多路、很累？</div>
-        <div class="qa-a">完全不會。本行程專為樂活族規劃，步調極慢，以靜態茶席、步道漫步與享用美食為主。</div>
+        <div class="qa-q">Q: 行程會不會走很多路、體力負擔大？</div>
+        <div class="qa-a">完全不會。行程專為樂活族群設計，步調慢活不緊湊，以靜態茶席、平緩步道漫步與品嚐美食為主。</div>
     </div>
     <div class="qa-item">
-        <div class="qa-q">Q: 山路會很難走嗎？</div>
-        <div class="qa-a">我們全程提供台北車站發車的專業接駁專車與經驗豐富的司機，您只需在車上安心休息即可。</div>
+        <div class="qa-q">Q: 山路開車會不會很辛苦？</div>
+        <div class="qa-a">我們提供台北車站直達接駁專車，由經驗豐富的專業司機開車，您只需在車上安心休息，免去駕駛疲勞與停車煩惱。</div>
     </div>
 
 </div>
 
-<!-- 底部固定按鈕 -->
+<!-- 底部固定導購按鈕 -->
 <div class="fixed-bottom">
     <a href="https://lin.ee/Z3c7Qam" class="btn-line">
-        💬 加 LINE 領 $500 優惠／搶先預約梯次
+        💬 加 LINE 領 $500 優惠／預約梯次
     </a>
 </div>
 
