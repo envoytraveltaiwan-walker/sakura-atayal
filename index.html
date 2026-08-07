@@ -3,287 +3,290 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>2027 白蘭櫻花雨｜櫻花樹下的泰雅微旅行</title>
+    <title>2027 白蘭櫻花雨｜櫻花樹下的泰雅樂活微旅行</title>
     <style>
+        :root {
+            --primary: #d66479;
+            --primary-light: #fff0f3;
+            --dark: #4a3539;
+            --gray: #666;
+            --bg: #fcfafb;
+        }
         body {
-            font-family: 'PingFang TC', 'Microsoft JhengHei', sans-serif;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang TC", "Microsoft JhengHei", sans-serif;
             line-height: 1.6;
             color: #333;
-            background-color: #fcfafb;
+            background-color: var(--bg);
             margin: 0;
-            padding: 0;
+            padding: 0 0 80px 0; /* 留給底部固定按鈕的空間 */
         }
-        header {
+        .header {
             background: linear-gradient(135deg, #ffd1dc 0%, #ffb6c1 100%);
-            color: #5a3c43;
+            color: var(--dark);
             text-align: center;
-            padding: 3rem 1rem;
+            padding: 2.5rem 1.2rem 2rem;
+            border-radius: 0 0 25px 25px;
         }
-        header h1 {
-            margin: 0;
-            font-size: 2.2rem;
+        .header h1 { margin: 0; font-size: 1.8rem; font-weight: 800; }
+        .header p { margin: 8px 0 0; font-size: 1.1rem; font-weight: bold; opacity: 0.9; }
+        
+        .container { padding: 1.2rem; max-width: 600px; margin: 0 auto; }
+        
+        /* 15秒重點卡片 */
+        .fast-read {
+            background: #fff;
+            border: 2px solid var(--primary);
+            border-radius: 16px;
+            padding: 1.2rem;
+            margin-top: -1.5rem;
+            box-shadow: 0 8px 20px rgba(214, 100, 121, 0.15);
         }
-        header p {
+        .fast-read h3 {
+            margin: 0 0 10px 0;
+            color: var(--primary);
             font-size: 1.2rem;
-            margin-top: 10px;
-            font-weight: bold;
-        }
-        .container {
-            max-width: 900px;
-            margin: 2rem auto;
-            padding: 0 1.5rem;
-        }
-        .section-title {
-            color: #d66479;
-            border-bottom: 2px solid #ffb6c1;
-            padding-bottom: 0.5rem;
-            margin-top: 2.5rem;
-        }
-        .expert-card {
-            background-color: #fff;
-            border-radius: 10px;
-            padding: 1.5rem;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
-            border-left: 5px solid #d66479;
-            margin-bottom: 2rem;
             display: flex;
-            flex-wrap: wrap;
             align-items: center;
-            gap: 1.5rem;
+            gap: 6px;
         }
-        .expert-photo-box {
-            flex: 0 0 160px;
-            text-align: center;
-            margin: 0 auto;
+        .fast-read-tags {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 10px;
         }
-        .expert-photo {
-            width: 150px;
-            height: 150px;
-            object-fit: cover;
-            border-radius: 50%;
-            border: 3px solid #d66479;
-            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-        }
-        .expert-info {
-            flex: 1;
-            min-width: 280px;
-        }
-        .expert-info h3 {
-            margin-top: 0;
-            color: #5a3c43;
-        }
-        .expert-quote {
-            font-style: italic;
-            color: #666;
-            background: #f9f9f9;
-            padding: 1rem;
-            border-radius: 5px;
-            margin-top: 0.5rem;
-        }
-        .highlights li {
-            margin-bottom: 1.2rem;
-        }
-        .highlights strong {
-            color: #d66479;
-            display: inline-block;
-            margin-bottom: 0.2rem;
-        }
-        .itinerary {
-            background: #fff;
-            padding: 1.5rem;
+        .tag-item {
+            background: var(--primary-light);
+            padding: 8px 12px;
             border-radius: 10px;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
-        }
-        .itinerary h4 {
-            color: #5a3c43;
-            background: #ffebf0;
-            padding: 0.5rem 1rem;
-            border-radius: 5px;
-        }
-        table {
-            width: 100%;
-            border-collapse: collapse;
-            margin: 1.5rem 0;
-            background: #fff;
-        }
-        th, td {
-            border: 1px solid #ddd;
-            padding: 12px;
-            text-align: center;
-        }
-        th {
-            background-color: #ffebf0;
-            color: #5a3c43;
-        }
-        .qa-box {
-            margin-bottom: 1.5rem;
-        }
-        .qa-q {
+            font-size: 0.95rem;
             font-weight: bold;
-            color: #d66479;
+            color: var(--dark);
         }
-        .cta {
-            background-color: #d66479;
+
+        .section-title {
+            color: var(--dark);
+            font-size: 1.4rem;
+            margin: 2rem 0 1rem 0;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        /* 達人引言 */
+        .expert-card {
+            background: #fff;
+            border-radius: 16px;
+            padding: 1.2rem;
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+        }
+        .expert-img {
+            width: 75px;
+            height: 75px;
+            border-radius: 50%;
+            border: 3px solid var(--primary);
+            flex-shrink: 0;
+            object-fit: cover;
+        }
+        .expert-text h4 { margin: 0; font-size: 1.1rem; color: var(--dark); }
+        .expert-text p { margin: 4px 0 0; font-size: 0.9rem; color: var(--gray); }
+
+        /* 樂活體驗故事 */
+        .story-card {
+            background: #fff;
+            border-radius: 16px;
+            padding: 1.2rem;
+            margin-bottom: 1rem;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.03);
+            border-left: 5px solid var(--primary);
+        }
+        .story-card h4 { margin: 0 0 6px 0; font-size: 1.1rem; color: var(--primary); }
+        .story-card p { margin: 0; font-size: 0.95rem; color: #555; }
+
+        /* 梯次卡片優化 (樂活好讀版) */
+        .batch-card {
+            background: #fff;
+            border: 1px solid #ffe0e6;
+            border-radius: 12px;
+            padding: 1rem;
+            margin-bottom: 10px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.02);
+        }
+        .batch-date { font-weight: bold; font-size: 1.05rem; color: var(--dark); }
+        .batch-date span { display: block; font-size: 0.85rem; color: var(--gray); font-weight: normal; }
+        .batch-status {
+            background: var(--primary);
+            color: #fff;
+            padding: 4px 10px;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            font-weight: bold;
+        }
+        .batch-status.highlight { background: #e63946; }
+
+        /* 貼心 QA */
+        .qa-item {
+            background: #fff;
+            padding: 1rem;
+            border-radius: 12px;
+            margin-bottom: 8px;
+            font-size: 0.95rem;
+        }
+        .qa-q { font-weight: bold; color: var(--primary); margin-bottom: 4px; }
+        .qa-a { color: #555; margin: 0; }
+
+        /* 底部固定導購按鈕 */
+        .fixed-bottom {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(8px);
+            border-top: 1px solid #eee;
+            padding: 12px 16px;
+            z-50;
+            box-shadow: 0 -4px 15px rgba(0,0,0,0.08);
+        }
+        .btn-line {
+            display: block;
+            width: 100%;
+            max-width: 500px;
+            margin: 0 auto;
+            background: #00B900;
             color: #fff;
             text-align: center;
-            padding: 2rem;
-            border-radius: 10px;
-            margin-top: 3rem;
-        }
-        .cta h2 {
-            margin-top: 0;
+            text-decoration: none;
+            font-size: 1.1rem;
+            font-weight: bold;
+            padding: 14px 0;
+            border-radius: 12px;
+            box-shadow: 0 4px 10px rgba(0, 185, 0, 0.3);
         }
     </style>
 </head>
 <body>
 
-<header>
-    <h1>🌸 2027 白蘭櫻花雨｜櫻花樹下的泰雅微旅行</h1>
-    <p>深度原鄉文化 × 零光害星空露營 ｜ 平日限定浪漫二日遊</p>
+<header class="header">
+    <h1>🌸 2027 白蘭櫻花雨</h1>
+    <p>櫻花樹下的泰雅微旅行｜平日限定 2 日遊</p>
 </header>
 
 <div class="container">
-    
-    <!-- 達人推薦區（含個人照片） -->
+
+    <!-- 15秒樂活族重點極速看 -->
+    <div class="fast-read">
+        <h3>⚡ 15秒看懂這趟行程</h3>
+        <div class="fast-read-tags">
+            <div class="tag-item">🚌 台北車站直達包車</div>
+            <div class="tag-item">🍵 櫻花樹下泰雅茶席</div>
+            <div class="tag-item">🌿 6人成團 / 20人上限</div>
+            <div class="tag-item">🌌 平日獨享星空雲海</div>
+        </div>
+    </div>
+
+    <!-- 達人靈魂帶路 -->
+    <div class="section-title">👩‍💼 達人帶路</div>
     <div class="expert-card">
-        <div class="expert-photo-box">
-            <img class="expert-photo" 
-                 src="https://raw.githubusercontent.com/envoytraveltaiwan-walker/sakura-atayal/main/%E8%8E%89%E6%A2%85%E5%A7%90.png" 
-                 alt="旅遊資深顧問 莉梅姐">
-            <div style="font-weight: bold; color: #5a3c43; margin-top: 0.5rem;">莉梅姐</div>
-            <div style="font-size: 0.85rem; color: #888;">35年資歷旅遊專家</div>
-        </div>
-        <div class="expert-info">
-            <h3>👩‍💼 達人靈魂帶路｜旅遊資深顧問 莉梅姐</h3>
-            <p><strong>深耕原鄉部落，多次向國際旅人推廣台灣原鄉文化與風景</strong></p>
-            <div class="expert-quote">
-                「我常跟國內外的旅人說，台灣最動人的風景不是繁華都市，而是原鄉部落裡那份與自然共生的溫度。白蘭部落是我非常推崇的泰雅族秘境，這裡沒有過度開發的商業氣息，只有滿山粉紅、浩瀚雲海與無光害星空。<br><br>
-                這次我特別嚴選『平日出團』，就是希望大家能避開人潮，在櫻花樹下安靜地喝一杯茶、嚐一口部落馬告與刺蔥的香氣。6人就能輕鬆出發，讓我們一起走進泰雅族人世代守護的粉紅山林。」
-            </div>
+        <img class="expert-img" src="https://raw.githubusercontent.com/envoytraveltaiwan-walker/sakura-atayal/main/%E8%8E%89%E6%A2%85%E5%A7%90.png" alt="莉梅姐">
+        <div class="expert-text">
+            <h4>旅遊資深顧問 莉梅姐</h4>
+            <p>「樂活歲月，就該把時間花在美好的事物上。避開假日人潮，帶您在粉紅花海下優雅喝茶、品嚐馬告山珍。」</p>
         </div>
     </div>
 
-    <!-- 五大獨家亮點 -->
-    <h2 class="section-title">🌟 行程五大獨家亮點</h2>
-    <ul class="highlights">
-        <li><strong>【達人靈魂帶路】</strong> 避開擠爆大客車的商業景點，跟著莉梅姐的國際級視野，深度體驗台灣山林之美與泰雅原鄉底蘊。</li>
-        <li><strong>【櫻花樹下的泰雅茶席】</strong> 擺脫走馬看花！在櫻花飄落的樹冠下鋪開茶席，品嚐特調熱茶與部落小米微醺點心，結合「歲月靜好、生活樂齡」主題分享，體驗極致儀式感。</li>
-        <li><strong>【原香舌尖饗宴】</strong> 
-            <ul>
-                <li><strong>星空迎賓大鍋菜</strong>：高山椴木香菇與甘甜高麗菜燉煮，感受部落共享 (Sharing) 的溫暖。</li>
-                <li><strong>原香靈魂午宴</strong>：天然竹筒飯、泰雅山胡椒<strong>馬告山豬肉</strong>、香氣濃郁的<strong>刺蔥烘蛋</strong>與香烤溪魚，用舌尖記住原鄉的味道。</li>
-            </ul>
-        </li>
-        <li><strong>【平日限定觀星與雲海】</strong> 只有平日才能真正獨享山林！在零光害的白蘭部落夜觀滿天星斗，清晨迎著雲海與日出晨光漫步。</li>
-        <li><strong>【樂齡與單人友善】</strong> 台北車站直達接送，免去開山路負擔。1人即可報名（協助湊團），6人成團輕鬆說走就走，至多20人精緻小團。</li>
-    </ul>
-
-    <!-- 預約梯次表 -->
-    <h2 class="section-title">🗓️ 2027 櫻花季預約梯次表（平日限定）</h2>
-    <p>額滿即止！每梯次 <strong>6人成團，最多 20 人</strong>，給您最高品質的旅遊體驗。</p>
-    <table>
-        <thead>
-            <tr>
-                <th>梯次編號</th>
-                <th>出發日期 (D1)</th>
-                <th>回程日期 (D2)</th>
-                <th>花期預估狀態</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr>
-                <td><strong>T01</strong></td>
-                <td>2027 / 02 / 15 (一)</td>
-                <td>2027 / 02 / 16 (二)</td>
-                <td>山櫻花初綻，粉紅漸濃</td>
-            </tr>
-            <tr>
-                <td><strong>T02</strong></td>
-                <td>2027 / 02 / 17 (三)</td>
-                <td>2027 / 02 / 18 (四)</td>
-                <td>昭和櫻、富士櫻盛開期 🔥</td>
-            </tr>
-            <tr>
-                <td><strong>T03</strong></td>
-                <td>2027 / 02 / 22 (一)</td>
-                <td>2027 / 02 / 23 (二)</td>
-                <td>滿開高潮期，粉紅花海 🌸</td>
-            </tr>
-            <tr>
-                <td><strong>T04</strong></td>
-                <td>2027 / 02 / 24 (三)</td>
-                <td>2027 / 02 / 25 (四)</td>
-                <td>滿開高潮期，風吹櫻花雨 🌸</td>
-            </tr>
-            <tr>
-                <td><strong>T05</strong></td>
-                <td>2027 / 03 / 01 (一)</td>
-                <td>2027 / 03 / 02 (二)</td>
-                <td>櫻吹雪浪漫期，滿地落櫻 🔥</td>
-            </tr>
-            <tr>
-                <td><strong>T06</strong></td>
-                <td>2027 / 03 / 03 (三)</td>
-                <td>2027 / 03 / 04 (四)</td>
-                <td>櫻吹雪尾聲，嫩綠交織</td>
-            </tr>
-        </tbody>
-    </table>
-
-    <!-- 詳細行程 -->
-    <h2 class="section-title">🌲 行程大綱</h2>
-    <div class="itinerary">
-        <h4>DAY 1：走進粉紅山林，樹下的午茶與營火夜宴</h4>
-        <p><strong>08:00</strong> 台北車站東三門集合出發<br>
-        <strong>10:30</strong> 竹東客家小鎮采風、稍作休息<br>
-        <strong>12:00</strong> 享用在地風味午餐<br>
-        <strong>13:30</strong> 抵達新竹五峰【白蘭時光營地】，初見粉紅櫻花<br>
-        <strong>15:00</strong> 🌸 <strong>專屬亮點：櫻花樹下泰雅茶席 ＆ 樂齡主題溫馨分享</strong><br>
-        <strong>17:00</strong> 山林散策，欣賞白蘭部落雲海與夕陽<br>
-        <strong>18:30</strong> 🍲 <strong>部落星空夜宴：高山椴木香菇特色大鍋菜</strong><br>
-        <strong>20:30</strong> 零光害觀星，浪漫入眠</p>
-        
-        <h4 style="margin-top:1.5rem;">DAY 2：櫻花步道漫步，帶走滿滿浪漫記憶</h4>
-        <p><strong>07:30</strong> 晨光與櫻花包圍下，享用古早味地瓜稀飯<br>
-        <strong>08:30</strong> 晨間櫻花步道漫步 ＆ 露營區巡禮<br>
-        <strong>10:30</strong> 收拾裝備，準備向白蘭部落告別<br>
-        <strong>12:30</strong> 🍱 <strong>原香午宴：馬告山豬肉、刺蔥烘蛋、竹筒飯等泰雅特色料理</strong><br>
-        <strong>14:30</strong> 踏上歸途，沿途欣賞山林風光<br>
-        <strong>16:30</strong> 帶著滿滿美照，預計返抵台北車站</p>
+    <!-- 故事化樂活行程亮點 -->
+    <div class="section-title">✨ 專屬於您的樂活體驗</div>
+    
+    <div class="story-card">
+        <h4>🌸 第一天：粉紅樹下的歲月靜好</h4>
+        <p>搭乘專車輕鬆出發，免去山路開車疲勞。午後抵達白蘭部落，在櫻花落英繽紛下鋪設茶席，品茗特調熱茶與部落點心，享受沒有車水馬龍的安靜時光。夜晚品嚐溫熱的高山香菇大鍋菜，抬頭即是滿天星斗。</p>
     </div>
 
-    <!-- 常見問題 Q&A -->
-    <h2 class="section-title">❓ 常見問題 Q&A</h2>
-    <div class="qa-box">
-        <div class="qa-q">Q1：只有我一個人，可以報名嗎？</div>
-        <div class="qa-a">A：當然可以！我們提供單人報名服務，會主動為您進行湊團安排，只要該梯次總人數達到 6 人即可順利成團。</div>
-    </div>
-    <div class="qa-box">
-        <div class="qa-q">Q2：如果我們剛好有 6 個人，可以直接包團嗎？</div>
-        <div class="qa-a">A：可以！6 人即可達到基礎成團門檻，您可以指定上述任何一個尚未額滿的平日梯次包團出發；若人數達到 20 人即達該梯次人數上限。</div>
-    </div>
-    <div class="qa-box">
-        <div class="qa-q">Q3：白蘭部落我自己開車去方便嗎？還是建議跟團？</div>
-        <div class="qa-a">A：白蘭部落山路較為狹窄蜿蜒且容易起霧，極度建議搭乘我們統一安排的台北接駁專車，由專業司機開車，免除找停車位與開車疲勞，輕鬆享受旅程。</div>
-    </div>
-    <div class="qa-box">
-        <div class="qa-q">Q4：樂齡族或年長長輩適合參加嗎？</div>
-        <div class="qa-a">A：非常適合！行程步調慢活不緊湊，且專為樂齡族設計交流時間，餐食也包含好消化的地瓜稀飯。提醒您，山區海拔約1,000公尺早晚溫差大，請準備保暖洋蔥式穿搭與防滑休閒鞋即可。</div>
+    <div class="story-card">
+        <h4>🌄 第二天：雲海晨光與原香舌尖饗宴</h4>
+        <p>在清晨的櫻花步道舒心散步，迎接壯闊雲海與第一道晨光。中午享用道地的泰雅靈魂午宴：香噴噴的竹筒飯、馬告山豬肉與刺蔥烘蛋。帶著滿滿美照與放鬆的心情，傍晚順暢返抵台北。</p>
     </div>
 
-    <!-- 行動呼籲 CTA -->
-    <div class="cta">
-        <h2>💌 立即預約您的粉紅微旅行</h2>
-        <p>現在就留言告訴我們：<strong>「我想許願報名梯次：T0__（+人數）」</strong></p>
-        <p>小幫手與莉梅姐團隊會第一時間與您聯繫安排！</p>
+    <!-- 梯次卡片 (大字好點擊) -->
+    <div class="section-title">🗓️ 2027 預約梯次（平日限定）</div>
+    <p style="font-size: 0.9rem; color: #666; margin-top: -8px;">全車不超過20人，樂活慢遊不擁擠</p>
+
+    <div class="batch-card">
+        <div class="batch-date">
+            2027 / 02 / 15 (一) - 02 / 16 (二)
+            <span>🌸 山櫻初綻，粉紅漸濃</span>
+        </div>
+        <div class="batch-status">T01 梯</div>
     </div>
-<div class="fixed bottom-0 left-0 right-0 bg-white/90 backdrop-blur-md border-t border-stone-200 p-3 z-50 shadow-2xl">
-    <div class="max-w-2xl mx-auto">
-        <a href="https://lin.ee/Z3c7Qam" class="block w-full text-center bg-rose-500 hover:bg-rose-600 text-white font-bold py-3 px-4 rounded-lg shadow-lg">
-            💬 加 LINE，領 $500 優惠與開團通知
-        </a>
+
+    <div class="batch-card">
+        <div class="batch-date">
+            2027 / 02 / 17 (三) - 02 / 18 (四)
+            <span>🔥 昭和櫻盛開推薦</span>
+        </div>
+        <div class="batch-status highlight">T02 梯</div>
     </div>
+
+    <div class="batch-card">
+        <div class="batch-date">
+            2027 / 02 / 22 (一) - 02 / 23 (二)
+            <span>🌸 滿開高潮，粉紅花海</span>
+        </div>
+        <div class="batch-status highlight">T03 梯</div>
+    </div>
+
+    <div class="batch-card">
+        <div class="batch-date">
+            2027 / 02 / 24 (三) - 02 / 25 (四)
+            <span>🌸 滿開高潮，風吹櫻花雨</span>
+        </div>
+        <div class="batch-status highlight">T04 梯</div>
+    </div>
+
+    <div class="batch-card">
+        <div class="batch-date">
+            2027 / 03 / 01 (一) - 03 / 02 (二)
+            <span>🌸 櫻吹雪浪漫期</span>
+        </div>
+        <div class="batch-status highlight">T05 梯</div>
+    </div>
+
+    <div class="batch-card">
+        <div class="batch-date">
+            2027 / 03 / 03 (三) - 03 / 04 (四)
+            <span>🍃 櫻吹雪尾聲與嫩綠</span>
+        </div>
+        <div class="batch-status">T06 梯</div>
+    </div>
+
+    <!-- 樂活族貼心 QA -->
+    <div class="section-title">💡 貼心小解答</div>
+    <div class="qa-item">
+        <div class="qa-q">Q: 一個人也可以參加嗎？</div>
+        <div class="qa-a">可以！我們很常協助單人旅客湊團，輕鬆結交喜愛山林的新朋友。</div>
+    </div>
+    <div class="qa-item">
+        <div class="qa-q">Q: 行程會不會走很多路、很累？</div>
+        <div class="qa-a">完全不會。本行程專為樂活族規劃，步調極慢，以靜態茶席、步道漫步與享用美食為主。</div>
+    </div>
+    <div class="qa-item">
+        <div class="qa-q">Q: 山路會很難走嗎？</div>
+        <div class="qa-a">我們全程提供台北車站發車的專業接駁專車與經驗豐富的司機，您只需在車上安心休息即可。</div>
+    </div>
+
 </div>
+
+<!-- 底部固定按鈕 -->
+<div class="fixed-bottom">
+    <a href="https://lin.ee/Z3c7Qam" class="btn-line">
+        💬 加 LINE 領 $500 優惠／搶先預約梯次
+    </a>
 </div>
 
 </body>
