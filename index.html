@@ -1,6 +1,15 @@
 <!DOCTYPE html>
 <html lang="ja">
 <head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-PPP4CT61HC"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-PPP4CT61HC');
+    </script>
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>2027 桜の秘境雨｜櫻花樹下的泰雅樂活微旅行｜アンジェ国際旅行社</title>
@@ -284,6 +293,11 @@
             padding: 10px 12px;
             position: relative;
             box-shadow: 0 2px 6px rgba(0,0,0,0.02);
+            cursor: pointer;
+            transition: transform 0.15s ease;
+        }
+        .batch-tile:active {
+            transform: scale(0.98);
         }
         .batch-tile.hot {
             border-color: #ffb6c1;
@@ -662,7 +676,7 @@
         </p>
 
         <div class="batch-grid-compact">
-            <div class="batch-tile">
+            <div class="batch-tile" data-batch-id="T01" data-batch-date="02/15-02/16">
                 <div class="batch-tile-top">
                     <span class="batch-tag-sm">T01</span>
                     <span class="batch-status-dot" style="color:#666;" data-lang="ja">受付中</span>
@@ -673,7 +687,7 @@
                 <div class="batch-tile-desc" data-lang="zh">山櫻初綻・粉紅漸濃</div>
             </div>
 
-            <div class="batch-tile hot">
+            <div class="batch-tile hot" data-batch-id="T02" data-batch-date="02/17-02/18">
                 <div class="batch-tile-top">
                     <span class="batch-tag-sm" style="color:#e63946; background:#ffebeb;">T02 🔥</span>
                     <span class="batch-status-dot" data-lang="ja">見頃推薦</span>
@@ -684,7 +698,7 @@
                 <div class="batch-tile-desc" data-lang="zh">昭和櫻、富士櫻盛開期</div>
             </div>
 
-            <div class="batch-tile hot">
+            <div class="batch-tile hot" data-batch-id="T03" data-batch-date="02/22-02/23">
                 <div class="batch-tile-top">
                     <span class="batch-tag-sm" style="color:#e63946; background:#ffebeb;">T03 🌸</span>
                     <span class="batch-status-dot" data-lang="ja">満開ピーク</span>
@@ -695,7 +709,7 @@
                 <div class="batch-tile-desc" data-lang="zh">滿開高潮・粉紅花海</div>
             </div>
 
-            <div class="batch-tile hot">
+            <div class="batch-tile hot" data-batch-id="T04" data-batch-date="02/24-02/25">
                 <div class="batch-tile-top">
                     <span class="batch-tag-sm" style="color:#e63946; background:#ffebeb;">T04 🌸</span>
                     <span class="batch-status-dot" data-lang="ja">風吹く桜雨</span>
@@ -706,7 +720,7 @@
                 <div class="batch-tile-desc" data-lang="zh">滿開高潮・風吹櫻花雨</div>
             </div>
 
-            <div class="batch-tile hot">
+            <div class="batch-tile hot" data-batch-id="T05" data-batch-date="03/01-03/02">
                 <div class="batch-tile-top">
                     <span class="batch-tag-sm" style="color:#e63946; background:#ffebeb;">T05 🔥</span>
                     <span class="batch-status-dot" data-lang="ja">桜吹雪</span>
@@ -717,7 +731,7 @@
                 <div class="batch-tile-desc" data-lang="zh">櫻吹雪浪漫期・滿地落櫻</div>
             </div>
 
-            <div class="batch-tile">
+            <div class="batch-tile" data-batch-id="T06" data-batch-date="03/03-03/04">
                 <div class="batch-tile-top">
                     <span class="batch-tag-sm">T06</span>
                     <span class="batch-status-dot" style="color:#666;" data-lang="ja">受付中</span>
@@ -808,12 +822,12 @@
 
     <div class="sticky-bar">
         <div class="sticky-inner">
-            <a href="mailto:service@envoytravel.com.tw" class="btn-action btn-b2b">
+            <a href="mailto:service@envoytravel.com.tw" class="btn-action btn-b2b" id="cta-b2b-mail">
                 <span>✉️</span>
                 <span data-lang="ja">B2B お問い合わせ</span>
                 <span data-lang="zh">同業 / 企業洽商</span>
             </a>
-            <a href="https://lin.ee/Z3c7Qam" target="_blank" rel="noopener" class="btn-action btn-b2c">
+            <a href="https://lin.ee/Z3c7Qam" target="_blank" rel="noopener" class="btn-action btn-b2c" id="cta-b2c-line">
                 <span>💬</span>
                 <span data-lang="ja">個人旅行のお問い合わせ</span>
                 <span data-lang="zh">加 LINE 專人諮詢預約</span>
@@ -823,6 +837,7 @@
 
     <canvas id="sakura-canvas"></canvas>
 
+    <!-- 雙語切換與 GA4 事件監聽腳本 -->
     <script>
         function setLanguage(lang) {
             const body = document.body;
@@ -840,9 +855,61 @@
                 btnZh.classList.remove('active');
                 document.documentElement.lang = 'ja';
             }
+
+            // [GA4 事件 1] 語系切換
+            if (typeof gtag === 'function') {
+                gtag('event', 'language_switch', {
+                    'selected_language': lang
+                });
+            }
         }
+
+        document.addEventListener('DOMContentLoaded', function () {
+            // [GA4 事件 2] 點擊加 LINE 諮詢 (核心轉換)
+            const lineBtn = document.getElementById('cta-b2c-line');
+            if (lineBtn) {
+                lineBtn.addEventListener('click', function () {
+                    if (typeof gtag === 'function') {
+                        gtag('event', 'generate_lead', {
+                            'method': 'line',
+                            'campaign': '2027_sakura_atayal'
+                        });
+                    }
+                });
+            }
+
+            // [GA4 事件 3] 點擊 B2B 郵件洽商
+            const b2bBtn = document.getElementById('cta-b2b-mail');
+            if (b2bBtn) {
+                b2bBtn.addEventListener('click', function () {
+                    if (typeof gtag === 'function') {
+                        gtag('event', 'contact', {
+                            'method': 'email_b2b',
+                            'campaign': '2027_sakura_atayal'
+                        });
+                    }
+                });
+            }
+
+            // [GA4 事件 4] 點擊預約梯次卡片
+            const batchTiles = document.querySelectorAll('.batch-tile');
+            batchTiles.forEach(function (tile) {
+                tile.addEventListener('click', function () {
+                    const batchId = this.getAttribute('data-batch-id');
+                    const batchDate = this.getAttribute('data-batch-date');
+                    if (typeof gtag === 'function') {
+                        gtag('event', 'select_content', {
+                            'content_type': 'tour_batch',
+                            'item_id': batchId,
+                            'item_name': batchDate
+                        });
+                    }
+                });
+            });
+        });
     </script>
 
+    <!-- 擬真櫻花瓣飄落動畫 -->
     <script>
     (function () {
         const canvas = document.getElementById('sakura-canvas');
