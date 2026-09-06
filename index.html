@@ -122,7 +122,7 @@
             background: linear-gradient(135deg, #ffd1dc 0%, #ffb6c1 100%);
             color: #5a3c43;
             text-align: center;
-            padding: 2.2rem 1.2rem;
+            padding: 2rem 1.2rem;
             border-radius: 18px;
             margin-bottom: 20px;
         }
@@ -137,18 +137,18 @@
             margin-bottom: 8px;
         }
         .tour-hero h1 {
-            font-size: 1.75rem;
+            font-size: 1.65rem;
             font-weight: 800;
             margin-bottom: 6px;
             line-height: 1.35;
         }
         .tour-desc {
-            font-size: 1.02rem;
+            font-size: 1rem;
             font-weight: bold;
             opacity: 0.95;
         }
 
-        /* 15秒直擊樂活族亮點卡片 */
+        /* 15秒直擊重點卡片 */
         .fast-read {
             background: #fff;
             border: 2px solid var(--primary);
@@ -267,7 +267,7 @@
             border-left: 3px solid var(--primary);
         }
 
-        /* 樂活重點體驗卡片 */
+        /* 深度體驗與文化故事卡片 */
         .story-card {
             background: #fff;
             border-radius: 16px;
@@ -280,7 +280,7 @@
         .story-card h4 { margin: 0 0 8px 0; font-size: 1.12rem; color: var(--primary); }
         .story-card p { margin: 0; font-size: 0.96rem; color: #444; line-height: 1.7; }
 
-        /* 梯次優化：雙欄輕量緊湊卡片（節省超過 50% 空間） */
+        /* 梯次優化：雙欄輕量緊湊卡片 */
         .batch-grid-compact {
             display: grid;
             grid-template-columns: repeat(2, 1fr);
@@ -333,7 +333,7 @@
             text-overflow: ellipsis;
         }
 
-        /* 4. 主辦單位資質卡片（完全依據指定截圖設計） */
+        /* 主辦單位卡片 */
         .organizer-card {
             background: var(--white);
             border-radius: 20px;
@@ -410,7 +410,7 @@
             display: block;
         }
 
-        /* 5. 共用常見問題 (FAQ) */
+        /* 5. 常見問題 (FAQ) 與底圖修正 */
         .faq-section {
             position: relative;
             margin-top: 30px;
@@ -439,19 +439,23 @@
             font-size: 0.88rem;
             color: var(--text-sub);
         }
+
+        /* 吉祥物底圖自適應控制 */
         .faq-footer-banner {
             width: 100%;
-            border-radius: 12px;
-            overflow: hidden;
-            margin-top: 14px;
+            max-width: 300px;
+            margin: 24px auto 10px;
+            display: block;
+            text-align: center;
         }
         .faq-footer-banner img {
             width: 100%;
             height: auto;
             display: block;
+            margin: 0 auto;
         }
 
-        /* 6. 底部固定懸浮諮詢列（純諮詢，無折扣字樣） */
+        /* 6. 底部固定懸浮諮詢列 */
         .sticky-bar {
             position: fixed;
             bottom: 0;
@@ -517,12 +521,15 @@
                 width: 50px;
                 top: -15px;
             }
+            .faq-footer-banner {
+                max-width: 220px;
+            }
         }
     </style>
 </head>
 <body>
 
-    <!-- 1. 頂部雙語導航（ENVOY Logo） -->
+    <!-- 1. 頂部雙語導航 -->
     <header class="site-header">
         <div class="header-inner">
             <div class="logo">
@@ -536,12 +543,12 @@
     </header>
 
     <main class="container">
-        <!-- 2. 部行山海間官方主視覺橫幅（素材-07.jpg） -->
+        <!-- 2. 部行山海間官方主視覺橫幅 -->
         <div class="official-banner">
             <img src="https://raw.githubusercontent.com/envoytraveltaiwan-walker/sakura-atayal/main/%E7%B4%A0%E6%9D%90_2026%E6%97%A5%E6%9C%AC%E6%97%85%E5%B1%95(%E5%8E%9F%E6%B0%91%E6%9C%83)_%E7%B5%A6%E6%A5%AD%E8%80%85-07.jpg" alt="部行山海間">
         </div>
 
-        <!-- 白蘭櫻花雨主題橫額 -->
+        <!-- 主題橫額 -->
         <section class="tour-hero">
             <span class="tour-tag" data-lang="ja">台湾原住民族文化探訪 × 桜の秘境</span>
             <span class="tour-tag" data-lang="zh">深度原鄉文化 × 零光害星空</span>
@@ -553,7 +560,7 @@
             <p class="tour-desc" data-lang="zh">平日限定浪漫 2 日遊｜在粉紅山林裡找回生活溫度的慢活微旅行</p>
         </section>
 
-        <!-- 15秒直擊樂活族亮點（四大安心保障） -->
+        <!-- 15秒直擊重點卡片 -->
         <div class="fast-read">
             <h3>
                 <span>✨</span>
@@ -615,7 +622,7 @@
             </div>
         </div>
 
-        <!-- 達人靈魂帶路（莉梅姐推薦） -->
+        <!-- 達人靈魂帶路 -->
         <div class="section-header" data-lang="ja">達人がご案内</div>
         <div class="section-header" data-lang="zh">達人靈魂帶路</div>
         <div class="expert-card">
@@ -640,32 +647,34 @@
             </div>
         </div>
 
-        <!-- 旅程三大樂活重點體驗 -->
-        <div class="section-header" data-lang="ja">旅の3大ハイライト体験</div>
-        <div class="section-header" data-lang="zh">旅程三大樂活重點體驗</div>
+        <!-- 依據台日遊客心理調整之深度內容 -->
+        <div class="section-header" data-lang="ja">風土と文化の物語</div>
+        <div class="section-header" data-lang="zh">走進部落的故事</div>
 
+        <!-- 部落與圖騰介紹 -->
         <div class="story-card">
-            <h4 data-lang="ja">🌸 桜樹下のタイヤル茶席と静かなひととき</h4>
-            <h4 data-lang="zh">🌸 櫻花樹下的泰雅茶席與慢活時光</h4>
-            <p data-lang="ja">台北駅から専用車で直行。新竹五峰の「白蘭部落」に到着後、舞い散る桜の花びらの下で茶席を囲みます。香り高い特製茶と素朴なスイーツを味わいながら、心洗われる静寂をご堪能ください。</p>
-            <p data-lang="zh">台北車站專車直達接送，免去山路開車與找車位的疲勞。抵達新竹五峰【白蘭部落】，在櫻花飄落的樹冠下鋪開茶席，品嚐特調熱茶與部落點心，享受歲月靜好的優雅氛圍。</p>
+            <h4 data-lang="ja">🏔️ 自然と祖霊が息づく桃源郷｜白蘭（バイラン）部落と「祖霊の目」</h4>
+            <h4 data-lang="zh">🏔️ 走進泰雅守護的粉紅秘境｜白蘭部落與祖靈之眼</h4>
+            <p data-lang="ja">標高約1,000m、豊かな原生林と雲海に抱かれた新竹五峰の白蘭部落。古より自然界の掟「Gaga」を重んじ、自然と共生するタイヤル族の聖地です。伝統織物に見られる菱形の幾何学模様は<strong>「祖霊の目（dowriq utux）」</strong>と呼ばれ、先祖の加護と旅人の安全を静かに見守る精神的な象徴。満開の桜の下で、台湾の奥深い精神文化に触れる体験をお届けします。</p>
+            <p data-lang="zh">新竹五峰的白蘭部落，是泰雅族人世代與山林共生的世外桃源。漫步在落櫻山林間，隨處可見象徵<strong>「祖靈之眼」</strong>的經典菱形圖騰，代表著先祖對這片土地的庇護與平安祝福。避開假日喧囂，走進純樸部落日常，在族人親切的招呼聲中，感受這片粉紅山林最溫暖的心靈安定感。</p>
+        </div>
+
+        <!-- 風味飲食文化介紹 -->
+        <div class="story-card">
+            <h4 data-lang="ja">🍃 森の恵みを五感で味わう｜幻のスパイス「馬告」と伝統食</h4>
+            <h4 data-lang="zh">🍲 山林直採的原香滋味｜天然馬告與產地餐桌</h4>
+            <p data-lang="ja">台湾原住民族が大切にしてきた野生の山胡椒<strong>「馬告（マーガオ）」</strong>は、黒胡椒のピリッとした辛味にレモングラスのような清涼な香りが重なる希少な森のスパイス。香ばしく焼き上げた豚肉料理の風味を引き立てます。さらに、高山特有の寒暖差が育んだ肉厚な椴木シイタケの大鍋煮込み、香り豊かなカラスザンショウ（刺葱）の卵焼きなど、化学調味料に頼らない大地の恵みをお召し上がりください。</p>
+            <p data-lang="zh">品嚐原鄉土地最真實的滋味！夜晚品嚐以高山清甜椴木香菇燉煮的暖胃大鍋菜；中午享用最道地的原香靈魂午宴：帶著天然檸檬香茅清香的<strong>「馬告山豬肉」</strong>、香氣濃郁的<strong>「刺蔥烘蛋」</strong>與竹筒飯。清晨更貼心配搭好消化的古早味地瓜稀飯，吃得鮮甜、無負擔且養生。</p>
         </div>
 
         <div class="story-card">
-            <h4 data-lang="ja">🍲 原住民族の美食と星空鍋の宴</h4>
-            <h4 data-lang="zh">🍲 原香舌尖饗宴與星空夜宴</h4>
-            <p data-lang="ja">夜は高山椴木シイタケと新鮮な高原野菜を煮込んだ温かい大鍋料理を皆様でシェア。お昼には竹筒ご飯、山胡椒（馬告）風味の豚肉料理、香ばしいシロバナセンダングサ（刺葱）入り卵焼きなど、伝統の美食を心ゆくまで味わいます。</p>
-            <p data-lang="zh">用在地美味記住原鄉的味道！夜晚品嚐暖心的高山椴木香菇特色大鍋菜，中午享用道地的泰雅原香靈魂午宴（含香烤竹筒飯、泰雅馬告山豬肉、香氣濃郁的刺蔥烘蛋）。</p>
+            <h4 data-lang="ja">🌸 桜樹下のタイヤル茶席と静寂の雲海</h4>
+            <h4 data-lang="zh">🌸 櫻花樹下的泰雅茶席與雲海漫步</h4>
+            <p data-lang="ja">台北駅から直行専用車で山道を快適に登り、白蘭部落へ。舞い散る花びらの下で鋪かれた特製茶席では、温かい地元のハーブティーと素朴なスイーツを味わいます。夜は光害ゼロの環境でこぼれ落ちそうな満天の星空を眺め、朝は幻想的な雲海を背に、平坦な桜の遊歩道を優雅に散策します。</p>
+            <p data-lang="zh">台北車站專車直達接送，免除自己開山路的疲勞與找車位壓力。午後在櫻花樹冠下鋪開茶席，品嚐在地熱茶與部落微醺茶點；清晨在櫻花與晨光包圍下迎著壯觀雲海步道悠閒漫步，帶著身心靈的放鬆與滿滿美照順暢返程。</p>
         </div>
 
-        <div class="story-card">
-            <h4 data-lang="ja">🌌 光害ゼロの満天の星空と雲海散策</h4>
-            <h4 data-lang="zh">🌌 零光害觀星與壯麗雲海散策</h4>
-            <p data-lang="ja">平日だからこそ味わえる山林の静けさ。夜は満天の星空を眺めながら心地よい眠りにつき、朝は桜と柔らかな朝陽に包まれて胃に優しいサツマイモ粥を。眼下に広がる壮大な雲海を眺めながらの朝の散策は格別です。</p>
-            <p data-lang="zh">避開週末人潮，平日獨享山林寧靜。夜晚抬頭即是滿天星斗浪漫入眠；清晨在櫻花與晨光包圍下享用古早味地瓜稀飯，迎著白蘭部落壯觀的雲海漫步步道，帶著滿滿美照輕鬆歸途。</p>
-        </div>
-
-        <!-- 2027 預約梯次（雙欄高緊湊好讀版，省 50% 空間） -->
+        <!-- 2027 預約梯次（雙欄緊湊卡片） -->
         <div class="section-header" data-lang="ja">🗓️ 2027年 予約日程（平日限定）</div>
         <div class="section-header" data-lang="zh">🗓️ 2027 預約梯次（平日限定）</div>
         <p style="font-size: 0.85rem; color: #777; margin-top: -6px; margin-bottom: 10px;">
@@ -747,7 +756,7 @@
             </div>
         </div>
 
-        <!-- 4. 主辦單位資質卡片（完全對齊截圖版面） -->
+        <!-- 4. 主辦單位資質卡片 -->
         <section class="organizer-card">
             <div class="organizer-header">
                 <img class="organizer-avatar" src="https://raw.githubusercontent.com/envoytraveltaiwan-walker/sakura-atayal/main/%E8%8E%89%E6%A2%85%E5%A7%90.png" alt="莉梅姐">
@@ -793,7 +802,7 @@
             </div>
         </section>
 
-        <!-- 5. 共用常見問題（素材-05 吉祥物、素材-06 底圖） -->
+        <!-- 5. 常見問題 (FAQ) -->
         <section class="faq-section">
             <img class="faq-mascot" src="https://raw.githubusercontent.com/envoytraveltaiwan-walker/sakura-atayal/main/%E7%B4%A0%E6%9D%90_2026%E6%97%A5%E6%9C%AC%E6%97%85%E5%B1%95(%E5%8E%9F%E6%B0%91%E6%9C%83)_%E7%B5%A6%E6%A5%AD%E8%80%85-05.png" alt="吉祥物">
             <div class="section-header" data-lang="ja">よくあるご質問</div>
@@ -820,14 +829,14 @@
                 <div class="faq-a" data-lang="zh">A: 非常歡迎！安捷國際為正規註冊甲種旅行社，具備專車、專業日語導遊、部落工作坊手作預約及全套一條龍地接實力，歡迎同業來信洽商。</div>
             </div>
 
-            <!-- 素材-06 原民文化形象圖置入 -->
+            <!-- 吉祥物底圖 -->
             <div class="faq-footer-banner">
                 <img src="https://raw.githubusercontent.com/envoytraveltaiwan-walker/sakura-atayal/main/%E7%B4%A0%E6%9D%90_2026%E6%97%A5%E6%9C%AC%E6%97%85%E5%B1%95(%E5%8E%9F%E6%B0%91%E6%9C%83)_%E7%B5%A6%E6%A5%AD%E8%80%85-06.png" alt="原住民族文化體驗">
             </div>
         </section>
     </main>
 
-    <!-- 6. 底部固定懸浮諮詢列（純諮詢，無折扣字樣） -->
+    <!-- 6. 底部固定懸浮諮詢列 -->
     <div class="sticky-bar">
         <div class="sticky-inner">
             <a href="mailto:service@envoytravel.com.tw" class="btn-action btn-b2b">
@@ -846,7 +855,7 @@
     <!-- 櫻花雨畫布元素 -->
     <canvas id="sakura-canvas"></canvas>
 
-    <!-- 雙語切換機制（預設日文啟動） -->
+    <!-- 雙語切換機制 -->
     <script>
         function setLanguage(lang) {
             const body = document.body;
@@ -867,7 +876,7 @@
         }
     </script>
 
-    <!-- 擬真櫻花瓣飄落動畫（帶頂端花裂的真實花瓣物理飄動） -->
+    <!-- 擬真櫻花瓣飄落動畫腳本 -->
     <script>
     (function () {
         const canvas = document.getElementById('sakura-canvas');
@@ -881,7 +890,7 @@
             height = canvas.height = window.innerHeight;
         });
 
-        const petalCount = 35; // 優雅的飄落密度
+        const petalCount = 35;
         const petals = [];
 
         class SakuraPetal {
@@ -891,15 +900,15 @@
             reset(init = false) {
                 this.x = Math.random() * width;
                 this.y = init ? Math.random() * height : -20;
-                this.size = Math.random() * 7 + 9; // 花瓣大小約 9~16px
-                this.speedY = Math.random() * 0.9 + 0.7; // 慢速輕盈飄落
+                this.size = Math.random() * 7 + 9;
+                this.speedY = Math.random() * 0.9 + 0.7;
                 this.speedX = Math.random() * 1.4 - 0.4;
                 this.rotation = Math.random() * Math.PI * 2;
                 this.rotationSpeed = Math.random() * 0.02 - 0.01;
                 this.swing = Math.random() * Math.PI * 2;
                 this.swingSpeed = Math.random() * 0.02 + 0.01;
-                this.opacity = Math.random() * 0.35 + 0.6; // 自然半透
-                this.flip = Math.random() * Math.PI; // 3D翻轉感
+                this.opacity = Math.random() * 0.35 + 0.6;
+                this.flip = Math.random() * Math.PI;
                 this.flipSpeed = Math.random() * 0.03 + 0.015;
             }
             update() {
@@ -917,21 +926,17 @@
                 ctx.save();
                 ctx.translate(this.x, this.y);
                 ctx.rotate(this.rotation);
-                // 藉由 scaleY 模擬花瓣在空中 3D 翻轉飄動
                 ctx.scale(1, Math.sin(this.flip));
 
-                // 櫻花粉漸層（深粉至粉白）
                 const grad = ctx.createLinearGradient(0, -this.size, 0, this.size);
                 grad.addColorStop(0, `rgba(255, 230, 236, ${this.opacity})`);
                 grad.addColorStop(0.7, `rgba(255, 182, 193, ${this.opacity})`);
                 grad.addColorStop(1, `rgba(238, 140, 160, ${this.opacity})`);
                 ctx.fillStyle = grad;
 
-                // 繪製真實櫻花瓣（帶有頂部淺凹花裂的幾何形狀）
                 ctx.beginPath();
-                ctx.moveTo(0, this.size); // 花瓣基底尖端
+                ctx.moveTo(0, this.size);
                 ctx.bezierCurveTo(-this.size * 0.7, this.size * 0.4, -this.size * 0.8, -this.size * 0.5, -this.size * 0.25, -this.size * 0.9);
-                // 頂部櫻花特有花裂缺角
                 ctx.lineTo(0, -this.size * 0.75);
                 ctx.lineTo(this.size * 0.25, -this.size * 0.9);
                 ctx.bezierCurveTo(this.size * 0.8, -this.size * 0.5, this.size * 0.7, this.size * 0.4, 0, this.size);
