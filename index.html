@@ -1,357 +1,557 @@
 <!DOCTYPE html>
-<html lang="zh-TW">
+<html lang="ja">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>2027 白蘭櫻花雨｜櫻花樹下的泰雅樂活微旅行</title>
+    <title>台湾原住民族文化体験ツアー｜アンジェ国際旅行社</title>
     <style>
         :root {
-            --primary: #d66479;
-            --primary-light: #fff0f3;
-            --dark: #5a3c43;
-            --gray: #666;
-            --bg: #fcfafb;
+            --primary: #c25340;
+            --primary-light: #fbf0ee;
+            --primary-dark: #8b3425;
+            --text-main: #333333;
+            --text-sub: #666666;
+            --bg-base: #fdfbf9;
+            --white: #ffffff;
+            --border-color: #eee4e0;
         }
-        body {
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang TC", "Microsoft JhengHei", sans-serif;
-            line-height: 1.6;
-            color: #333;
-            background-color: var(--bg);
+
+        * {
+            box-sizing: border-box;
             margin: 0;
-            padding: 0 0 85px 0;
-        }
-        .header {
-            background: linear-gradient(135deg, #ffd1dc 0%, #ffb6c1 100%);
-            color: var(--dark);
-            text-align: center;
-            padding: 2.2rem 1.2rem 2rem;
-            border-radius: 0 0 25px 25px;
-        }
-        .header h1 { margin: 0; font-size: 1.8rem; font-weight: 800; }
-        .header p { margin: 8px 0 0; font-size: 1.05rem; font-weight: bold; opacity: 0.9; }
-        
-        .container { padding: 1.2rem; max-width: 600px; margin: 0 auto; }
-        
-        /* 15秒直擊樂活族亮點（置頂核心誘因） */
-        .fast-read {
-            background: #fff;
-            border: 2px solid var(--primary);
-            border-radius: 16px;
-            padding: 1.2rem;
-            margin-top: -1.5rem;
-            box-shadow: 0 8px 20px rgba(214, 100, 121, 0.15);
-        }
-        .fast-read h3 {
-            margin: 0 0 12px 0;
-            color: var(--primary);
-            font-size: 1.2rem;
-            display: flex;
-            align-items: center;
-            gap: 6px;
-            font-weight: bold;
-        }
-        .lohas-features {
-            display: flex;
-            flex-direction: column;
-            gap: 10px;
-        }
-        .lohas-item {
-            background: var(--primary-light);
-            padding: 10px 14px;
-            border-radius: 12px;
-            display: flex;
-            align-items: center;
-            gap: 10px;
-            font-size: 0.98rem;
-            font-weight: bold;
-            color: var(--dark);
-        }
-        .lohas-icon {
-            font-size: 1.2rem;
-            flex-shrink: 0;
+            padding: 0;
         }
 
-        .section-title {
-            color: var(--dark);
-            font-size: 1.35rem;
-            margin: 2rem 0 0.8rem 0;
+        body {
+            font-family: 'PingFang TC', 'Hiragino Kaku Gothic ProN', 'Microsoft JhengHei', sans-serif;
+            background-color: var(--bg-base);
+            color: var(--text-main);
+            line-height: 1.6;
+            padding-bottom: 90px;
+        }
+
+        /* 語系切換隱藏屬性 */
+        [data-lang="zh"] { display: none; }
+        body.lang-zh [data-lang="ja"] { display: none; }
+        body.lang-zh [data-lang="zh"] { display: inline; }
+        body.lang-zh blockquote[data-lang="zh"],
+        body.lang-zh div[data-lang="zh"],
+        body.lang-zh p[data-lang="zh"],
+        body.lang-zh h1[data-lang="zh"],
+        body.lang-zh h2[data-lang="zh"],
+        body.lang-zh h3[data-lang="zh"] { display: block; }
+
+        /* 1. 頂部雙語導航 */
+        .site-header {
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            background: rgba(255, 255, 255, 0.96);
+            backdrop-filter: blur(8px);
+            border-bottom: 1px solid var(--border-color);
+            padding: 10px 16px;
+        }
+        .header-inner {
+            max-width: 800px;
+            margin: 0 auto;
             display: flex;
             align-items: center;
-            gap: 8px;
-            font-weight: bold;
-        }
-
-        /* 達人故事卡片 */
-        .expert-card {
-            background: #fff;
-            border-radius: 16px;
-            padding: 1.4rem;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
-            border-top: 4px solid var(--primary);
-        }
-        .expert-header {
-            display: flex;
-            align-items: center;
-            gap: 1rem;
-            margin-bottom: 1rem;
-        }
-        .expert-img {
-            width: 70px;
-            height: 70px;
-            border-radius: 50%;
-            border: 3px solid var(--primary);
-            flex-shrink: 0;
-            object-fit: cover;
-        }
-        .expert-header h4 { margin: 0; font-size: 1.15rem; color: var(--dark); font-weight: bold; }
-        .expert-tag { font-size: 0.85rem; color: var(--primary); font-weight: bold; margin-top: 2px; }
-        
-        .expert-story p {
-            margin: 0 0 0.8rem 0;
-            font-size: 0.96rem;
-            color: #444;
-            line-height: 1.65;
-        }
-        .expert-story p:last-child { margin-bottom: 0; }
-        .expert-story .highlight-text {
-            background: var(--primary-light);
-            padding: 10px 12px;
-            border-radius: 10px;
-            color: var(--dark);
-            font-weight: 500;
-            border-left: 3px solid var(--primary);
-        }
-
-        /* 樂活主題重點（去時間軸與第一/二天包裝） */
-        .story-card {
-            background: #fff;
-            border-radius: 16px;
-            padding: 1.3rem;
-            margin-bottom: 1rem;
-            box-shadow: 0 4px 12px rgba(0,0,0,0.03);
-            border-left: 5px solid var(--primary);
-        }
-        .story-card h4 { margin: 0 0 8px 0; font-size: 1.15rem; color: var(--primary); }
-        .story-card p { margin: 0; font-size: 0.98rem; color: #444; line-height: 1.7; }
-
-        /* 梯次卡片 (大字好點擊、樂活優化) */
-        .batch-card {
-            background: #fff;
-            border: 1px solid #ffe0e6;
-            border-radius: 14px;
-            padding: 1.1rem;
-            margin-bottom: 12px;
-            display: flex;
             justify-content: space-between;
-            align-items: center;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.02);
         }
-        .batch-info { flex: 1; }
-        .batch-no { font-weight: bold; color: var(--primary); font-size: 0.9rem; margin-bottom: 2px; }
-        .batch-date { font-weight: bold; font-size: 1.05rem; color: var(--dark); }
-        .batch-status { font-size: 0.88rem; color: var(--gray); margin-top: 4px; }
-        .batch-tag {
-            background: var(--primary);
-            color: #fff;
-            padding: 6px 12px;
+        .logo img {
+            height: 36px;
+            display: block;
+        }
+        .lang-switch {
+            display: flex;
+            background: #f0eeec;
             border-radius: 20px;
+            padding: 3px;
+        }
+        .lang-btn {
+            border: none;
+            outline: none;
+            background: transparent;
+            padding: 4px 12px;
+            font-size: 0.8rem;
+            font-weight: bold;
+            border-radius: 16px;
+            cursor: pointer;
+            color: var(--text-sub);
+        }
+        .lang-btn.active {
+            background: var(--white);
+            color: var(--primary);
+            box-shadow: 0 2px 5px rgba(0,0,0,0.08);
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 0 16px;
+        }
+
+        /* 2. 原民會官方橫額（素材-01） */
+        .official-banner {
+            width: 100%;
+            margin: 14px 0 20px;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.06);
+        }
+        .official-banner img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        /* 換檔區塊：遊程主視覺與標題 */
+        .tour-hero {
+            background: var(--white);
+            border-radius: 16px;
+            padding: 20px;
+            margin-bottom: 20px;
+            border: 1px solid var(--border-color);
+        }
+        .tour-tag {
+            display: inline-block;
+            background: var(--primary-light);
+            color: var(--primary);
+            font-size: 0.8rem;
+            font-weight: bold;
+            padding: 4px 10px;
+            border-radius: 4px;
+            margin-bottom: 8px;
+        }
+        .tour-hero h1 {
+            font-size: 1.5rem;
+            color: var(--primary-dark);
+            margin-bottom: 10px;
+            line-height: 1.4;
+        }
+        .tour-desc {
+            font-size: 0.95rem;
+            color: var(--text-sub);
+        }
+
+        /* 3. 規格特點標籤 3 欄 */
+        .specs-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 10px;
+            margin-bottom: 24px;
+        }
+        .spec-item {
+            background: var(--white);
+            border: 1px solid var(--border-color);
+            border-radius: 12px;
+            padding: 12px 8px;
+            text-align: center;
+        }
+        .spec-icon {
+            font-size: 1.4rem;
+            margin-bottom: 4px;
+        }
+        .spec-title {
             font-size: 0.85rem;
             font-weight: bold;
-            white-space: nowrap;
-            margin-left: 10px;
+            color: var(--primary-dark);
+            margin-bottom: 2px;
         }
-        .batch-tag.hot { background: #e63946; }
+        .spec-desc {
+            font-size: 0.75rem;
+            color: var(--text-sub);
+        }
 
-        /* 貼心 QA */
-        .qa-item {
-            background: #fff;
-            padding: 1.1rem;
+        /* 行程特色展示 */
+        .section-header {
+            font-size: 1.25rem;
+            color: var(--primary-dark);
+            margin: 24px 0 12px;
+            border-left: 4px solid var(--primary);
+            padding-left: 10px;
+            font-weight: bold;
+        }
+        .feature-box {
+            background: var(--white);
             border-radius: 14px;
-            margin-bottom: 10px;
-            font-size: 0.95rem;
-            box-shadow: 0 2px 6px rgba(0,0,0,0.02);
+            overflow: hidden;
+            border: 1px solid var(--border-color);
+            margin-bottom: 16px;
         }
-        .qa-q { font-weight: bold; color: var(--primary); margin-bottom: 6px; font-size: 1rem; }
-        .qa-a { color: #555; margin: 0; line-height: 1.6; }
+        .feature-img {
+            width: 100%;
+            height: 220px;
+            object-fit: cover;
+            display: block;
+        }
+        .feature-body {
+            padding: 16px;
+        }
+        .feature-body h3 {
+            font-size: 1.08rem;
+            color: var(--primary);
+            margin-bottom: 6px;
+        }
+        .feature-body p {
+            font-size: 0.9rem;
+            color: var(--text-sub);
+        }
 
-        /* 底部固定導購按鈕 */
-        .fixed-bottom {
+        /* 4. 主辦單位資質卡片 */
+        .organizer-card {
+            background: var(--white);
+            border-radius: 16px;
+            border: 1px solid var(--border-color);
+            box-shadow: 0 4px 12px rgba(0,0,0,0.03);
+            margin-top: 30px;
+            overflow: hidden;
+        }
+        .organizer-content {
+            padding: 20px;
+            display: flex;
+            gap: 16px;
+            align-items: flex-start;
+        }
+        .organizer-avatar {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            border: 3px solid var(--primary-light);
+            object-fit: cover;
+            flex-shrink: 0;
+        }
+        .organizer-meta h3 {
+            font-size: 1.1rem;
+            color: var(--primary-dark);
+            margin-bottom: 4px;
+        }
+        .license-no {
+            font-size: 0.78rem;
+            color: var(--text-sub);
+            margin-bottom: 8px;
+            background: #f7f6f5;
+            display: inline-block;
+            padding: 3px 8px;
+            border-radius: 4px;
+        }
+        .organizer-intro {
+            font-size: 0.88rem;
+            color: var(--text-main);
+            line-height: 1.5;
+        }
+        .endorsement-bar {
+            background: #faf7f5;
+            border-top: 1px solid var(--border-color);
+            padding: 12px 20px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        .endorsement-text {
+            font-size: 0.8rem;
+            font-weight: bold;
+            color: var(--primary-dark);
+        }
+        .endorsement-logo img {
+            height: 32px;
+            display: block;
+        }
+
+        /* 5. 共用常見問題 (FAQ) */
+        .faq-section {
+            position: relative;
+            margin-top: 30px;
+        }
+        .faq-mascot {
+            position: absolute;
+            top: -25px;
+            right: 10px;
+            width: 65px;
+            height: auto;
+        }
+        .faq-item {
+            background: var(--white);
+            border-radius: 12px;
+            border: 1px solid var(--border-color);
+            padding: 14px 16px;
+            margin-bottom: 10px;
+        }
+        .faq-q {
+            font-weight: bold;
+            color: var(--primary);
+            font-size: 0.95rem;
+            margin-bottom: 4px;
+        }
+        .faq-a {
+            font-size: 0.88rem;
+            color: var(--text-sub);
+        }
+        .faq-footer-banner {
+            width: 100%;
+            border-radius: 12px;
+            overflow: hidden;
+            margin-top: 14px;
+        }
+        .faq-footer-banner img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        /* 6. 底部固定懸浮列 */
+        .sticky-bar {
             position: fixed;
             bottom: 0;
             left: 0;
             right: 0;
             background: rgba(255, 255, 255, 0.95);
             backdrop-filter: blur(8px);
-            border-top: 1px solid #eee;
-            padding: 12px 16px;
-            z-index: 50;
-            box-shadow: 0 -4px 15px rgba(0,0,0,0.08);
+            border-top: 1px solid var(--border-color);
+            padding: 10px 16px;
+            z-index: 200;
         }
-        .btn-line {
-            display: block;
-            width: 100%;
-            max-width: 500px;
+        .sticky-inner {
+            max-width: 600px;
             margin: 0 auto;
-            background: #00B900;
-            color: #fff;
-            text-align: center;
+            display: grid;
+            grid-template-columns: 1fr 1.3fr;
+            gap: 10px;
+        }
+        .btn-action {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 6px;
             text-decoration: none;
-            font-size: 1.1rem;
+            font-size: 0.88rem;
             font-weight: bold;
-            padding: 14px 0;
-            border-radius: 12px;
-            box-shadow: 0 4px 10px rgba(0, 185, 0, 0.3);
+            border-radius: 10px;
+            padding: 12px 8px;
+            text-align: center;
+        }
+        .btn-b2b {
+            background: #4a4a4a;
+            color: var(--white);
+        }
+        .btn-b2c {
+            background: #00B900;
+            color: var(--white);
+        }
+
+        @media (max-width: 600px) {
+            .specs-grid {
+                grid-template-columns: 1fr;
+                gap: 8px;
+            }
+            .spec-item {
+                display: flex;
+                align-items: center;
+                gap: 12px;
+                text-align: left;
+                padding: 10px 14px;
+            }
+            .spec-icon { margin-bottom: 0; }
+            .organizer-content {
+                flex-direction: column;
+                align-items: center;
+                text-align: center;
+            }
+            .feature-img { height: 180px; }
+            .faq-mascot {
+                width: 50px;
+                top: -15px;
+            }
         }
     </style>
 </head>
 <body>
 
-<header class="header">
-    <h1>🌸 2027 白蘭櫻花雨</h1>
-    <p>櫻花樹下的泰雅微旅行｜平日限定 2 日遊</p>
-</header>
-
-<div class="container">
-
-    <!-- 15秒直擊樂活族亮點（置頂核心誘因） -->
-    <div class="fast-read">
-        <h3>✨ 樂活族首選！無憂賞櫻 4 大保障</h3>
-        <div class="lohas-features">
-            <div class="lohas-item">
-                <span class="lohas-icon">🚌</span>
-                <span><strong>台北直達免開車：</strong>台北車站定點接送，免除山路駕駛與尋找車位疲勞</span>
+    <!-- 1. 頂部雙語導航（ENVOY Logo 置換） -->
+    <header class="site-header">
+        <div class="header-inner">
+            <div class="logo">
+                <img src="https://raw.githubusercontent.com/envoytraveltaiwan-walker/sakura-atayal/main/ENVOY_Logo_Transparent_HQ.png" alt="ENVOY TRAVEL">
             </div>
-            <div class="lohas-item">
-                <span class="lohas-icon">🍵</span>
-                <span><strong>櫻花樹下泰雅茶席：</strong>擺脫走馬看花，優雅喝茶品嚐部落微醺點心</span>
-            </div>
-            <div class="lohas-item">
-                <span class="lohas-icon">🌿</span>
-                <span><strong>平日獨享精緻小團：</strong>6人成團、最多20人，避開假日人潮人聲鼎沸</span>
-            </div>
-            <div class="lohas-item">
-                <span class="lohas-icon">🌌</span>
-                <span><strong>慢活親民不累腳：</strong>平緩步道散策，夜觀零光害星空與壯麗雲海</span>
+            <div class="lang-switch">
+                <button class="lang-btn active" id="btn-ja" onclick="setLanguage('ja')">日本語</button>
+                <button class="lang-btn" id="btn-zh" onclick="setLanguage('zh')">繁體中文</button>
             </div>
         </div>
-    </div>
+    </header>
 
-    <!-- 達人故事帶路（強化預約誘因） -->
-    <div class="section-title">👩‍💼 達人靈魂帶路</div>
-    <div class="expert-card">
-        <div class="expert-header">
-            <img class="expert-img" src="https://raw.githubusercontent.com/envoytraveltaiwan-walker/sakura-atayal/main/%E8%8E%89%E6%A2%85%E5%A7%90.png" alt="莉梅姐">
-            <div>
-                <h4>資深旅遊顧問 莉梅姐</h4>
-                <div class="expert-tag">10年深耕原鄉文化專家</div>
+    <main class="container">
+        <!-- 2. 原民會官方橫額（素材-01 置換） -->
+        <div class="official-banner">
+            <img src="https://raw.githubusercontent.com/envoytraveltaiwan-walker/sakura-atayal/main/%E7%B4%A0%E6%9D%90_2026%E6%97%A5%E6%9C%AC%E6%97%85%E5%B1%95(%E5%8E%9F%E6%B0%91%E6%9C%83)_%E7%B5%A6%E6%A5%AD%E8%80%85-01.png" alt="部行山海間">
+        </div>
+
+        <!-- ==================== 【換檔填空區 START】 ==================== -->
+        <section class="tour-hero">
+            <span class="tour-tag" data-lang="ja">台湾原住民族文化探訪</span>
+            <span class="tour-tag" data-lang="zh">台灣原住民族文化深訪</span>
+            
+            <h1 data-lang="ja">【行程名稱填空】日文遊程主標題</h1>
+            <h1 data-lang="zh">【行程名稱填空】中文遊程主標題</h1>
+            
+            <p class="tour-desc" data-lang="ja">日文遊程核心簡介：1〜2文で体験の魅力、自然景観、伝統文化の深みを端的にまとめます。</p>
+            <p class="tour-desc" data-lang="zh">中文遊程核心簡介：以1至2句話重點闡述在地部落體驗特色、山海自然景觀與文化深厚魅力。</p>
+        </section>
+        <!-- ==================== 【換檔填空區 END】 ==================== -->
+
+        <!-- 3. 規格特點標籤 3 欄 -->
+        <div class="specs-grid">
+            <div class="spec-item">
+                <div class="spec-icon">👥</div>
+                <div>
+                    <div class="spec-title" data-lang="ja">少人数催行</div>
+                    <div class="spec-title" data-lang="zh">精緻小團</div>
+                    <div class="spec-desc" data-lang="ja">6名様より貸切可</div>
+                    <div class="spec-desc" data-lang="zh">6人成行自主包團</div>
+                </div>
+            </div>
+            <div class="spec-item">
+                <div class="spec-icon">🚐</div>
+                <div>
+                    <div class="spec-title" data-lang="ja">専用車往復</div>
+                    <div class="spec-title" data-lang="zh">專車往返接送</div>
+                    <div class="spec-desc" data-lang="ja">台北市内指定地送迎</div>
+                    <div class="spec-desc" data-lang="zh">台北定點接送直達</div>
+                </div>
+            </div>
+            <div class="spec-item">
+                <div class="spec-icon">🛡️</div>
+                <div>
+                    <div class="spec-title" data-lang="ja">安心の手配力</div>
+                    <div class="spec-title" data-lang="zh">合法甲種承辦</div>
+                    <div class="spec-desc" data-lang="ja">旅行業正規登録会社</div>
+                    <div class="spec-desc" data-lang="zh">旅責險保障完備</div>
+                </div>
             </div>
         </div>
-        <div class="expert-story">
-            <p>「走過半個地球，看過無數景致，我常跟朋友說：<strong>台灣最震撼心靈的風景，其實藏在部落的櫻花樹下。</strong>」</p>
-            <p>白蘭部落是我藏在口袋裡很久的泰雅秘境。那裡沒有商業喧囂，只有滿山粉紅櫻花、浩瀚雲海與無光害星空。幾年前我第一次在櫻花樹下接過族人遞來的熱茶，那一刻的平靜與感動，至今依然深刻。</p>
-            <p class="highlight-text">「好風景值得優雅對待。為了避開人潮擠壓，我堅持只帶<strong>『平日精緻小團』</strong>。每梯次名額非常有限，2027 年的櫻花雨，邀請您提早預約這份歲月靜好。」</p>
+
+        <!-- ==================== 【換檔填空區：行程特色】 ==================== -->
+        <div class="section-header" data-lang="ja">体験の見どころ</div>
+        <div class="section-header" data-lang="zh">行程特色亮點</div>
+
+        <!-- 亮點一（素材-03 置換） -->
+        <div class="feature-box">
+            <img class="feature-img" src="https://raw.githubusercontent.com/envoytraveltaiwan-walker/sakura-atayal/main/%E7%B4%A0%E6%9D%90_2026%E6%97%A5%E6%9C%AC%E6%97%85%E5%B1%95(%E5%8E%9F%E6%B0%91%E6%9C%83)_%E7%B5%A6%E6%A5%AD%E8%80%85-03.png" alt="文化特色展示">
+            <div class="feature-body">
+                <h3 data-lang="ja">🌿 【文化特色一】日文標題</h3>
+                <h3 data-lang="zh">🌿 【文化特色一】中文標題</h3>
+                <p data-lang="ja">文化体験の具体的な内容、歴史背景、職人のこだわりなどを記述します。</p>
+                <p data-lang="zh">說明具體文化體驗工藝、部落歷史脈絡與儀式感體驗重點。</p>
+            </div>
+        </div>
+
+        <!-- 亮點二（素材-04 置換） -->
+        <div class="feature-box">
+            <img class="feature-img" src="https://raw.githubusercontent.com/envoytraveltaiwan-walker/sakura-atayal/main/%E7%B4%A0%E6%9D%90_2026%E6%97%A5%E6%9C%AC%E6%97%85%E5%B1%95(%E5%8E%9F%E6%B0%91%E6%9C%83)_%E7%B5%A6%E6%A5%AD%E8%80%85-04.png" alt="風味料理展示">
+            <div class="feature-body">
+                <h3 data-lang="ja">🍲 【風味料理二】日文標題</h3>
+                <h3 data-lang="zh">🍲 【風味料理二】中文標題</h3>
+                <p data-lang="ja">伝統食材、香辛料（馬告等）、地元ならではの食文化体験を紹介します。</p>
+                <p data-lang="zh">介紹在地採集辛香料（如馬告）、山林時令野味與部落特色原香饗宴。</p>
+            </div>
+        </div>
+        <!-- ==================== 【換檔填空區 END】 ==================== -->
+
+        <!-- 4. 主辦單位資質卡片（素材-02 置換背書 Logo） -->
+        <section class="organizer-card">
+            <div class="organizer-content">
+                <img class="organizer-avatar" src="https://raw.githubusercontent.com/envoytraveltaiwan-walker/sakura-atayal/main/%E8%8E%89%E6%A2%85%E5%A7%90.png" alt="莉梅姐">
+                <div class="organizer-meta">
+                    <h3 data-lang="ja">主催・運行｜アンジェ国際旅行社</h3>
+                    <h3 data-lang="zh">主辦單位｜安捷國際旅行社</h3>
+                    <div class="license-no" data-lang="ja">台湾交通部観光署認可 甲種旅行業（交観甲字第5920号）｜統一番号：16169138</div>
+                    <div class="license-no" data-lang="zh">交通部觀光署 甲種旅行業（交觀甲字第 5920 號）｜統一編號：16169138</div>
+                    <p class="organizer-intro" data-lang="ja">
+                        35年の実績と信頼。台湾原住民族の文化と自然を深く知るスペシャリスト「莉梅姐」が監修。少人数プライベートツアーから、日本の旅行会社様向けのランドオペレーター（地上手配）業務、企業・グループ視察まで、合法的かつ確かな手配力でお応えします。
+                    </p>
+                    <p class="organizer-intro" data-lang="zh">
+                        深耕業界 35 年資歷，由熟稔原鄉文化的資深旅遊專家「莉梅姐」品質把關。專精少人數精緻專屬團，並具備完整合法的日本旅行社 Land Operator 地接承辦、企業考察與客製家族包團經驗，提供最安心專業的在地手配力。
+                    </p>
+                </div>
+            </div>
+            <div class="endorsement-bar">
+                <div class="endorsement-text" data-lang="ja">【推薦・公認】台湾 原住民族委員会</div>
+                <div class="endorsement-text" data-lang="zh">【官方推薦】行政院原住民族委員會</div>
+                <div class="endorsement-logo">
+                    <img src="https://raw.githubusercontent.com/envoytraveltaiwan-walker/sakura-atayal/main/%E7%B4%A0%E6%9D%90_2026%E6%97%A5%E6%9C%AC%E6%97%85%E5%B1%95(%E5%8E%9F%E6%B0%91%E6%9C%83)_%E7%B5%A6%E6%A5%AD%E8%80%85-02.png" alt="原民會標誌">
+                </div>
+            </div>
+        </section>
+
+        <!-- 5. 共用三大常見問題（素材-05 吉祥物、素材-06 宣傳底圖） -->
+        <section class="faq-section">
+            <img class="faq-mascot" src="https://raw.githubusercontent.com/envoytraveltaiwan-walker/sakura-atayal/main/%E7%B4%A0%E6%9D%90_2026%E6%97%A5%E6%9C%AC%E6%97%85%E5%B1%95(%E5%8E%9F%E6%B0%91%E6%9C%83)_%E7%B5%A6%E6%A5%AD%E8%80%85-05.png" alt="吉祥物">
+            <div class="section-header" data-lang="ja">よくあるご質問</div>
+            <div class="section-header" data-lang="zh">常見問題 Q&amp;A</div>
+
+            <div class="faq-item">
+                <div class="faq-q" data-lang="ja">Q1: 1名または2名でも参加できますか？</div>
+                <div class="faq-q" data-lang="zh">Q1: 只有 1~2 個人也可以報名嗎？</div>
+                <div class="faq-a" data-lang="ja">A: 可能です。公式LINEよりお気軽にご連絡ください。他のお客様との混載調整や、2名様専用のチャーター手配（個別お見積り）も迅速に対応いたします。</div>
+                <div class="faq-a" data-lang="zh">A: 可以的！歡迎加入 LINE 登記湊團；若希望享受純私密行程，我們亦能為 1~2 位貴賓獨立安排專車包團，快速提供報價。</div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-q" data-lang="ja">Q2: 部落の民家に宿泊するのでしょうか？</div>
+                <div class="faq-q" data-lang="zh">Q2: 住宿是住在當地的部落民家嗎？</div>
+                <div class="faq-a" data-lang="ja">A: いいえ、日中は集落でディープな文化体験を行いますが、夜は周辺の衛生基準を満たした合法的なリゾートホテルまたは厳選民宿へご案内し、快適な滞在をお約束します。</div>
+                <div class="faq-a" data-lang="zh">A: 請放心，白天我們深入聚落體驗最道地的工藝與人文，夜間則安排下榻周邊經嚴格認證的合法度假飯店或精選特色民宿，兼顧舒適度與衛生品質。</div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-q" data-lang="ja">Q3: 日本の旅行会社ですが、ランド手配の委託は可能ですか？</div>
+                <div class="faq-q" data-lang="zh">Q3: 我們是旅行社同業，是否可以委託進行 Land 地接？</div>
+                <div class="faq-a" data-lang="ja">A: 歓迎いたします。弊社は正規の甲種旅行社として、専用車・日本語ガイド・体験プログラム・宿泊手配までワンストップで承ります。B2Bメール窓口よりお問い合わせください。</div>
+                <div class="faq-a" data-lang="zh">A: 非常歡迎！安捷國際為正規註冊甲種旅行社，具備專車、專業日語導遊、部落工作坊手作預約及星級旅宿全套一條龍地接實力，歡迎同業來信洽商。</div>
+            </div>
+
+            <!-- 素材-06 原民文化形象圖置入 -->
+            <div class="faq-footer-banner">
+                <img src="https://raw.githubusercontent.com/envoytraveltaiwan-walker/sakura-atayal/main/%E7%B4%A0%E6%9D%90_2026%E6%97%A5%E6%9C%AC%E6%97%85%E5%B1%95(%E5%8E%9F%E6%B0%91%E6%9C%83)_%E7%B5%A6%E6%A5%AD%E8%80%85-06.png" alt="原住民族文化體驗">
+            </div>
+        </section>
+    </main>
+
+    <!-- 6. 底部固定懸浮諮詢列（Sticky Bar） -->
+    <div class="sticky-bar">
+        <div class="sticky-inner">
+            <a href="mailto:service@envoytravel.com.tw" class="btn-action btn-b2b">
+                <span>✉️</span>
+                <span data-lang="ja">B2B お問い合わせ</span>
+                <span data-lang="zh">同業 / 企業洽商</span>
+            </a>
+            <a href="https://lin.ee/Z3c7Qam" target="_blank" rel="noopener" class="btn-action btn-b2c">
+                <span>💬</span>
+                <span data-lang="ja">個人旅行のご相談</span>
+                <span data-lang="zh">加 LINE 專人諮詢</span>
+            </a>
         </div>
     </div>
 
-    <!-- 主題式樂活重點（無時間軸、無第一/二天包裝） -->
-    <div class="section-title">✨ 旅程三大樂活重點體驗</div>
-    
-    <div class="story-card">
-        <h4>🌸 櫻花樹下的泰雅茶席與慢活時光</h4>
-        <p>台北車站專車直達接送，免去山路開車與找車位的疲勞。抵達新竹五峰【白蘭部落】，在櫻花飄落的樹冠下鋪開茶席，品嚐特調熱茶與部落點心，享受歲月靜好的優雅氛圍。</p>
-    </div>
+    <!-- 雙語切換機制（預設日文） -->
+    <script>
+        function setLanguage(lang) {
+            const body = document.body;
+            const btnJa = document.getElementById('btn-ja');
+            const btnZh = document.getElementById('btn-zh');
 
-    <div class="story-card">
-        <h4>🍲 原香舌尖饗宴與星空夜宴</h4>
-        <p>用在地美味記住原鄉的味道！夜晚品嚐暖心的高山椴木香菇特色大鍋菜，中午享用道地的泰雅原香靈魂午宴（含香烤竹筒飯、泰雅馬告山豬肉、香氣濃郁的刺蔥烘蛋）。</p>
-    </div>
-
-    <div class="story-card">
-        <h4>🌌 零光害觀星與壯麗雲海散策</h4>
-        <p>避開週末人潮，平日獨享山林寧靜。夜晚抬頭即是滿天星斗浪漫入眠；清晨在櫻花與晨光包圍下享用古早味地瓜稀飯，迎著白蘭部落壯觀的雲海漫步步道，帶著滿滿美照輕鬆歸途。</p>
-    </div>
-
-    <!-- 梯次卡片 (大字好點擊、樂活優化) -->
-    <div class="section-title">🗓️ 2027 預約梯次（平日限定）</div>
-    <p style="font-size: 0.9rem; color: #666; margin-top: -8px;">6人成團，最多20人，給您高品質慢遊體驗</p>
-
-    <div class="batch-card">
-        <div class="batch-info">
-            <div class="batch-no">梯次 T01</div>
-            <div class="batch-date">2027 / 02 / 15 (一) - 02 / 16 (二)</div>
-            <div class="batch-status">山櫻花初綻，粉紅漸濃</div>
-        </div>
-        <div class="batch-tag">預約中</div>
-    </div>
-
-    <div class="batch-card">
-        <div class="batch-info">
-            <div class="batch-no">梯次 T02</div>
-            <div class="batch-date">2027 / 02 / 17 (三) - 02 / 18 (四)</div>
-            <div class="batch-status">昭和櫻、富士櫻盛開期</div>
-        </div>
-        <div class="batch-tag hot">熱門推薦</div>
-    </div>
-
-    <div class="batch-card">
-        <div class="batch-info">
-            <div class="batch-no">梯次 T03</div>
-            <div class="batch-date">2027 / 02 / 22 (一) - 02 / 23 (二)</div>
-            <div class="batch-status">滿開高潮期，粉紅花海 🌸</div>
-        </div>
-        <div class="batch-tag hot">熱門推薦</div>
-    </div>
-
-    <div class="batch-card">
-        <div class="batch-info">
-            <div class="batch-no">梯次 T04</div>
-            <div class="batch-date">2027 / 02 / 24 (三) - 02 / 25 (四)</div>
-            <div class="batch-status">滿開高潮期，風吹櫻花雨 🌸</div>
-        </div>
-        <div class="batch-tag hot">熱門推薦</div>
-    </div>
-
-    <div class="batch-card">
-        <div class="batch-info">
-            <div class="batch-no">梯次 T05</div>
-            <div class="batch-date">2027 / 03 / 01 (一) - 03 / 02 (二)</div>
-            <div class="batch-status">櫻吹雪浪漫期，滿地落櫻</div>
-        </div>
-        <div class="batch-tag hot">熱門推薦</div>
-    </div>
-
-    <div class="batch-card">
-        <div class="batch-info">
-            <div class="batch-no">梯次 T06</div>
-            <div class="batch-date">2027 / 03 / 03 (三) - 03 / 04 (四)</div>
-            <div class="batch-status">櫻吹雪尾聲，嫩綠交織</div>
-        </div>
-        <div class="batch-tag">預約中</div>
-    </div>
-
-    <!-- 樂活族貼心 QA -->
-    <div class="section-title">💡 貼心小解答</div>
-    <div class="qa-item">
-        <div class="qa-q">Q: 一個人也可以報名參加嗎？</div>
-        <div class="qa-a">當然可以！我們非常鼓勵單人報名，並會協助進行湊團，很多樂活朋友獨自報名後都結交到了喜愛山林的新朋友。</div>
-    </div>
-    <div class="qa-item">
-        <div class="qa-q">Q: 行程會不會走很多路、體力負擔大？</div>
-        <div class="qa-a">完全不會。行程專為樂活族群設計，步調慢活不緊湊，以靜態櫻花茶席、平緩步道漫步與品嚐在地美食為主。</div>
-    </div>
-    <div class="qa-item">
-        <div class="qa-q">Q: 山路開車會不會很辛苦？</div>
-        <div class="qa-a">我們提供台北車站直達接駁專車，您只需在車上安心休息，免去親自駕駛與找停車位的煩惱。</div>
-    </div>
-
-</div>
-
-<!-- 底部固定導購按鈕 -->
-<div class="fixed-bottom">
-    <a href="https://lin.ee/Z3c7Qam" class="btn-line">
-        💬 加 LINE 領 $500 優惠／預約梯次
-    </a>
-</div>
-
+            if (lang === 'zh') {
+                body.classList.add('lang-zh');
+                btnZh.classList.add('active');
+                btnJa.classList.remove('active');
+                document.documentElement.lang = 'zh-TW';
+            } else {
+                body.classList.remove('lang-zh');
+                btnJa.classList.add('active');
+                btnZh.classList.remove('active');
+                document.documentElement.lang = 'ja';
+            }
+        }
+    </script>
 </body>
 </html>
