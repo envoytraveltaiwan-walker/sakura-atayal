@@ -41,6 +41,17 @@
         body.lang-zh h2[data-lang="zh"],
         body.lang-zh h3[data-lang="zh"] { display: block; }
 
+        /* 櫻花雨畫布：置頂且不干擾點擊 */
+        #sakura-canvas {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: 9999;
+        }
+
         /* 1. 頂部雙語導航 */
         .site-header {
             position: sticky;
@@ -533,6 +544,9 @@
         </div>
     </div>
 
+    <!-- 櫻花雨畫布元素 -->
+    <canvas id="sakura-canvas"></canvas>
+
     <!-- 雙語切換機制（預設日文） -->
     <script>
         function setLanguage(lang) {
@@ -552,6 +566,78 @@
                 document.documentElement.lang = 'ja';
             }
         }
+    </script>
+
+    <!-- 櫻花雨飄落動畫腳本 -->
+    <script>
+    (function () {
+        const canvas = document.getElementById('sakura-canvas');
+        const ctx = canvas.getContext('2d');
+
+        let width = (canvas.width = window.innerWidth);
+        let height = (canvas.height = window.innerHeight);
+
+        window.addEventListener('resize', () => {
+            width = canvas.width = window.innerWidth;
+            height = canvas.height = window.innerHeight;
+        });
+
+        const petalCount = 30;
+        const petals = [];
+
+        class Petal {
+            constructor() {
+                this.reset();
+            }
+            reset() {
+                this.x = Math.random() * width;
+                this.y = Math.random() * -height;
+                this.size = Math.random() * 8 + 7;
+                this.speedY = Math.random() * 1.2 + 0.8;
+                this.speedX = Math.random() * 1.5 - 0.5;
+                this.angle = Math.random() * Math.PI * 2;
+                this.spin = Math.random() * 0.03 - 0.015;
+                this.opacity = Math.random() * 0.4 + 0.5;
+            }
+            update() {
+                this.y += this.speedY;
+                this.x += Math.sin(this.angle) * 1.2 + this.speedX;
+                this.angle += this.spin;
+
+                if (this.y > height + 20 || this.x > width + 20 || this.x < -20) {
+                    this.reset();
+                    this.y = -10;
+                }
+            }
+            draw() {
+                ctx.save();
+                ctx.translate(this.x, this.y);
+                ctx.rotate(this.angle);
+                ctx.fillStyle = `rgba(255, 183, 197, ${this.opacity})`;
+                ctx.beginPath();
+                ctx.moveTo(0, 0);
+                ctx.bezierCurveTo(-this.size / 2, -this.size / 2, -this.size, this.size / 3, 0, this.size);
+                ctx.bezierCurveTo(this.size, this.size / 3, this.size / 2, -this.size / 2, 0, 0);
+                ctx.fill();
+                ctx.restore();
+            }
+        }
+
+        for (let i = 0; i < petalCount; i++) {
+            petals.push(new Petal());
+        }
+
+        function render() {
+            ctx.clearRect(0, 0, width, height);
+            petals.forEach(petal => {
+                petal.update();
+                petal.draw();
+            });
+            requestAnimationFrame(render);
+        }
+
+        render();
+    })();
     </script>
 </body>
 </html>
