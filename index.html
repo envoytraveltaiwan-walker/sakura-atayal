@@ -1,1000 +1,1087 @@
 <!DOCTYPE html>
 <html lang="ja">
 <head>
-    <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-PPP4CT61HC"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-      gtag('config', 'G-PPP4CT61HC');
-    </script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>2027 桜の秘境雨｜櫻花樹下的泰雅樂活微旅行｜ENVOY TRAVEL 安捷國際旅行社</title>
 
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>2027 桜の秘境雨｜櫻花樹下的泰雅樂活微旅行｜アンジェ国際旅行社</title>
-    <style>
-        :root {
-            --primary: #d66479;
-            --primary-light: #fff0f3;
-            --primary-dark: #8b3425;
-            --text-main: #333333;
-            --text-sub: #666666;
-            --bg-base: #fcfafb;
-            --white: #ffffff;
-            --border-color: #ffe0e6;
-        }
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-PPP4CT61HC"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-PPP4CT61HC');
+  </script>
 
-        * {
-            box-sizing: border-box;
-            margin: 0;
-            padding: 0;
-        }
+  <!-- Google Fonts: Noto Serif JP, Noto Serif TC, Montserrat -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Noto+Sans+JP:wght@300;400;500;600&family=Noto+Sans+TC:wght@300;400;500;600&family=Noto+Serif+JP:wght@300;400;600;700&family=Noto+Serif+TC:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
-        body {
-            font-family: -apple-system, BlinkMacSystemFont, "PingFang TC", "Hiragino Kaku Gothic ProN", "Microsoft JhengHei", sans-serif;
-            background-color: var(--bg-base);
-            color: var(--text-main);
-            line-height: 1.6;
-            padding-bottom: 90px;
-        }
+  <style>
+    :root {
+      --c-navy: #132438;
+      --c-navy-light: #1B365D;
+      --c-gold: #C5A059;
+      --c-gold-soft: #D9C394;
+      --c-gold-dark: #8C6B2D;
+      --c-paper: #FAF8F5;
+      --c-sand: #F2EDE4;
+      --c-border: rgba(197, 160, 89, 0.28);
+      
+      /* 櫻花主題專屬柔和點綴色 */
+      --c-sakura: #D66479;
+      --c-sakura-light: #FFF0F3;
+      --c-sakura-dark: #8B3425;
 
-        [data-lang="zh"] { display: none; }
-        body.lang-zh [data-lang="ja"] { display: none; }
-        body.lang-zh [data-lang="zh"] { display: inline; }
-        body.lang-zh blockquote[data-lang="zh"],
-        body.lang-zh div[data-lang="zh"],
-        body.lang-zh p[data-lang="zh"],
-        body.lang-zh h1[data-lang="zh"],
-        body.lang-zh h2[data-lang="zh"],
-        body.lang-zh h3[data-lang="zh"],
-        body.lang-zh h4[data-lang="zh"] { display: block; }
+      --font-serif-ja: 'Noto Serif JP', serif;
+      --font-serif-tc: 'Noto Serif TC', serif;
+      --font-sans-ja: 'Noto Sans JP', sans-serif;
+      --font-sans-tc: 'Noto Sans TC', sans-serif;
+      --font-en: 'Montserrat', sans-serif;
+    }
 
-        #sakura-canvas {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            pointer-events: none;
-            z-index: 9999;
-        }
+    * { box-sizing: border-box; margin: 0; padding: 0; -webkit-tap-highlight-color: transparent; }
 
-        .site-header {
-            position: sticky;
-            top: 0;
-            z-index: 100;
-            background: rgba(255, 255, 255, 0.96);
-            backdrop-filter: blur(8px);
-            border-bottom: 1px solid var(--border-color);
-            padding: 10px 16px;
-        }
-        .header-inner {
-            max-width: 800px;
-            margin: 0 auto;
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-        }
-        .logo img {
-            height: 34px;
-            display: block;
-        }
-        .lang-switch {
-            display: flex;
-            background: #f5edef;
-            border-radius: 20px;
-            padding: 3px;
-        }
-        .lang-btn {
-            border: none;
-            outline: none;
-            background: transparent;
-            padding: 4px 12px;
-            font-size: 0.8rem;
-            font-weight: bold;
-            border-radius: 16px;
-            cursor: pointer;
-            color: var(--text-sub);
-        }
-        .lang-btn.active {
-            background: var(--white);
-            color: var(--primary);
-            box-shadow: 0 2px 5px rgba(214, 100, 121, 0.15);
-        }
+    body {
+      background-color: #1F2732;
+      color: var(--c-navy);
+      font-family: var(--font-serif-ja);
+      line-height: 1.85;
+      letter-spacing: 0.04em;
+      display: flex;
+      justify-content: center;
+      min-height: 100vh;
+      transition: font-family 0.2s ease;
+    }
 
-        .container {
-            max-width: 800px;
-            margin: 0 auto;
-            padding: 0 16px;
-        }
+    body.lang-zh-active {
+      font-family: var(--font-serif-tc);
+    }
 
-        .official-banner {
-            width: 100%;
-            margin: 12px 0;
-            border-radius: 14px;
-            overflow: hidden;
-            box-shadow: 0 4px 12px rgba(0,0,0,0.06);
-        }
-        .official-banner img {
-            width: 100%;
-            height: auto;
-            display: block;
-        }
+    .mobile-stage {
+      width: 100%;
+      max-width: 480px;
+      background-color: var(--c-paper);
+      min-height: 100vh;
+      position: relative;
+      box-shadow: 0 0 40px rgba(0,0,0,0.4);
+      padding-bottom: 95px;
+      overflow-x: hidden;
+    }
 
-        .tour-hero {
-            background: linear-gradient(135deg, #ffd1dc 0%, #ffb6c1 100%);
-            color: #5a3c43;
-            text-align: center;
-            padding: 1.8rem 1.2rem;
-            border-radius: 18px;
-            margin-bottom: 18px;
-        }
-        .tour-tag {
-            display: inline-block;
-            background: rgba(255, 255, 255, 0.85);
-            color: var(--primary-dark);
-            font-size: 0.82rem;
-            font-weight: bold;
-            padding: 4px 12px;
-            border-radius: 20px;
-            margin-bottom: 8px;
-        }
-        .tour-hero h1 {
-            font-size: 1.6rem;
-            font-weight: 800;
-            margin-bottom: 6px;
-            line-height: 1.35;
-        }
-        .tour-desc {
-            font-size: 0.98rem;
-            font-weight: bold;
-            opacity: 0.95;
-        }
+    /* 頂部泰雅幾何圖騰織帶 */
+    .top-tribal-band {
+      width: 100%;
+      height: 8px;
+      background-color: var(--c-navy);
+      background-image: repeating-linear-gradient(45deg, var(--c-gold) 0, var(--c-gold) 2px, transparent 0, transparent 8px),
+                        repeating-linear-gradient(-45deg, var(--c-gold) 0, var(--c-gold) 2px, transparent 0, transparent 8px);
+      background-size: 10px 8px;
+    }
 
-        .fast-read {
-            background: #fff;
-            border: 2px solid var(--primary);
-            border-radius: 16px;
-            padding: 1.2rem;
-            margin-bottom: 20px;
-            box-shadow: 0 8px 20px rgba(214, 100, 121, 0.12);
-        }
-        .fast-read h3 {
-            margin: 0 0 12px 0;
-            color: var(--primary);
-            font-size: 1.15rem;
-            display: flex;
-            align-items: center;
-            gap: 6px;
-            font-weight: bold;
-        }
-        .lohas-features {
-            display: flex;
-            flex-direction: column;
-            gap: 10px;
-        }
-        .lohas-item {
-            background: var(--primary-light);
-            padding: 10px 14px;
-            border-radius: 12px;
-            display: flex;
-            align-items: center;
-            gap: 10px;
-            font-size: 0.95rem;
-            font-weight: bold;
-            color: #5a3c43;
-        }
-        .lohas-icon {
-            font-size: 1.2rem;
-            flex-shrink: 0;
-        }
+    .site-nav {
+      position: sticky;
+      top: 0;
+      z-index: 50;
+      background: rgba(250, 248, 245, 0.95);
+      backdrop-filter: blur(8px);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 12px 20px;
+      border-bottom: 1px solid var(--c-border);
+    }
 
-        .specs-grid {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 10px;
-            margin-bottom: 24px;
-        }
-        .spec-item {
-            background: var(--white);
-            border: 1px solid var(--border-color);
-            border-radius: 12px;
-            padding: 12px 8px;
-            text-align: center;
-        }
-        .spec-icon {
-            font-size: 1.4rem;
-            margin-bottom: 4px;
-        }
-        .spec-title {
-            font-size: 0.85rem;
-            font-weight: bold;
-            color: var(--primary-dark);
-            margin-bottom: 2px;
-        }
-        .spec-desc {
-            font-size: 0.75rem;
-            color: var(--text-sub);
-        }
+    .brand-group {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      text-decoration: none;
+    }
 
-        .section-header {
-            font-size: 1.3rem;
-            color: #5a3c43;
-            margin: 24px 0 12px;
-            border-left: 4px solid var(--primary);
-            padding-left: 10px;
-            font-weight: bold;
-        }
+    .brand-svg { width: 24px; height: 32px; }
+    .brand-text-block { display: flex; flex-direction: column; }
 
-        .expert-card {
-            background: #fff;
-            border-radius: 16px;
-            padding: 1.4rem;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.04);
-            border-top: 4px solid var(--primary);
-            border: 1px solid var(--border-color);
-            margin-bottom: 24px;
-        }
-        .expert-header {
-            display: flex;
-            align-items: center;
-            gap: 1rem;
-            margin-bottom: 1rem;
-        }
-        .expert-img {
-            width: 70px;
-            height: 70px;
-            border-radius: 50%;
-            border: 3px solid var(--primary);
-            flex-shrink: 0;
-            object-fit: cover;
-        }
-        .expert-header h4 { margin: 0; font-size: 1.15rem; color: #5a3c43; font-weight: bold; }
-        .expert-tag { font-size: 0.85rem; color: var(--primary); font-weight: bold; margin-top: 2px; }
-        .expert-story p {
-            margin: 0 0 0.8rem 0;
-            font-size: 0.96rem;
-            color: #444;
-            line-height: 1.65;
-        }
-        .expert-story p:last-child { margin-bottom: 0; }
-        .expert-story .highlight-text {
-            background: var(--primary-light);
-            padding: 10px 12px;
-            border-radius: 10px;
-            color: #5a3c43;
-            font-weight: 500;
-            border-left: 3px solid var(--primary);
-        }
+    .brand-name-en {
+      font-family: var(--font-en);
+      font-size: 13px;
+      font-weight: 700;
+      letter-spacing: 0.18em;
+      color: var(--c-navy);
+      line-height: 1.1;
+    }
 
-        .story-card {
-            background: #fff;
-            border-radius: 16px;
-            padding: 1.3rem;
-            margin-bottom: 12px;
-            box-shadow: 0 4px 12px rgba(0,0,0,0.03);
-            border: 1px solid var(--border-color);
-            border-left: 5px solid var(--primary);
-        }
-        .story-card h4 { margin: 0 0 8px 0; font-size: 1.12rem; color: var(--primary); }
-        .story-card p { margin: 0; font-size: 0.96rem; color: #444; line-height: 1.7; }
+    .brand-name-sub {
+      font-family: var(--font-en);
+      font-size: 8px;
+      letter-spacing: 0.15em;
+      color: var(--c-gold);
+      font-weight: 600;
+    }
 
-        .batch-grid-compact {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 10px;
-            margin-bottom: 24px;
-        }
-        .batch-tile {
-            background: var(--white);
-            border: 1.5px solid var(--border-color);
-            border-radius: 12px;
-            padding: 10px 12px;
-            position: relative;
-            box-shadow: 0 2px 6px rgba(0,0,0,0.02);
-            cursor: pointer;
-            transition: transform 0.15s ease;
-        }
-        .batch-tile:active {
-            transform: scale(0.98);
-        }
-        .batch-tile.hot {
-            border-color: #ffb6c1;
-            background: #fffcfd;
-        }
-        .batch-tile-top {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            margin-bottom: 4px;
-        }
-        .batch-tag-sm {
-            font-size: 0.75rem;
-            font-weight: 800;
-            color: var(--primary);
-            background: var(--primary-light);
-            padding: 2px 6px;
-            border-radius: 4px;
-        }
-        .batch-status-dot {
-            font-size: 0.72rem;
-            color: #e63946;
-            font-weight: bold;
-        }
-        .batch-tile-date {
-            font-size: 0.92rem;
-            font-weight: bold;
-            color: #333;
-            line-height: 1.3;
-        }
-        .batch-tile-desc {
-            font-size: 0.76rem;
-            color: #777;
-            margin-top: 4px;
-            white-space: nowrap;
-            overflow: hidden;
-            text-overflow: ellipsis;
-        }
+    .lang-switcher {
+      display: flex;
+      background: #EBE5DB;
+      border-radius: 20px;
+      padding: 2px;
+      border: 1px solid rgba(197, 160, 89, 0.3);
+    }
 
-        .organizer-card {
-            background: var(--white);
-            border-radius: 20px;
-            border: 1px solid #eaeaea;
-            box-shadow: 0 4px 20px rgba(0,0,0,0.04);
-            margin-top: 30px;
-            padding: 24px;
-        }
-        .organizer-header {
-            display: flex;
-            align-items: center;
-            gap: 16px;
-            margin-bottom: 16px;
-        }
-        .organizer-avatar {
-            width: 72px;
-            height: 72px;
-            border-radius: 50%;
-            border: 2px solid #eaeaea;
-            object-fit: cover;
-            flex-shrink: 0;
-        }
-        .organizer-titles h3 {
-            font-size: 1.25rem;
-            color: #222;
-            font-weight: bold;
-            margin-bottom: 4px;
-        }
-        .organizer-license {
-            font-size: 0.88rem;
-            color: #666;
-        }
-        .organizer-desc {
-            font-size: 1rem;
-            color: #444;
-            line-height: 1.8;
-            margin-bottom: 18px;
-        }
-        .organizer-badges-box {
-            background: #fbf9f9;
-            border: 1px solid #f0e6e6;
-            border-radius: 12px;
-            padding: 14px 16px;
-            display: flex;
-            flex-direction: column;
-            gap: 8px;
-            margin-bottom: 20px;
-        }
-        .badge-line {
-            font-size: 0.92rem;
-            color: #555;
-            line-height: 1.5;
-        }
-        .badge-line strong {
-            color: #a63a2a;
-        }
+    .lang-btn {
+      border: none;
+      background: transparent;
+      padding: 4px 10px;
+      font-size: 11px;
+      font-family: var(--font-en);
+      font-weight: 600;
+      border-radius: 16px;
+      cursor: pointer;
+      color: #666;
+      transition: all 0.25s ease;
+    }
 
-        .endorsement-row {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            padding-top: 14px;
-            border-top: 1px dashed #eaeaea;
-        }
-        .endorsement-title {
-            font-size: 0.95rem;
-            font-weight: bold;
-            color: #333;
-            display: flex;
-            align-items: center;
-            gap: 6px;
-        }
-        .endorsement-logo img {
-            height: 32px;
-            display: block;
-        }
+    .lang-btn.active {
+      background: var(--c-navy);
+      color: #FFF;
+      box-shadow: 0 2px 5px rgba(19, 36, 56, 0.25);
+    }
 
-        .faq-section {
-            position: relative;
-            margin-top: 30px;
-        }
-        .faq-mascot {
-            position: absolute;
-            top: -25px;
-            right: 10px;
-            width: 65px;
-            height: auto;
-        }
-        .faq-item {
-            background: var(--white);
-            border-radius: 12px;
-            border: 1px solid var(--border-color);
-            padding: 14px 16px;
-            margin-bottom: 10px;
-        }
-        .faq-q {
-            font-weight: bold;
-            color: var(--primary);
-            font-size: 0.95rem;
-            margin-bottom: 4px;
-        }
-        .faq-a {
-            font-size: 0.88rem;
-            color: var(--text-sub);
-        }
+    /* 原民會官方橫額 */
+    .cip-banner-box {
+      padding: 14px 16px 0;
+      background: #EAE5DC;
+    }
+    .cip-banner-img {
+      width: 100%;
+      height: auto;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.06);
+      display: block;
+    }
 
-        .faq-footer-banner {
-            width: 100%;
-            max-width: 220px;
-            margin: 20px auto 10px;
-            display: block;
-            text-align: center;
-        }
-        .faq-footer-banner img {
-            width: 100%;
-            height: auto;
-            max-height: 260px;
-            object-fit: contain;
-            display: block;
-            margin: 0 auto;
-        }
+    .hero-editorial {
+      padding: 20px 20px 20px;
+      text-align: center;
+      background: linear-gradient(180deg, #EAE5DC 0%, var(--c-paper) 100%);
+    }
 
-        .sticky-bar {
-            position: fixed;
-            bottom: 0;
-            left: 0;
-            right: 0;
-            background: rgba(255, 255, 255, 0.95);
-            backdrop-filter: blur(8px);
-            border-top: 1px solid var(--border-color);
-            padding: 10px 16px;
-            z-index: 200;
-        }
-        .sticky-inner {
-            max-width: 600px;
-            margin: 0 auto;
-            display: grid;
-            grid-template-columns: 1fr 1.3fr;
-            gap: 10px;
-        }
-        .btn-action {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 6px;
-            text-decoration: none;
-            font-size: 0.9rem;
-            font-weight: bold;
-            border-radius: 10px;
-            padding: 12px 8px;
-            text-align: center;
-        }
-        .btn-b2b {
-            background: #4a4a4a;
-            color: var(--white);
-        }
-        .btn-b2c {
-            background: #00B900;
-            color: var(--white);
-        }
+    .mag-label {
+      font-family: var(--font-en);
+      font-size: 10px;
+      font-weight: 600;
+      letter-spacing: 0.22em;
+      color: var(--c-sakura);
+      text-transform: uppercase;
+      margin-bottom: 12px;
+      display: inline-block;
+      border-bottom: 1px solid var(--c-sakura);
+      padding-bottom: 2px;
+    }
 
-        @media (max-width: 600px) {
-            .specs-grid {
-                grid-template-columns: 1fr;
-                gap: 8px;
-            }
-            .spec-item {
-                display: flex;
-                align-items: center;
-                gap: 12px;
-                text-align: left;
-                padding: 10px 14px;
-            }
-            .spec-icon { margin-bottom: 0; }
-            .organizer-header {
-                flex-direction: column;
-                text-align: center;
-            }
-            .endorsement-row {
-                flex-direction: column;
-                gap: 8px;
-                text-align: center;
-            }
-            .faq-mascot {
-                width: 50px;
-                top: -15px;
-            }
-            .faq-footer-banner {
-                max-width: 180px;
-            }
-        }
-    </style>
+    .hero-lead-title {
+      font-size: 21px;
+      font-weight: 700;
+      color: var(--c-navy);
+      margin-bottom: 6px;
+      line-height: 1.45;
+    }
+
+    .hero-sub-title {
+      font-size: 12px;
+      color: var(--c-sakura-dark);
+      font-weight: 600;
+      margin-bottom: 14px;
+    }
+
+    .hero-quote-card {
+      background: #FFF;
+      border-left: 3px solid var(--c-sakura);
+      padding: 14px 16px;
+      border-radius: 0 8px 8px 0;
+      text-align: left;
+      font-size: 13px;
+      line-height: 1.9;
+      color: var(--c-navy);
+      box-shadow: 0 2px 8px rgba(0,0,0,0.03);
+      margin: 10px 0;
+    }
+
+    .section-block { padding: 24px 20px; }
+
+    .sec-header-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-end;
+      margin-bottom: 14px;
+    }
+
+    .sec-chapter {
+      font-family: var(--font-en);
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: 0.2em;
+      color: var(--c-gold);
+      display: block;
+      margin-bottom: 2px;
+    }
+
+    .sec-title {
+      font-size: 17px;
+      font-weight: 700;
+      color: var(--c-navy);
+      position: relative;
+      padding-bottom: 6px;
+    }
+
+    .sec-title::after {
+      content: '';
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      width: 32px;
+      height: 2px;
+      background: var(--c-gold);
+    }
+
+    .mascot-icon {
+      width: 44px;
+      height: 44px;
+      object-fit: contain;
+      flex-shrink: 0;
+    }
+
+    .specs-strip {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 6px;
+      margin: 16px 0;
+      text-align: center;
+    }
+
+    .spec-item {
+      background: #FFF;
+      border: 1px solid #E8E2D8;
+      border-radius: 8px;
+      padding: 10px 4px;
+    }
+
+    .spec-icon { font-size: 16px; margin-bottom: 2px; }
+    .spec-title { font-size: 11px; font-weight: 700; color: var(--c-navy); }
+    .spec-sub { font-size: 9px; color: #777; }
+
+    /* 達人引路卡 */
+    .expert-card {
+      background: #FFF;
+      border-radius: 12px;
+      border: 1px solid var(--c-border);
+      padding: 16px;
+      margin-bottom: 16px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.03);
+    }
+
+    .expert-header {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 12px;
+    }
+
+    .expert-img {
+      width: 60px;
+      height: 60px;
+      border-radius: 50%;
+      border: 2px solid var(--c-gold);
+      object-fit: cover;
+      flex-shrink: 0;
+    }
+
+    .expert-title-box h4 {
+      font-size: 14px;
+      font-weight: 700;
+      color: var(--c-navy);
+    }
+
+    .expert-tag {
+      font-size: 11px;
+      color: var(--c-gold-dark);
+      font-weight: 600;
+    }
+
+    .expert-story p {
+      font-size: 12.5px;
+      line-height: 1.9;
+      color: #444;
+      margin-bottom: 8px;
+    }
+
+    .highlight-banner-text {
+      background: var(--c-sakura-light);
+      border-left: 3px solid var(--c-sakura);
+      padding: 10px 12px;
+      border-radius: 0 8px 8px 0;
+      font-size: 12px;
+      color: var(--c-sakura-dark);
+      line-height: 1.8;
+      margin-top: 10px;
+    }
+
+    /* 故事與風土卡片 */
+    .story-card {
+      background: #FFF;
+      border-radius: 12px;
+      border: 1px solid var(--c-border);
+      padding: 16px;
+      margin-bottom: 12px;
+    }
+
+    .story-card h4 {
+      font-size: 14px;
+      font-weight: 700;
+      color: var(--c-navy);
+      margin-bottom: 6px;
+    }
+
+    .story-card p {
+      font-size: 12px;
+      line-height: 1.85;
+      color: #555;
+    }
+
+    /* 2027 梯次卡片網格 */
+    .batch-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 8px;
+      margin: 14px 0 20px;
+    }
+
+    .batch-card {
+      background: #FFF;
+      border: 1px solid var(--c-border);
+      border-radius: 10px;
+      padding: 10px 12px;
+      transition: all 0.2s ease;
+    }
+
+    .batch-card.hot {
+      background: #FFFDFC;
+      border-color: var(--c-sakura);
+    }
+
+    .batch-top {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 4px;
+    }
+
+    .batch-tag {
+      font-size: 10px;
+      font-weight: 700;
+      font-family: var(--font-en);
+      padding: 1px 6px;
+      border-radius: 4px;
+      background: #EBE5DB;
+      color: var(--c-navy);
+    }
+
+    .batch-tag.hot-tag {
+      background: var(--c-sakura-light);
+      color: var(--c-sakura);
+    }
+
+    .batch-status {
+      font-size: 10px;
+      font-weight: 600;
+      color: var(--c-sakura);
+    }
+
+    .batch-date {
+      font-size: 12.5px;
+      font-weight: 700;
+      color: var(--c-navy);
+      line-height: 1.3;
+    }
+
+    .batch-desc {
+      font-size: 10.5px;
+      color: #777;
+      margin-top: 3px;
+    }
+
+    /* 6人包團行動卡 */
+    .charter-card {
+      background: #F2EFE9;
+      border: 1.5px dashed var(--c-gold);
+      border-radius: 10px;
+      padding: 14px 16px;
+      margin: 18px 0;
+      font-size: 12px;
+      line-height: 1.85;
+      color: var(--c-navy);
+    }
+    .charter-card strong { color: #A62122; }
+
+    /* FAQ 卡片 */
+    .faq-item {
+      background: #FFF;
+      border: 1px solid var(--c-border);
+      border-radius: 10px;
+      padding: 14px;
+      margin-bottom: 10px;
+    }
+
+    .faq-q {
+      font-weight: 700;
+      font-size: 13px;
+      color: var(--c-navy);
+      display: flex;
+      align-items: flex-start;
+      gap: 6px;
+      margin-bottom: 6px;
+    }
+
+    .faq-q span { color: var(--c-sakura); }
+    .faq-a { font-size: 12px; color: #555; line-height: 1.75; }
+
+    /* 官方認證統一頁尾 */
+    .footer-official-badge {
+      padding: 28px 20px 16px;
+      background-color: #EDE8DF;
+      border-top: 1px solid rgba(197, 160, 89, 0.28);
+      text-align: center;
+      color: #555555;
+      line-height: 1.85;
+    }
+
+    .footer-official-badge .company-name {
+      font-size: 14px;
+      font-weight: 700;
+      color: #132438;
+      letter-spacing: 0.05em;
+      margin-bottom: 3px;
+    }
+
+    .footer-official-badge .license-info {
+      font-size: 11.5px;
+      color: #666666;
+      letter-spacing: 0.03em;
+      margin-bottom: 6px;
+    }
+
+    .footer-official-badge .endorsement-box {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      margin: 8px 0 10px;
+    }
+
+    .footer-official-badge .cip-logo-img {
+      height: 22px;
+      width: auto;
+      object-fit: contain;
+    }
+
+    .footer-official-badge .endorsement-text {
+      font-size: 11.5px;
+      font-weight: 600;
+      color: #8C6B2D;
+    }
+
+    .footer-official-badge .copyright-text {
+      font-size: 10px;
+      font-family: var(--font-en);
+      color: #8E8E8E;
+      letter-spacing: 0.05em;
+    }
+
+    .bottom-bar {
+      position: fixed;
+      bottom: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 100%;
+      max-width: 480px;
+      background: rgba(255, 255, 255, 0.96);
+      backdrop-filter: blur(10px);
+      border-top: 1px solid var(--c-border);
+      padding: 10px 16px;
+      display: flex;
+      gap: 10px;
+      z-index: 100;
+      box-shadow: 0 -4px 15px rgba(0,0,0,0.06);
+    }
+
+    .bar-btn {
+      flex: 1;
+      height: 44px;
+      border-radius: 6px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-decoration: none;
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: 0.05em;
+    }
+
+    .btn-mail { background: var(--c-navy); color: #FFF; }
+    .btn-line { background: #06C755; color: #FFF; }
+
+    #sakura-canvas {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      pointer-events: none;
+      z-index: 999;
+    }
+  </style>
 </head>
 <body>
 
-    <header class="site-header">
-        <div class="header-inner">
-            <div class="logo">
-                <img src="https://raw.githubusercontent.com/envoytraveltaiwan-walker/sakura-atayal/main/ENVOY_Logo_Transparent_HQ.png" alt="ENVOY TRAVEL">
-            </div>
-            <div class="lang-switch">
-                <button class="lang-btn active" id="btn-ja" onclick="setLanguage('ja')">日本語</button>
-                <button class="lang-btn" id="btn-zh" onclick="setLanguage('zh')">繁體中文</button>
-            </div>
+  <div class="mobile-stage">
+
+    <div class="top-tribal-band"></div>
+
+    <!-- 導航列 -->
+    <nav class="site-nav">
+      <a href="#" class="brand-group">
+        <svg class="brand-svg" viewBox="0 0 100 140">
+          <path d="M50 6 C51 15 52.5 21 55.5 25 C60 25.8 66 26 73 26.5 C66 28 60 29.2 56 31 C53.8 35 52 41 50 47 C48 41 46.2 35 44 31 C40 29.2 34 28 27 26.5 C34 26 40 25.8 44.5 25 C47.5 21 49 15 50 6 Z" fill="#C5A059"/>
+          <path d="M46 48.5 C47.5 48 52.5 48 54 48.5 C54.8 49.2 54.5 51.5 53.8 52.2 C52 52.8 48 52.8 46.2 52.2 C45.5 51.5 45.2 49.2 46 48.5 Z" fill="#132438"/>
+          <path d="M49 53.5 C45.8 63 39.5 75 30.5 86.5 C29.2 88.2 27.2 90 25.8 88.5 C24.5 86.8 26.2 85 27.8 83 C36 71.5 41.8 61 45 52.5 Z" fill="#C5A059"/>
+          <path d="M51 53.5 C54.2 63 60.5 75 69.5 86.5 C70.8 88.2 72.8 90 74.2 88.5 C75.5 86.8 73.8 85 72.2 83 C64 71.5 58.2 61 55 52.5 Z" fill="#C5A059"/>
+          <path d="M47.2 52.5 C48.8 52 51.2 52 52.8 52.5 C53.2 67 53.6 84 53.2 101 C52.8 116 53.2 126 52.6 133 C52.2 135.5 47.8 135.5 47.4 133 C46.8 126 47.2 116 46.8 101 C46.4 84 46.8 67 47.2 52.5 Z" fill="#C5A059"/>
+        </svg>
+        <div class="brand-text-block">
+          <span class="brand-name-en">ENVOY TRAVEL</span>
+          <span class="brand-name-sub" id="nav-reg-sub">安捷旅遊 ‧ 甲種 5920 號</span>
         </div>
-    </header>
+      </a>
 
-    <main class="container">
-        <div class="official-banner">
-            <img src="https://raw.githubusercontent.com/envoytraveltaiwan-walker/sakura-atayal/main/%E7%B4%A0%E6%9D%90_2026%E6%97%A5%E6%9C%AC%E6%97%85%E5%B1%95(%E5%8E%9F%E6%B0%91%E6%9C%83)_%E7%B5%A6%E6%A5%AD%E8%80%85-07.jpg" alt="部行山海間">
-        </div>
+      <!-- 中日切換鍵 -->
+      <div class="lang-switcher">
+        <button class="lang-btn active" id="btn-ja" onclick="setLanguage('ja')">日本語</button>
+        <button class="lang-btn" id="btn-zh" onclick="setLanguage('zh')">繁中</button>
+      </div>
+    </nav>
 
-        <section class="tour-hero">
-            <span class="tour-tag" data-lang="ja">台湾原住民族文化探訪 × 桜の秘境</span>
-            <span class="tour-tag" data-lang="zh">深度原鄉文化 × 高山純淨星空</span>
-            
-            <h1 data-lang="ja">🌸 2027 桜の秘境雨｜桜樹下のタイヤル族マイクロツーリズム</h1>
-            <h1 data-lang="zh">🌸 2027 原鄉櫻花雨｜櫻花樹下的泰雅微旅行</h1>
-            
-            <p class="tour-desc" data-lang="ja">平日限定・タイヤル族の秘境で優雅な茶席と澄んだ星空を愉しむ2日間</p>
-            <p class="tour-desc" data-lang="zh">平日限定浪漫 2 日遊｜在粉紅山林裡找回生活溫度的慢活微旅行</p>
-        </section>
-
-        <div class="fast-read">
-            <h3>
-                <span>✨</span>
-                <span data-lang="ja">大人旅の安心をお約束する4大特長</span>
-                <span data-lang="zh">樂活族首選！無憂賞櫻 4 大保障</span>
-            </h3>
-            <div class="lohas-features">
-                <div class="lohas-item">
-                    <span class="lohas-icon">🚌</span>
-                    <span data-lang="ja"><strong>台北駅発着・往復送迎：</strong>山道の運転や駐車の心配は一切不要、車内でゆったりおくつろぎいただけます</span>
-                    <span data-lang="zh"><strong>台北直達免開車：</strong>台北車站定點接送直達，免除山路駕駛與尋找車位疲勞</span>
-                </div>
-                <div class="lohas-item">
-                    <span class="lohas-icon">🍵</span>
-                    <span data-lang="ja"><strong>満開の桜樹下で茶席：</strong>慌ただしい観光ではなく、舞い散る桜の下で特製茶と集落の茶菓子を優雅に堪能</span>
-                    <span data-lang="zh"><strong>櫻花樹下泰雅茶席：</strong>擺脫走馬看花，優雅喝茶品嚐部落微醺茶點</span>
-                </div>
-                <div class="lohas-item">
-                    <span class="lohas-icon">🌿</span>
-                    <span data-lang="ja"><strong>平日限定・少人数催行：</strong>6名様より催行（最大20名様）。週末の混雑を避け、静かな山林を独占</span>
-                    <span data-lang="zh"><strong>平日獨享精緻小團：</strong>6人成團、最多20人，避開假日人潮人聲鼎沸</span>
-                </div>
-                <div class="lohas-item">
-                    <span class="lohas-icon">🌌</span>
-                    <span data-lang="ja"><strong>身体に優しいスローな散策：</strong>起伏の少ない遊歩道、都会の喧騒を離れた満天の星空と幻想的な雲海を満喫</span>
-                    <span data-lang="zh"><strong>慢活親民不累腳：</strong>平緩步道散策，夜觀高山純淨星空與壯麗雲海</span>
-                </div>
-            </div>
-        </div>
-
-        <div class="specs-grid">
-            <div class="spec-item">
-                <div class="spec-icon">👥</div>
-                <div>
-                    <div class="spec-title" data-lang="ja">少人数催行</div>
-                    <div class="spec-title" data-lang="zh">精緻小團</div>
-                    <div class="spec-desc" data-lang="ja">6名様より催行（最大20名）</div>
-                    <div class="spec-desc" data-lang="zh">6人成行自主包團（上限20人）</div>
-                </div>
-            </div>
-            <div class="spec-item">
-                <div class="spec-icon">🚐</div>
-                <div>
-                    <div class="spec-title" data-lang="ja">専用車往復</div>
-                    <div class="spec-title" data-lang="zh">專車往返接送</div>
-                    <div class="spec-desc" data-lang="ja">台北市内指定地直行</div>
-                    <div class="spec-desc" data-lang="zh">台北定點接送直達</div>
-                </div>
-            </div>
-            <div class="spec-item">
-                <div class="spec-icon">🛡️</div>
-                <div>
-                    <div class="spec-title" data-lang="ja">安心の手配力</div>
-                    <div class="spec-title" data-lang="zh">合法甲種承辦</div>
-                    <div class="spec-desc" data-lang="ja">旅行業正規登録会社</div>
-                    <div class="spec-desc" data-lang="zh">旅責險保障完備</div>
-                </div>
-            </div>
-        </div>
-
-        <div class="section-header" data-lang="ja">達人がご案内</div>
-        <div class="section-header" data-lang="zh">達人靈魂帶路</div>
-        <div class="expert-card">
-            <div class="expert-header">
-                <img class="expert-img" src="https://raw.githubusercontent.com/envoytraveltaiwan-walker/sakura-atayal/main/%E8%8E%89%E6%A2%85%E5%A7%90.png" alt="莉梅姐">
-                <div>
-                    <h4 data-lang="ja">シニアツアープランナー 莉梅（リーメイ）</h4>
-                    <h4 data-lang="zh">資深旅遊顧問 莉梅姐</h4>
-                    <div class="expert-tag" data-lang="ja">35年の実績・原住民族文化スペシャリスト</div>
-                    <div class="expert-tag" data-lang="zh">35年深耕原鄉文化專家</div>
-                </div>
-            </div>
-            <div class="expert-story">
-                <p data-lang="ja">「世界中を旅してきましたが、<strong>台湾で最も心を揺さぶられる風景は、原住民族の隠れ里の桜の木の下にあります。</strong>」</p>
-                <p data-lang="zh">「走過半個地球，看過無數景致，我常跟朋友說：<strong>台灣最震撼心靈的風景，其實藏在原鄉的櫻花樹下。</strong>」</p>
-                
-                <p data-lang="ja">ここは私が長年大切にしてきたタイヤル族の桃源郷です。商業的な喧騒は一切なく、あるのは満開の桜、雄大な雲海、そして澄み切った満天の星空だけ。数年前に初めて桜の木の下で族人から温かいお茶を受け取った時の静けさと感動は、今も忘れられません。</p>
-                <p data-lang="zh">這處高山秘境是我藏在口袋裡很久的泰雅世外桃源。那裡沒有商業喧囂，只有滿山粉紅櫻花、浩瀚雲海與純淨夜空。幾年前我第一次在櫻花樹下接過族人遞來的熱茶，那一刻的平靜與感動，至今依然深刻。</p>
-
-                <p class="highlight-text" data-lang="ja">「美しい自然こそ、ゆったりと優雅に味わうべきです。人混みを避けるため、<strong>『平日・少人数限定』</strong>にこだわりました。各回のお席には限りがございます。2027年の桜の季節、この心豊かな旅をぜひお早めにご予約ください。」</p>
-                <p class="highlight-text" data-lang="zh">「好風景值得優雅對待。為了避開人潮擠壓，我堅持只帶<strong>『平日精緻小團』</strong>。每梯次名額非常有限，2027 年的櫻花雨，邀請您提早預約這份歲月靜好。」</p>
-            </div>
-        </div>
-
-        <div class="section-header" data-lang="ja">風土と文化の物語</div>
-        <div class="section-header" data-lang="zh">走進部落的故事</div>
-
-        <div class="story-card">
-            <h4 data-lang="ja">🏔️ 自然と祖霊が息づく桃源郷｜タイヤル族の聖地と「祖霊の目」</h4>
-            <h4 data-lang="zh">🏔️ 走進泰雅守護的粉紅秘境｜高山原鄉與祖靈之眼</h4>
-            <p data-lang="ja">標高約1,000m、豊かな原生林と雲海に抱かれた新竹五峰の高山集落。古より自然界の掟「Gaga」を重んじ、自然と共生するタイヤル族の聖地です。伝統織物に見られる菱形の幾何学模様は<strong>「祖霊の目（dowriq utux）」</strong>と呼ばれ、先祖の加護と旅人の安全を静かに見守る精神的な象徴。満開の桜の下で、台湾の奥深い精神文化に触れる体験をお届けします。</p>
-            <p data-lang="zh">座落於新竹五峰海拔千公尺的山林之間，這裡是泰雅族人世代與自然共生的世外桃源。漫步在落櫻山林間，隨處可見象徵<strong>「祖靈之眼」</strong>的經典菱形圖騰，代表著先祖對這片土地的庇護與平安祝福。避開假日喧囂，走進純樸山林日常，在族人親切的招呼聲中，感受這片粉紅山林最溫暖的心靈安定感。</p>
-        </div>
-
-        <div class="story-card">
-            <h4 data-lang="ja">🍃 森の恵みを五感で味わう｜幻のスパイス「馬告」と伝統食</h4>
-            <h4 data-lang="zh">🍲 山林直採的原香滋味｜天然馬告與產地餐桌</h4>
-            <p data-lang="ja">台湾原住民族が大切にしてきた野生の山胡椒<strong>「馬告（マーガオ）」</strong>は、黒胡椒のピリッとした辛味にレモングラスのような清涼な香りが重なる希少な森のスパイス。香ばしく焼き上げた豚肉料理の風味を引き立てます。さらに、高山特有の寒暖差が育んだ肉厚な椴木シイタケの大鍋煮込み、香り豊かなカラスザンショウ（刺葱）の卵焼きなど、化学調味料に頼らない大地の恵みをお召し上がりください。</p>
-            <p data-lang="zh">品嚐原鄉土地最真實的滋味！夜晚品嚐以高山清甜椴木香菇燉煮的暖胃大鍋菜；中午享用最道地的原香靈魂午宴：帶著天然檸檬香茅清香的<strong>「馬告山豬肉」</strong>、香氣濃郁的<strong>「刺蔥烘蛋」</strong>與竹筒飯。清晨更貼心配搭好消化的古早味地瓜稀飯，吃得鮮甜、無負擔且養生。</p>
-        </div>
-
-        <div class="story-card">
-            <h4 data-lang="ja">🌸 桜樹下のタイヤル茶席と静寂の雲海</h4>
-            <h4 data-lang="zh">🌸 櫻花樹下的泰雅茶席與雲海漫步</h4>
-            <p data-lang="ja">台北駅から直行専用車で山道を快適に登り、桜の隠れ里へ。舞い散る花びらの下で鋪かれた特製茶席では、温かい地元のハーブティーと素朴なスイーツを味わいます。夜は光害の少ない高地で広がる満天の星空を眺め、朝は幻想的な雲海を背に、平坦な桜の遊歩道を優雅に散策します。</p>
-            <p data-lang="zh">台北車站專車直達接送，免除自己開山路的疲勞與找車位壓力。午後在櫻花樹冠下鋪開茶席，品嚐在地熱茶與部落微醺茶點；清晨在櫻花與晨光包圍下迎著壯觀雲海步道悠閒漫步，夜賞高山純淨星空，帶著身心靈的放鬆與滿滿美照順暢返程。</p>
-        </div>
-
-        <div class="section-header" data-lang="ja">🗓️ 2027年 予約日程（平日限定）</div>
-        <div class="section-header" data-lang="zh">🗓️ 2027 預約梯次（平日限定）</div>
-        <p style="font-size: 0.85rem; color: #777; margin-top: -6px; margin-bottom: 10px;">
-            <span data-lang="ja">※ 6名様より催行（最大20名）。ご希望の梯次をLINEにてお知らせください。</span>
-            <span data-lang="zh">※ 6人成行自主包團（上限20人）。請直接加 LINE 告知想預約的梯次編號。</span>
-        </p>
-
-        <div class="batch-grid-compact">
-            <div class="batch-tile" data-batch-id="T01" data-batch-date="02/15-02/16">
-                <div class="batch-tile-top">
-                    <span class="batch-tag-sm">T01</span>
-                    <span class="batch-status-dot" style="color:#666;" data-lang="ja">受付中</span>
-                    <span class="batch-status-dot" style="color:#666;" data-lang="zh">可預約</span>
-                </div>
-                <div class="batch-tile-date">02/15(一) - 02/16(二)</div>
-                <div class="batch-tile-desc" data-lang="ja">山桜初咲き・ピンク漸濃</div>
-                <div class="batch-tile-desc" data-lang="zh">山櫻初綻・粉紅漸濃</div>
-            </div>
-
-            <div class="batch-tile hot" data-batch-id="T02" data-batch-date="02/17-02/18">
-                <div class="batch-tile-top">
-                    <span class="batch-tag-sm" style="color:#e63946; background:#ffebeb;">T02 🔥</span>
-                    <span class="batch-status-dot" data-lang="ja">見頃推薦</span>
-                    <span class="batch-status-dot" data-lang="zh">盛開推薦</span>
-                </div>
-                <div class="batch-tile-date">02/17(三) - 02/18(四)</div>
-                <div class="batch-tile-desc" data-lang="ja">昭和桜・富士桜盛開期</div>
-                <div class="batch-tile-desc" data-lang="zh">昭和櫻、富士櫻盛開期</div>
-            </div>
-
-            <div class="batch-tile hot" data-batch-id="T03" data-batch-date="02/22-02/23">
-                <div class="batch-tile-top">
-                    <span class="batch-tag-sm" style="color:#e63946; background:#ffebeb;">T03 🌸</span>
-                    <span class="batch-status-dot" data-lang="ja">満開ピーク</span>
-                    <span class="batch-status-dot" data-lang="zh">滿開推薦</span>
-                </div>
-                <div class="batch-tile-date">02/22(一) - 02/23(二)</div>
-                <div class="batch-tile-desc" data-lang="ja">満開高潮・一面の桜海</div>
-                <div class="batch-tile-desc" data-lang="zh">滿開高潮・粉紅花海</div>
-            </div>
-
-            <div class="batch-tile hot" data-batch-id="T04" data-batch-date="02/24-02/25">
-                <div class="batch-tile-top">
-                    <span class="batch-tag-sm" style="color:#e63946; background:#ffebeb;">T04 🌸</span>
-                    <span class="batch-status-dot" data-lang="ja">風吹く桜雨</span>
-                    <span class="batch-status-dot" data-lang="zh">風吹櫻花雨</span>
-                </div>
-                <div class="batch-tile-date">02/24(三) - 02/25(四)</div>
-                <div class="batch-tile-desc" data-lang="ja">満開高潮・桜雨舞う</div>
-                <div class="batch-tile-desc" data-lang="zh">滿開高潮・風吹櫻花雨</div>
-            </div>
-
-            <div class="batch-tile hot" data-batch-id="T05" data-batch-date="03/01-03/02">
-                <div class="batch-tile-top">
-                    <span class="batch-tag-sm" style="color:#e63946; background:#ffebeb;">T05 🔥</span>
-                    <span class="batch-status-dot" data-lang="ja">桜吹雪</span>
-                    <span class="batch-status-dot" data-lang="zh">櫻吹雪推薦</span>
-                </div>
-                <div class="batch-tile-date">03/01(一) - 03/02(二)</div>
-                <div class="batch-tile-desc" data-lang="ja">桜吹雪ロマンチック期</div>
-                <div class="batch-tile-desc" data-lang="zh">櫻吹雪浪漫期・滿地落櫻</div>
-            </div>
-
-            <div class="batch-tile" data-batch-id="T06" data-batch-date="03/03-03/04">
-                <div class="batch-tile-top">
-                    <span class="batch-tag-sm">T06</span>
-                    <span class="batch-status-dot" style="color:#666;" data-lang="ja">受付中</span>
-                    <span class="batch-status-dot" style="color:#666;" data-lang="zh">可預約</span>
-                </div>
-                <div class="batch-tile-date">03/03(三) - 03/04(四)</div>
-                <div class="batch-tile-desc" data-lang="ja">桜吹雪終盤・新緑交織</div>
-                <div class="batch-tile-desc" data-lang="zh">櫻吹雪尾聲・嫩綠交織</div>
-            </div>
-        </div>
-
-        <section class="organizer-card">
-            <div class="organizer-header">
-                <img class="organizer-avatar" src="https://raw.githubusercontent.com/envoytraveltaiwan-walker/sakura-atayal/main/%E8%8E%89%E6%A2%85%E5%A7%90.png" alt="莉梅姐">
-                <div class="organizer-titles">
-                    <h3 data-lang="ja">主催・運行｜アンジェ国際旅行社</h3>
-                    <h3 data-lang="zh">主辦單位｜安捷國際旅行社</h3>
-                    <div class="organizer-license" data-lang="ja">交通部観光署 甲種旅行業（交観甲字第 5920 号）｜統一番号：16169138</div>
-                    <div class="organizer-license" data-lang="zh">交通部觀光署 甲種旅行業（交觀甲字第 5920 號）｜統一編號：16169138</div>
-                </div>
-            </div>
-
-            <p class="organizer-desc" data-lang="ja">
-                深耕旅遊 35 年，專注於精緻小團與原真文化深度。作為原住民族委員會推薦的承辦單位，我們以細膩的接待品質，帶領旅人走入最純樸的生活日常，享受深度、安心且充滿人情味的旅程。
-            </p>
-            <p class="organizer-desc" data-lang="zh">
-                深耕旅遊 35 年，專注於精緻小團與原真文化深度。作為原住民族委員會推薦的承辦單位，我們以細膩的接待品質，帶領旅人走入最純樸的生活日常，享受深度、安心且充滿人情味的旅程。
-            </p>
-
-            <div class="organizer-badges-box">
-                <div class="badge-line" data-lang="ja">
-                    <strong>【企業包團／同業合作】</strong> 行程客製調配、同業同盟優惠、專車獨立出發
-                </div>
-                <div class="badge-line" data-lang="zh">
-                    <strong>【企業包團／同業合作】</strong> 行程客製調配、同業同盟優惠、專車獨立出發
-                </div>
-                <div class="badge-line" data-lang="ja">
-                    <strong>【親友家庭精緻團】</strong> 6 人即成行、台北指定點接送、悠閒體驗無負擔
-                </div>
-                <div class="badge-line" data-lang="zh">
-                    <strong>【親友家庭精緻團】</strong> 6 人即成行、台北指定點接送、悠閒體驗無負擔
-                </div>
-            </div>
-
-            <div class="endorsement-row">
-                <div class="endorsement-title">
-                    <span style="color:#d97706;">🌼</span>
-                    <span data-lang="ja">【官方推薦】行政院原住民族委員會</span>
-                    <span data-lang="zh">【官方推薦】行政院原住民族委員會</span>
-                </div>
-                <div class="endorsement-logo">
-                    <img src="https://raw.githubusercontent.com/envoytraveltaiwan-walker/sakura-atayal/main/%E7%B4%A0%E6%9D%90_2026%E6%97%A5%E6%9C%AC%E6%97%85%E5%B1%95(%E5%8E%9F%E6%B0%91%E6%9C%83)_%E7%B5%A6%E6%A5%AD%E8%80%85-02.png" alt="原民會標誌">
-                </div>
-            </div>
-        </section>
-
-        <section class="faq-section">
-            <img class="faq-mascot" src="https://raw.githubusercontent.com/envoytraveltaiwan-walker/sakura-atayal/main/%E7%B4%A0%E6%9D%90_2026%E6%97%A5%E6%9C%AC%E6%97%85%E5%B1%95(%E5%8E%9F%E6%B0%91%E6%9C%83)_%E7%B5%A6%E6%A5%AD%E8%80%85-05.png" alt="吉祥物">
-            <div class="section-header" data-lang="ja">よくあるご質問</div>
-            <div class="section-header" data-lang="zh">常見問題 Q&amp;A</div>
-
-            <div class="faq-item">
-                <div class="faq-q" data-lang="ja">Q1: 1名または2名でも参加できますか？</div>
-                <div class="faq-q" data-lang="zh">Q1: 只有 1~2 個人也可以報名嗎？</div>
-                <div class="faq-a" data-lang="ja">A: 可能です。公式LINEよりお気軽にご連絡ください。他のお客様との混載調整や、2名様専用のチャーター手配（個別お見積り）も迅速に対応いたします。</div>
-                <div class="faq-a" data-lang="zh">A: 可以的！歡迎加入 LINE 登記湊團；若希望享受純私密行程，我們亦能為 1~2 位貴賓獨立安排專車包團，快速提供報價。</div>
-            </div>
-
-            <div class="faq-item">
-                <div class="faq-q" data-lang="ja">Q2: 部落の民家に宿泊するのでしょうか？</div>
-                <div class="faq-q" data-lang="zh">Q2: 住宿是住在當地的部落民家嗎？</div>
-                <div class="faq-a" data-lang="ja">A: いいえ、日中は集落でディープな文化体験を行いますが、夜は周辺の衛生基準を満たした合法的で快適な宿泊施設へご案内し、安心の滞在をお約束します。</div>
-                <div class="faq-a" data-lang="zh">A: 請放心，白天我們深入聚落體驗最道地的工藝與人文，夜間則安排下榻周邊經嚴格認證的合法露營休閒區或精選度假旅宿，兼顧山林氛圍與舒適品質。</div>
-            </div>
-
-            <div class="faq-item">
-                <div class="faq-q" data-lang="ja">Q3: 日本の旅行会社ですが、ランド手配の委託は可能ですか？</div>
-                <div class="faq-q" data-lang="zh">Q3: 我們是旅行社同業，是否可以委託進行 Land 地接？</div>
-                <div class="faq-a" data-lang="ja">A: 歓迎いたします。弊社は正規の甲種旅行社として、専用車・日本語ガイド・体験プログラム・宿泊手配までワンストップで承ります。B2Bメール窓口よりお問い合わせください。</div>
-                <div class="faq-a" data-lang="zh">A: 非常歡迎！安捷國際為正規註冊甲種旅行社，具備專車、專業日語導遊、部落工作坊手作預約及全套一條龍地接實力，歡迎同業來信洽商。</div>
-            </div>
-
-            <div class="faq-footer-banner">
-                <img src="https://raw.githubusercontent.com/envoytraveltaiwan-walker/sakura-atayal/main/%E7%B4%A0%E6%9D%90_2026%E6%97%A5%E6%9C%AC%E6%97%85%E5%B1%95(%E5%8E%9F%E6%B0%91%E6%9C%83)_%E7%B5%A6%E6%A5%AD%E8%80%85-06.png" alt="原住民族文化體驗">
-            </div>
-        </section>
-    </main>
-
-    <div class="sticky-bar">
-        <div class="sticky-inner">
-            <a href="mailto:service@envoytravel.com.tw" class="btn-action btn-b2b" id="cta-b2b-mail">
-                <span>✉️</span>
-                <span data-lang="ja">B2B お問い合わせ</span>
-                <span data-lang="zh">同業 / 企業洽商</span>
-            </a>
-            <a href="https://lin.ee/Z3c7Qam" target="_blank" rel="noopener" class="btn-action btn-b2c" id="cta-b2c-line">
-                <span>💬</span>
-                <span data-lang="ja">個人旅行のお問い合わせ</span>
-                <span data-lang="zh">加 LINE 專人諮詢預約</span>
-            </a>
-        </div>
+    <!-- 原民會 2026 日本旅展「部行山海間」官方主視覺橫幅 -->
+    <div class="cip-banner-box">
+      <img src="https://raw.githubusercontent.com/envoytraveltaiwan-walker/healing-trip/main/%E7%B4%A0%E6%9D%90_2026%E6%97%A5%E6%9C%AC%E6%97%85%E5%B1%95(%E5%8E%9F%E6%B0%91%E6%9C%83)_%E7%B5%A6%E6%A5%AD%E8%80%85-07.jpg" 
+           alt="部行山海間" 
+           class="cip-banner-img">
     </div>
 
-    <canvas id="sakura-canvas"></canvas>
+    <!-- Hero 封面區 -->
+    <header class="hero-editorial">
+      <span class="mag-label" id="i18n-hero-tag">🌸 2027 桜の秘境雨 ‧ 2 Days</span>
+      <h1 class="hero-lead-title" id="i18n-hero-title">
+        桜樹下のタイヤル族マイクロツーリズム 2日間
+      </h1>
+      <p class="hero-sub-title" id="i18n-hero-sub">
+        平日限定・タイヤル族の秘境で優雅な茶席と澄んだ星空を愉しむ
+      </p>
 
-    <!-- 雙語切換與 GA4 事件監聽腳本 -->
-    <script>
-        function setLanguage(lang) {
-            const body = document.body;
-            const btnJa = document.getElementById('btn-ja');
-            const btnZh = document.getElementById('btn-zh');
+      <blockquote class="hero-quote-card">
+        <span id="i18n-hero-quote">
+          「走過半個地球，看過無數景致，我常跟朋友說：<br>
+          台灣最震撼心靈的風景，其實藏在原鄉的櫻花樹下。」
+        </span>
+      </blockquote>
+    </header>
 
-            if (lang === 'zh') {
-                body.classList.add('lang-zh');
-                btnZh.classList.add('active');
-                btnJa.classList.remove('active');
-                document.documentElement.lang = 'zh-TW';
-            } else {
-                body.classList.remove('lang-zh');
-                btnJa.classList.add('active');
-                btnZh.classList.remove('active');
-                document.documentElement.lang = 'ja';
-            }
+    <!-- 3大規格亮點列 -->
+    <div class="section-block" style="padding-top: 0; padding-bottom: 0;">
+      <div class="specs-strip">
+        <div class="spec-item">
+          <div class="spec-icon">👥</div>
+          <div class="spec-title" id="i18n-sp1-t">少人数催行</div>
+          <div class="spec-sub" id="i18n-sp1-s">6名様より催行（最大20名）</div>
+        </div>
+        <div class="spec-item">
+          <div class="spec-icon">🚐</div>
+          <div class="spec-title" id="i18n-sp2-t">専用車往復</div>
+          <div class="spec-sub" id="i18n-sp2-s">台北駅/ホテル直行</div>
+        </div>
+        <div class="spec-item">
+          <div class="spec-icon">🛡️</div>
+          <div class="spec-title" id="i18n-sp3-t">原民会認定</div>
+          <div class="spec-sub" id="i18n-sp3-s">正規甲種旅行業</div>
+        </div>
+      </div>
+    </div>
 
-            // [GA4 事件 1] 語系切換
-            if (typeof gtag === 'function') {
-                gtag('event', 'language_switch', {
-                    'selected_language': lang
-                });
-            }
-        }
+    <!-- 達人靈魂帶路（莉梅姐） -->
+    <section class="section-block">
+      <div class="sec-header-row">
+        <div>
+          <span class="sec-chapter">CURATOR</span>
+          <h2 class="sec-title" id="i18n-expert-title">達人靈魂帶路</h2>
+        </div>
+        <!-- 吉祥物 06 -->
+        <img src="https://raw.githubusercontent.com/envoytraveltaiwan-walker/healing-trip/main/%E7%B4%A0%E6%9D%90_2026%E6%97%A5%E6%9C%AC%E6%97%85%E5%B1%95(%E5%8E%9F%E6%B0%91%E6%9C%83)_%E7%B5%A6%E6%A5%AD%E8%80%85-06.png" 
+             alt="原民探索吉祥物" 
+             class="mascot-icon">
+      </div>
 
-        document.addEventListener('DOMContentLoaded', function () {
-            // [GA4 事件 2] 點擊加 LINE 諮詢 (核心轉換)
-            const lineBtn = document.getElementById('cta-b2c-line');
-            if (lineBtn) {
-                lineBtn.addEventListener('click', function () {
-                    if (typeof gtag === 'function') {
-                        gtag('event', 'generate_lead', {
-                            'method': 'line',
-                            'campaign': '2027_sakura_atayal'
-                        });
-                    }
-                });
-            }
+      <div class="expert-card">
+        <div class="expert-header">
+          <img class="expert-img" src="https://raw.githubusercontent.com/envoytraveltaiwan-walker/sakura-atayal/main/%E8%8E%89%E6%A2%85%E5%A7%90.png" alt="莉梅姐">
+          <div class="expert-title-box">
+            <h4 id="i18n-expert-name">資深旅遊顧問 莉梅姐</h4>
+            <div class="expert-tag" id="i18n-expert-role">35年深耕原鄉文化專家</div>
+          </div>
+        </div>
+        <div class="expert-story">
+          <p id="i18n-expert-p1">
+            這裡是我藏在口袋很久的泰雅世外桃源。那裡沒有商業喧囂，只有滿山粉紅櫻花、浩瀚雲海與純淨夜空。幾年前我第一次在櫻花樹下接過族人遞來的熱茶，那一刻的平靜與感動，至今依然深刻。
+          </p>
+          <div class="highlight-banner-text" id="i18n-expert-p2">
+            「好風景值得優雅對待。為了避開人潮擠壓，我堅持只帶<strong>『平日精緻小團』</strong>。每梯次名額非常有限，邀請您提早預約這份歲月靜好。」
+          </div>
+        </div>
+      </div>
+    </section>
 
-            // [GA4 事件 3] 點擊 B2B 郵件洽商
-            const b2bBtn = document.getElementById('cta-b2b-mail');
-            if (b2bBtn) {
-                b2bBtn.addEventListener('click', function () {
-                    if (typeof gtag === 'function') {
-                        gtag('event', 'contact', {
-                            'method': 'email_b2b',
-                            'campaign': '2027_sakura_atayal'
-                        });
-                    }
-                });
-            }
+    <!-- 篇章：風土與走進部落的故事 -->
+    <section class="section-block" style="background:#F4EFE6;">
+      <div class="sec-header-row">
+        <div>
+          <span class="sec-chapter">STORIES</span>
+          <h2 class="sec-title" id="i18n-story-title">走進部落的故事</h2>
+        </div>
+        <!-- 吉祥物 03 美食 -->
+        <img src="https://raw.githubusercontent.com/envoytraveltaiwan-walker/healing-trip/main/%E7%B4%A0%E6%9D%90_2026%E6%97%A5%E6%9C%AC%E6%97%85%E5%B1%95(%E5%8E%9F%E6%B0%91%E6%9C%83)_%E7%B5%A6%E6%A5%AD%E8%80%85-03.png" 
+             alt="原民美食吉祥物" 
+             class="mascot-icon">
+      </div>
 
-            // [GA4 事件 4] 點擊預約梯次卡片
-            const batchTiles = document.querySelectorAll('.batch-tile');
-            batchTiles.forEach(function (tile) {
-                tile.addEventListener('click', function () {
-                    const batchId = this.getAttribute('data-batch-id');
-                    const batchDate = this.getAttribute('data-batch-date');
-                    if (typeof gtag === 'function') {
-                        gtag('event', 'select_content', {
-                            'content_type': 'tour_batch',
-                            'item_id': batchId,
-                            'item_name': batchDate
-                        });
-                    }
-                });
-            });
-        });
-    </script>
+      <div class="story-card">
+        <h4 id="story-1-h">🏔️ 走進泰雅守護的粉紅秘境｜高山原鄉與祖靈之眼</h4>
+        <p id="story-1-p">
+          座落於新竹五峰海拔千公尺的山林之間，這裡是泰雅族人世代與自然共生的世外桃源。漫步在落櫻山林間，隨處可見象徵<strong>「祖靈之眼」</strong>的經典菱形圖騰，代表著先祖對這片土地的庇護與平安祝福。避開假日喧囂，感受這片粉紅山林最溫暖的心靈安定感。
+        </p>
+      </div>
 
-    <!-- 擬真櫻花瓣飄落動畫 -->
-    <script>
+      <div class="story-card">
+        <h4 id="story-2-h">🍃 山林直採的原香滋味｜天然馬告與產地餐桌</h4>
+        <p id="story-2-p">
+          夜晚品嚐以高山清甜椴木香菇燉煮的暖胃大鍋菜；中午享用最道地的原香靈魂午宴：帶著天然檸檬香茅清香的<strong>「馬告山豬肉」</strong>、香氣濃郁的<strong>「刺蔥烘蛋」</strong>與竹筒飯。清晨更貼心配搭好消化的古早味地瓜稀飯，吃得鮮甜、無負擔且養生。
+        </p>
+      </div>
+
+      <div class="story-card">
+        <h4 id="story-3-h">🌸 櫻花樹下的泰雅茶席與雲海漫步</h4>
+        <p id="story-3-p">
+          台北專車直達接送，免除自己開山路的疲勞與找車位壓力。午後在櫻花樹冠下鋪開茶席，品嚐在地熱茶與部落微醺茶點；清晨在櫻花與晨光包圍下迎著壯觀雲海步道悠閒漫步，夜賞高山純淨星空，享受身心靈的徹底放鬆。
+        </p>
+      </div>
+    </section>
+
+    <!-- 篇章：2027 預約梯次（平日限定） -->
+    <section class="section-block">
+      <div class="sec-header-row">
+        <div>
+          <span class="sec-chapter">CALENDAR</span>
+          <h2 class="sec-title" id="i18n-batch-title">2027 預約梯次（平日限定）</h2>
+        </div>
+      </div>
+      <p style="font-size: 11px; color: #777; margin-top: -6px; margin-bottom: 12px;" id="i18n-batch-sub">
+        ※ 滿 6 人即可成團（每團上限 20 人）。歡迎直接洽詢想預約的梯次。
+      </p>
+
+      <div class="batch-grid">
+        <div class="batch-card">
+          <div class="batch-top">
+            <span class="batch-tag">T01</span>
+            <span class="batch-status" style="color:#666;" id="b-st-01">可預約</span>
+          </div>
+          <div class="batch-date">02/15(一) - 02/16(二)</div>
+          <div class="batch-desc" id="b-de-01">山櫻初綻・粉紅漸濃</div>
+        </div>
+
+        <div class="batch-card hot">
+          <div class="batch-top">
+            <span class="batch-tag hot-tag">T02 🔥</span>
+            <span class="batch-status" id="b-st-02">盛開推薦</span>
+          </div>
+          <div class="batch-date">02/17(三) - 02/18(四)</div>
+          <div class="batch-desc" id="b-de-02">昭和櫻、富士櫻盛開期</div>
+        </div>
+
+        <div class="batch-card hot">
+          <div class="batch-top">
+            <span class="batch-tag hot-tag">T03 🌸</span>
+            <span class="batch-status" id="b-st-03">滿開推薦</span>
+          </div>
+          <div class="batch-date">02/22(一) - 02/23(二)</div>
+          <div class="batch-desc" id="b-de-03">滿開高潮・粉紅花海</div>
+        </div>
+
+        <div class="batch-card hot">
+          <div class="batch-top">
+            <span class="batch-tag hot-tag">T04 🌸</span>
+            <span class="batch-status" id="b-st-04">風吹櫻花雨</span>
+          </div>
+          <div class="batch-date">02/24(三) - 02/25(四)</div>
+          <div class="batch-desc" id="b-de-04">滿開高潮・風吹櫻花雨</div>
+        </div>
+
+        <div class="batch-card hot">
+          <div class="batch-top">
+            <span class="batch-tag hot-tag">T05 🔥</span>
+            <span class="batch-status" id="b-st-05">櫻吹雪推薦</span>
+          </div>
+          <div class="batch-date">03/01(一) - 03/02(二)</div>
+          <div class="batch-desc" id="b-de-05">櫻吹雪浪漫期・落櫻</div>
+        </div>
+
+        <div class="batch-card">
+          <div class="batch-top">
+            <span class="batch-tag">T06</span>
+            <span class="batch-status" style="color:#666;" id="b-st-06">可預約</span>
+          </div>
+          <div class="batch-date">03/03(三) - 03/04(四)</div>
+          <div class="batch-desc" id="b-de-06">櫻吹雪尾聲・嫩綠交織</div>
+        </div>
+      </div>
+
+      <!-- 6人成行專屬說明 -->
+      <div class="charter-card" id="i18n-charter-box">
+        <strong>✦ 6人成團即可出發！</strong><br>
+        支持一人報名湊團；達 6 人即可自選出發日期獨立包專車！請透過 LINE 或 Email 提供您「想出發的梯次或日期區間」與「參加人數」，專屬團隊將為您調配成行。
+      </div>
+    </section>
+
+    <!-- 篇章：常見問題 FAQ -->
+    <section class="section-block" style="background:#FFF;">
+      <div class="sec-header-row">
+        <div>
+          <span class="sec-chapter">FAQ</span>
+          <h2 class="sec-title" id="i18n-faq-title">常見問題 Q&amp;A</h2>
+        </div>
+        <!-- 吉祥物 05 放鬆休憩 -->
+        <img src="https://raw.githubusercontent.com/envoytraveltaiwan-walker/healing-trip/main/%E7%B4%A0%E6%9D%90_2026%E6%97%A5%E6%9C%AC%E6%97%85%E5%B1%95(%E5%8E%9F%E6%B0%91%E6%9C%83)_%E7%B5%A6%E6%A5%AD%E8%80%85-05.png" 
+             alt="放鬆休憩吉祥物" 
+             class="mascot-icon">
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-q"><span>Q1.</span> <span id="faq-q1">只有 1~2 個人也可以報名嗎？</span></div>
+        <div class="faq-a" id="faq-a1">可以的！歡迎登記湊團；若希望享受純私密行程，我們亦能為 1~2 位貴賓獨立安排專車包團，快速提供報價。</div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-q"><span>Q2.</span> <span id="faq-q2">住宿是住在當地的部落民家嗎？</span></div>
+        <div class="faq-a" id="faq-a2">請放心，白天我們深入聚落體驗最道地的工藝與人文，夜間則安排下榻周邊經嚴格認證的合法度假旅宿，兼顧山林氛圍與舒適品質。</div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-q"><span>Q3.</span> <span id="faq-q3">我們是旅行社同業，是否可以委託進行 Land 地接？</span></div>
+        <div class="faq-a" id="faq-a3">非常歡迎！安捷國際為正規註冊甲種旅行社，具備專車、專業日語導遊、部落工作坊手作預約及全套一條龍地接實力，歡迎同業來信洽商。</div>
+      </div>
+    </section>
+
+    <!-- 官方認證與旅行業履約保證統一頁尾（包含原民會正式 Logo） -->
+    <footer class="footer-official-badge">
+      <p class="company-name" id="ft-comp-name">
+        台湾・安捷國際旅行社有限公司 ENVOY TRAVEL
+      </p>
+      <p class="license-info" id="ft-lic-info">
+        交通部観光署 登録旅行業 甲種 5920 号 ｜ 統一番号：16169138
+      </p>
+      
+      <!-- 原民會正式 Logo ＋ 官方推薦背書 -->
+      <div class="endorsement-box">
+        <img src="https://raw.githubusercontent.com/envoytraveltaiwan-walker/healing-trip/main/%E7%B4%A0%E6%9D%90_2026%E6%97%A5%E6%9C%AC%E6%97%85%E5%B1%95(%E5%8E%9F%E6%B0%91%E6%9C%83)_%E7%B5%A6%E6%A5%AD%E8%80%85-02.png" 
+             alt="原住民族委員會" 
+             class="cip-logo-img">
+        <span class="endorsement-text" id="ft-endorse-text">
+          【推薦・公認】台湾 原住民族委員会 認定パートナーシップ企業
+        </span>
+      </div>
+
+      <p class="copyright-text">
+        © 2026 ENVOY TRAVEL. All Rights Reserved.
+      </p>
+    </footer>
+
+    <!-- 底部固定動作列 -->
+    <div class="bottom-bar">
+      <a href="mailto:service@envoytravel.com.tw?subject=【東京旅展2026】桜の秘境ツアー・お問合せ" class="bar-btn btn-mail" id="i18n-btn-b2b">
+        ✉ メールでお見積り (B2B)
+      </a>
+      <a href="https://lin.ee/Z3c7Qam" target="_blank" class="bar-btn btn-line" id="i18n-btn-b2c">
+        💬 LINEで相談・予約 (B2C)
+      </a>
+    </div>
+
+  </div>
+
+  <canvas id="sakura-canvas"></canvas>
+
+  <script>
+    const i18n = {
+      ja: {
+        navRegSub: "安捷旅遊 ‧ 甲種 5920 號",
+        heroTag: "🌸 2027 桜の秘境雨 ‧ 2 Days",
+        heroTitle: "桜樹下のタイヤル族マイクロツーリズム 2日間",
+        heroSub: "平日限定・タイヤル族の秘境で優雅な茶席と澄んだ星空を愉しむ",
+        heroQuote: "「世界中を旅してきましたが、台湾で最も心を揺さぶられる風景は、原住民族の隠れ里の桜の木の下にあります。」",
+        sp1T: "少人数催行", sp1S: "6名様より催行（最大20名）",
+        sp2T: "専用車往復", sp2S: "台北駅/ホテル直行",
+        sp3T: "原民会認定", sp3S: "正規甲種旅行業",
+        expertTitle: "達人がご案内",
+        expertName: "シニアツアープランナー 莉梅（リーメイ）",
+        expertRole: "35年の実績・原住民族文化スペシャリスト",
+        expertP1: "ここは私が長年大切にしてきたタイヤル族の桃源郷です。商業的な喧騒は一切なく、あるのは満開の桜、雄大な雲海、そして澄み切った満天の星空だけ。数年前に初めて桜の木の下で族人から温かいお茶を受け取った時の静けさと感動は、今も忘れられません。",
+        expertP2: "「美しい自然こそ、ゆったりと優雅に味わうべきです。人混みを避けるため、<strong>『平日・少人数限定』</strong>にこだわりました。各回のお席には限りがございます。ぜひお早めにご予約ください。」",
+        storyTitle: "風土と文化の物語",
+        story1H: "🏔️ 自然と祖霊が息づく桃源郷｜タイヤル族の聖地と「祖霊の目」",
+        story1P: "標高約1,000m、豊かな原生林と雲海に抱かれた新竹五峰の高山集落。古より自然界の掟「Gaga」を重んじ、自然と共生するタイヤル族の聖地です。伝統織物に見られる菱形の幾何学模様は「祖霊の目」と呼ばれ、先祖の加護と旅人の安全を静かに見守る精神的な象徴です。",
+        story2H: "🍃 森の恵みを五感で味わう｜幻のスパイス「馬告」と伝統食",
+        story2P: "台湾原住民族が大切にしてきた野生の山胡椒「馬告（マーガオ）」は、黒胡椒のピリッとした辛味にレモングラスのような清涼な香りが重なる希少な森のスパイス。肉厚な椴木シイタケの大鍋煮込み、香り豊かなカラスザンショウ（刺葱）の卵焼きなど、化学調味料に頼らない大地の恵みをお召し上がりください。",
+        story3H: "🌸 桜樹下のタイヤル茶席と静寂の雲海",
+        story3P: "台北から直行専用車で山道を快適に登り、桜の隠れ里へ。舞い散る花びらの下で鋪かれた特製茶席では、温かい地元のハーブティーと素朴なスイーツを味わいます。夜は満天の星空を眺め、朝は幻想的な雲海を背に、平坦な桜の遊歩道を優雅に散策します。",
+        batchTitle: "2027年 予約日程（平日限定）",
+        batchSub: "※ 6名様より催行（最大20名）。ご希望の梯次をLINEまたはメールにてお知らせください。",
+        bSt01: "受付中", bDe01: "山桜初咲き・ピンク漸濃",
+        bSt02: "見頃推薦", bDe02: "昭和桜・富士桜盛開期",
+        bSt03: "満開ピーク", bDe03: "満開高潮・一面の桜海",
+        bSt04: "風吹く桜雨", bDe04: "満開高潮・桜雨舞う",
+        bSt05: "桜吹雪", bDe05: "桜吹雪ロマンチック期",
+        bSt06: "受付中", bDe06: "桜吹雪終盤・新緑交織",
+        charterBox: "<strong>✦ 6名様より催行確定！</strong><br>お一人様のエントリーも大歓迎。6名様以上のグループなら、出発日を自由に選べる専用車貸切チャーターが可能です！LINEまたはメールにてご希望時期や人数をお気軽にご相談ください。",
+        faqTitle: "よくあるご質問（FAQ）",
+        faqQ1: "1名または2名でも参加できますか？",
+        faqA1: "可能です。他のお客様との混載調整や、少人数専用のチャーター手配（個別お見積り）も迅速に対応いたします。",
+        faqQ2: "集落の民家に宿泊するのでしょうか？",
+        faqA2: "いいえ、日中は集落で文化体験を行いますが、夜は周辺の衛生基準を満たした合法的で快適な宿泊施設へご案内し、安心の滞在をお約束します。",
+        faqQ3: "日本の旅行会社ですが、ランド手配の委託は可能ですか？",
+        faqA3: "歓迎いたします。弊社は正規の甲種旅行社として、専用車・日本語ガイド・体験プログラム・宿泊手配までワンストップで承ります。",
+        ftCompName: "台湾・安捷國際旅行社有限公司 ENVOY TRAVEL",
+        ftLicInfo: "交通部観光署 登録旅行業 甲種 5920 号 ｜ 統一番号：16169138",
+        ftEndorseText: "【推薦・公認】台湾 原住民族委員会 認定パートナーシップ企業",
+        btnB2B: "✉ メールでお見積り (B2B)",
+        btnB2C: "💬 LINEで相談・予約 (B2C)"
+      },
+      zh: {
+        navRegSub: "安捷旅遊 ‧ 甲種 5920 號",
+        heroTag: "🌸 2027 原鄉櫻花雨 ‧ 2 Days",
+        heroTitle: "櫻花樹下的泰雅樂活微旅行 2日遊",
+        heroSub: "平日限定浪漫 2 日遊｜在粉紅山林裡找回生活溫度的慢活微旅行",
+        heroQuote: "「走過半個地球，看過無數景致，我常跟朋友說：<br>台灣最震撼心靈的風景，其實藏在原鄉的櫻花樹下。」",
+        sp1T: "精緻小團", sp1S: "6人成行自主包團（上限20人）",
+        sp2T: "專車往返接送", sp2S: "台北車站/飯店接送直達",
+        sp3T: "合法甲種承辦", sp3S: "原民會官方推薦認證",
+        expertTitle: "達人靈魂帶路",
+        expertName: "資深旅遊顧問 莉梅姐",
+        expertRole: "35年深耕原鄉文化專家",
+        expertP1: "這處高山秘境是我藏在口袋裡很久的泰雅世外桃源。那裡沒有商業喧囂，只有滿山粉紅櫻花、浩瀚雲海與純淨夜空。幾年前我第一次在櫻花樹下接過族人遞來的熱茶，那一刻的平靜與感動，至今依然深刻。",
+        expertP2: "「好風景值得優雅對待。為了避開人潮擠壓，我堅持只帶<strong>『平日精緻小團』</strong>。每梯次名額非常有限，2027 年的櫻花雨，邀請您提早預約這份歲月靜好。」",
+        storyTitle: "走進部落的故事",
+        story1H: "🏔️ 走進泰雅守護的粉紅秘境｜高山原鄉與祖靈之眼",
+        story1P: "座落於新竹五峰海拔千公尺的山林之間，這裡是泰雅族人世代與自然共生的世外桃源。漫步在落櫻山林間，隨處可見象徵「祖靈之眼」的經典菱形圖騰，代表著先祖對這片土地的庇護與平安祝福。避開假日喧囂，感受這片粉紅山林最溫暖的心靈安定感。",
+        story2H: "🍃 山林直採的原香滋味｜天然馬告與產地餐桌",
+        story2P: "夜晚品嚐以高山清甜椴木香菇燉煮的暖胃大鍋菜；中午享用最道地的原香靈魂午宴：帶著天然檸檬香茅清香的「馬告山豬肉」、「刺蔥烘蛋」與竹筒飯。清晨更貼心配搭好消化的古早味地瓜稀飯，吃得鮮甜、無負擔且養生。",
+        story3H: "🌸 櫻花樹下的泰雅茶席與雲海漫步",
+        story3P: "台北專車直達接送，免除自己開山路的疲勞與找車位壓力。午後在櫻花樹冠下鋪開茶席，品嚐在地熱茶與部落微醺茶點；清晨在櫻花與晨光包圍下迎著壯觀雲海步道悠閒漫步，夜賞高山純淨星空，享受身心靈的徹底放鬆。",
+        batchTitle: "2027 預約梯次（平日限定）",
+        batchSub: "※ 滿 6 人即可成團（每團上限 20 人）。歡迎直接洽詢想預約的梯次編號。",
+        bSt01: "可預約", bDe01: "山櫻初綻・粉紅漸濃",
+        bSt02: "盛開推薦", bDe02: "昭和櫻、富士櫻盛開期",
+        bSt03: "滿開推薦", bDe03: "滿開高潮・粉紅花海",
+        bSt04: "風吹櫻花雨", bDe04: "滿開高潮・風吹櫻花雨",
+        bSt05: "櫻吹雪推薦", bDe05: "櫻吹雪浪漫期・落櫻",
+        bSt06: "可預約", bDe06: "櫻吹雪尾聲・嫩綠交織",
+        charterBox: "<strong>✦ 6人成團即可出發！</strong><br>支持一人報名湊團；達 6 人即可自選出發日期獨立包專車！請透過 LINE 或 Email 提供您「想出發的梯次或日期區間」與「參加人數」，專屬團隊將迅速為您調配成行。",
+        faqTitle: "常見問題說明（FAQ）",
+        faqQ1: "只有 1~2 個人也可以報名嗎？",
+        faqA1: "可以的！歡迎登記湊團；若希望享受純私密行程，我們亦能為 1~2 位貴賓獨立安排專車包團，快速提供報價。",
+        faqQ2: "住宿是住在當地的部落民家嗎？",
+        faqA2: "請放心，白天我們深入聚落體驗最道地的工藝與人文，夜間則安排下榻周邊經嚴格認證的合法度假旅宿，兼顧山林氛圍與舒適品質。",
+        faqQ3: "我們是旅行社同業，是否可以委託進行 Land 地接？",
+        faqA3: "非常歡迎！安捷國際為正規註冊甲種旅行社，具備專車、專業日語導遊、部落工作坊手作預約及全套一條龍地接實力，歡迎同業來信洽商。",
+        ftCompName: "安捷國際旅行社有限公司 ENVOY TRAVEL",
+        ftLicInfo: "交通部觀光署 註冊旅行業 甲種 5920 號 ｜ 統編：16169138",
+        ftEndorseText: "【官方推薦】行政院原住民族委員會認證合作夥伴",
+        btnB2B: "✉ Email 專屬報價 (B2B)",
+        btnB2C: "💬 加 LINE 取得報價 (B2C)"
+      }
+    };
+
+    let currentLang = 'ja';
+
+    function setLanguage(lang) {
+      currentLang = lang;
+      const dict = i18n[lang];
+
+      document.getElementById('btn-ja').classList.toggle('active', lang === 'ja');
+      document.getElementById('btn-zh').classList.toggle('active', lang === 'zh');
+
+      if (lang === 'zh') {
+        document.body.classList.add('lang-zh-active');
+        document.documentElement.lang = 'zh-TW';
+      } else {
+        document.body.classList.remove('lang-zh-active');
+        document.documentElement.lang = 'ja';
+      }
+
+      document.getElementById('nav-reg-sub').innerText = dict.navRegSub;
+      document.getElementById('i18n-hero-tag').innerText = dict.heroTag;
+      document.getElementById('i18n-hero-title').innerText = dict.heroTitle;
+      document.getElementById('i18n-hero-sub').innerText = dict.heroSub;
+      document.getElementById('i18n-hero-quote').innerHTML = dict.heroQuote;
+
+      document.getElementById('i18n-sp1-t').innerText = dict.sp1T;
+      document.getElementById('i18n-sp1-s').innerText = dict.sp1S;
+      document.getElementById('i18n-sp2-t').innerText = dict.sp2T;
+      document.getElementById('i18n-sp2-s').innerText = dict.sp2S;
+      document.getElementById('i18n-sp3-t').innerText = dict.sp3T;
+      document.getElementById('i18n-sp3-s').innerText = dict.sp3S;
+
+      document.getElementById('i18n-expert-title').innerText = dict.expertTitle;
+      document.getElementById('i18n-expert-name').innerText = dict.expertName;
+      document.getElementById('i18n-expert-role').innerText = dict.expertRole;
+      document.getElementById('i18n-expert-p1').innerText = dict.expertP1;
+      document.getElementById('i18n-expert-p2').innerHTML = dict.expertP2;
+
+      document.getElementById('i18n-story-title').innerText = dict.storyTitle;
+      document.getElementById('story-1-h').innerText = dict.story1H;
+      document.getElementById('story-1-p').innerHTML = dict.story1P;
+      document.getElementById('story-2-h').innerText = dict.story2H;
+      document.getElementById('story-2-p').innerHTML = dict.story2P;
+      document.getElementById('story-3-h').innerText = dict.story3H;
+      document.getElementById('story-3-p').innerHTML = dict.story3P;
+
+      document.getElementById('i18n-batch-title').innerText = dict.batchTitle;
+      document.getElementById('i18n-batch-sub').innerText = dict.batchSub;
+
+      document.getElementById('b-st-01').innerText = dict.bSt01;
+      document.getElementById('b-de-01').innerText = dict.bDe01;
+      document.getElementById('b-st-02').innerText = dict.bSt02;
+      document.getElementById('b-de-02').innerText = dict.bDe02;
+      document.getElementById('b-st-03').innerText = dict.bSt03;
+      document.getElementById('b-de-03').innerText = dict.bDe03;
+      document.getElementById('b-st-04').innerText = dict.bSt04;
+      document.getElementById('b-de-04').innerText = dict.bDe04;
+      document.getElementById('b-st-05').innerText = dict.bSt05;
+      document.getElementById('b-de-05').innerText = dict.bDe05;
+      document.getElementById('b-st-06').innerText = dict.bSt06;
+      document.getElementById('b-de-06').innerText = dict.bDe06;
+
+      document.getElementById('i18n-charter-box').innerHTML = dict.charterBox;
+
+      document.getElementById('i18n-faq-title').innerText = dict.faqTitle;
+      document.getElementById('faq-q1').innerText = dict.faqQ1;
+      document.getElementById('faq-a1').innerText = dict.faqA1;
+      document.getElementById('faq-q2').innerText = dict.faqQ2;
+      document.getElementById('faq-a2').innerText = dict.faqA2;
+      document.getElementById('faq-q3').innerText = dict.faqQ3;
+      document.getElementById('faq-a3').innerText = dict.faqA3;
+
+      document.getElementById('ft-comp-name').innerText = dict.ftCompName;
+      document.getElementById('ft-lic-info').innerText = dict.ftLicInfo;
+      document.getElementById('ft-endorse-text').innerText = dict.ftEndorseText;
+
+      document.getElementById('i18n-btn-b2b').innerText = dict.btnB2B;
+      document.getElementById('i18n-btn-b2c').innerText = dict.btnB2C;
+    }
+
+    document.addEventListener('DOMContentLoaded', () => {
+      setLanguage('ja');
+    });
+
+    // 擬真櫻花瓣飄落動畫
     (function () {
-        const canvas = document.getElementById('sakura-canvas');
-        const ctx = canvas.getContext('2d');
+      const canvas = document.getElementById('sakura-canvas');
+      const ctx = canvas.getContext('2d');
 
-        let width = (canvas.width = window.innerWidth);
-        let height = (canvas.height = window.innerHeight);
+      let width = (canvas.width = window.innerWidth);
+      let height = (canvas.height = window.innerHeight);
 
-        window.addEventListener('resize', () => {
-            width = canvas.width = window.innerWidth;
-            height = canvas.height = window.innerHeight;
+      window.addEventListener('resize', () => {
+        width = canvas.width = window.innerWidth;
+        height = canvas.height = window.innerHeight;
+      });
+
+      const petalCount = 30;
+      const petals = [];
+
+      class SakuraPetal {
+        constructor() { this.reset(true); }
+        reset(init = false) {
+          this.x = Math.random() * width;
+          this.y = init ? Math.random() * height : -20;
+          this.size = Math.random() * 7 + 8;
+          this.speedY = Math.random() * 0.8 + 0.6;
+          this.speedX = Math.random() * 1.2 - 0.4;
+          this.rotation = Math.random() * Math.PI * 2;
+          this.rotationSpeed = Math.random() * 0.02 - 0.01;
+          this.swing = Math.random() * Math.PI * 2;
+          this.swingSpeed = Math.random() * 0.02 + 0.01;
+          this.opacity = Math.random() * 0.35 + 0.55;
+          this.flip = Math.random() * Math.PI;
+          this.flipSpeed = Math.random() * 0.03 + 0.015;
+        }
+        update() {
+          this.y += this.speedY;
+          this.swing += this.swingSpeed;
+          this.x += Math.sin(this.swing) * 1.1 + this.speedX;
+          this.rotation += this.rotationSpeed;
+          this.flip += this.flipSpeed;
+
+          if (this.y > height + 20 || this.x > width + 25 || this.x < -25) {
+            this.reset(false);
+          }
+        }
+        draw() {
+          ctx.save();
+          ctx.translate(this.x, this.y);
+          ctx.rotate(this.rotation);
+          ctx.scale(1, Math.sin(this.flip));
+
+          const grad = ctx.createLinearGradient(0, -this.size, 0, this.size);
+          grad.addColorStop(0, `rgba(255, 230, 236, ${this.opacity})`);
+          grad.addColorStop(0.7, `rgba(255, 182, 193, ${this.opacity})`);
+          grad.addColorStop(1, `rgba(214, 100, 121, ${this.opacity})`);
+          ctx.fillStyle = grad;
+
+          ctx.beginPath();
+          ctx.moveTo(0, this.size);
+          ctx.bezierCurveTo(-this.size * 0.7, this.size * 0.4, -this.size * 0.8, -this.size * 0.5, -this.size * 0.25, -this.size * 0.9);
+          ctx.lineTo(0, -this.size * 0.75);
+          ctx.lineTo(this.size * 0.25, -this.size * 0.9);
+          ctx.bezierCurveTo(this.size * 0.8, -this.size * 0.5, this.size * 0.7, this.size * 0.4, 0, this.size);
+          ctx.closePath();
+          ctx.fill();
+
+          ctx.restore();
+        }
+      }
+
+      for (let i = 0; i < petalCount; i++) {
+        petals.push(new SakuraPetal());
+      }
+
+      function animate() {
+        ctx.clearRect(0, 0, width, height);
+        petals.forEach(p => {
+          p.update();
+          p.draw();
         });
+        requestAnimationFrame(animate);
+      }
 
-        const petalCount = 35;
-        const petals = [];
-
-        class SakuraPetal {
-            constructor() {
-                this.reset(true);
-            }
-            reset(init = false) {
-                this.x = Math.random() * width;
-                this.y = init ? Math.random() * height : -20;
-                this.size = Math.random() * 7 + 9;
-                this.speedY = Math.random() * 0.9 + 0.7;
-                this.speedX = Math.random() * 1.4 - 0.4;
-                this.rotation = Math.random() * Math.PI * 2;
-                this.rotationSpeed = Math.random() * 0.02 - 0.01;
-                this.swing = Math.random() * Math.PI * 2;
-                this.swingSpeed = Math.random() * 0.02 + 0.01;
-                this.opacity = Math.random() * 0.35 + 0.6;
-                this.flip = Math.random() * Math.PI;
-                this.flipSpeed = Math.random() * 0.03 + 0.015;
-            }
-            update() {
-                this.y += this.speedY;
-                this.swing += this.swingSpeed;
-                this.x += Math.sin(this.swing) * 1.1 + this.speedX;
-                this.rotation += this.rotationSpeed;
-                this.flip += this.flipSpeed;
-
-                if (this.y > height + 20 || this.x > width + 25 || this.x < -25) {
-                    this.reset(false);
-                }
-            }
-            draw() {
-                ctx.save();
-                ctx.translate(this.x, this.y);
-                ctx.rotate(this.rotation);
-                ctx.scale(1, Math.sin(this.flip));
-
-                const grad = ctx.createLinearGradient(0, -this.size, 0, this.size);
-                grad.addColorStop(0, `rgba(255, 230, 236, ${this.opacity})`);
-                grad.addColorStop(0.7, `rgba(255, 182, 193, ${this.opacity})`);
-                grad.addColorStop(1, `rgba(238, 140, 160, ${this.opacity})`);
-                ctx.fillStyle = grad;
-
-                ctx.beginPath();
-                ctx.moveTo(0, this.size);
-                ctx.bezierCurveTo(-this.size * 0.7, this.size * 0.4, -this.size * 0.8, -this.size * 0.5, -this.size * 0.25, -this.size * 0.9);
-                ctx.lineTo(0, -this.size * 0.75);
-                ctx.lineTo(this.size * 0.25, -this.size * 0.9);
-                ctx.bezierCurveTo(this.size * 0.8, -this.size * 0.5, this.size * 0.7, this.size * 0.4, 0, this.size);
-                ctx.closePath();
-                ctx.fill();
-
-                ctx.restore();
-            }
-        }
-
-        for (let i = 0; i < petalCount; i++) {
-            petals.push(new SakuraPetal());
-        }
-
-        function animate() {
-            ctx.clearRect(0, 0, width, height);
-            petals.forEach(p => {
-                p.update();
-                p.draw();
-            });
-            requestAnimationFrame(animate);
-        }
-
-        animate();
+      animate();
     })();
-    </script>
+  </script>
 </body>
 </html>
