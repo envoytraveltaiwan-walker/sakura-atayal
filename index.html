@@ -537,7 +537,7 @@
     .faq-q span { color: var(--c-sakura); }
     .faq-a { font-size: 12.5px; color: #555; line-height: 1.75; }
 
-    /* 頁尾認證資訊 */
+    /* 官方認證統一頁尾（強化 Logo 顯示與比例） */
     .footer-official-badge {
       padding: 32px 20px 24px;
       background-color: #EDE8DF;
@@ -566,14 +566,20 @@
       display: flex;
       align-items: center;
       justify-content: center;
-      gap: 8px;
-      margin: 12px 0;
+      gap: 10px;
+      margin: 12px auto;
+      max-width: 600px;
+      flex-wrap: wrap;
     }
 
     .footer-official-badge .cip-logo-img {
-      height: 24px;
+      height: 28px;
+      min-height: 26px;
       width: auto;
+      max-width: 140px;
       object-fit: contain;
+      display: inline-block;
+      vertical-align: middle;
     }
 
     .footer-official-badge .endorsement-text {
@@ -619,6 +625,7 @@
       font-weight: 700;
       letter-spacing: 0.05em;
       transition: opacity 0.2s;
+      white-space: nowrap;
     }
     .bar-btn:hover { opacity: 0.9; }
 
@@ -641,6 +648,7 @@
       .brand-name-sub { display: none; }
       .nav-ctrl-btn span { display: none; }
       .nav-ctrl-btn { padding: 6px 10px; }
+      .footer-official-badge .cip-logo-img { height: 24px; }
     }
   </style>
 </head>
@@ -653,7 +661,7 @@
     <!-- 導航列 -->
     <nav class="site-nav">
       <div class="nav-left">
-        <!-- 1. 返回上一頁 -->
+        <!-- 1. 返回上一頁（點擊回到東京旅展首頁） -->
         <a href="javascript:void(0);" onclick="goBackOrHome()" class="nav-ctrl-btn" id="btn-back" title="上一頁">
           <i class="fa-solid fa-chevron-left"></i>
           <span id="btn-back-text">戻る</span>
@@ -916,7 +924,7 @@
       </div>
     </section>
 
-    <!-- 官方認證與旅行業履約保證統一頁尾 -->
+    <!-- 官方認證與旅行業履約保證統一頁尾（原民會彩色標章強化容器） -->
     <footer class="footer-official-badge">
       <p class="company-name" id="ft-comp-name">
         台湾・安捷國際旅行社有限公司 ENVOY TRAVEL
@@ -928,7 +936,8 @@
       <div class="endorsement-box">
         <img src="https://raw.githubusercontent.com/envoytraveltaiwan-walker/healing-trip/main/%E7%B4%A0%E6%9D%90_2026%E6%97%A5%E6%9C%AC%E6%97%85%E5%B1%95(%E5%8E%9F%E6%B0%91%E6%9C%83)_%E7%B5%A6%E6%A5%AD%E8%80%85-02.png" 
              alt="原住民族委員會" 
-             class="cip-logo-img">
+             class="cip-logo-img"
+             onerror="this.src='https://raw.githubusercontent.com/envoytraveltaiwan-walker/lowcarbon-valley-3d/main/%E7%B4%A0%E6%9D%90_2026%E6%97%A5%E6%9C%AC%E6%97%85%E5%B1%95(%E5%8E%9F%E6%B0%91%E6%9C%83)_%E7%B5%A6%E6%A5%AD%E8%80%85-02.png'">
         <span class="endorsement-text" id="ft-endorse-text">
           【推薦・公認】台湾 原住民族委員会 認定パートナーシップ企業
         </span>
@@ -954,12 +963,15 @@
   <canvas id="sakura-canvas"></canvas>
 
   <script>
-    // 返回上一頁或回旅展主頁
+    // 智慧回上一頁：若來自東京旅展內部頁面則正常 back()，無紀錄或外站來源則直接導向東京旅展主頁
     function goBackOrHome() {
-      if (document.referrer && document.referrer.indexOf(window.location.host) !== -1) {
+      const expoHomeUrl = 'https://envoytraveltaiwan-walker.github.io/tokyo-expo/';
+      if (document.referrer && document.referrer.indexOf('envoytraveltaiwan-walker.github.io') !== -1) {
+        window.history.back();
+      } else if (window.history.length > 1) {
         window.history.back();
       } else {
-        window.location.href = 'https://envoytraveltaiwan-walker.github.io/tokyo-expo/';
+        window.location.href = expoHomeUrl;
       }
     }
 
@@ -1096,11 +1108,11 @@
 
       document.getElementById('i18n-story-title').innerText = dict.storyTitle;
       document.getElementById('story-1-h').innerText = dict.story1H;
-      document.getElementById('story-1-p').innerText = dict.story1P;
+      document.getElementById('story-1-p').innerHTML = dict.story1P;
       document.getElementById('story-2-h').innerText = dict.story2H;
-      document.getElementById('story-2-p').innerText = dict.story2P;
+      document.getElementById('story-2-p').innerHTML = dict.story2P;
       document.getElementById('story-3-h').innerText = dict.story3H;
-      document.getElementById('story-3-p').innerText = dict.story3P;
+      document.getElementById('story-3-p').innerHTML = dict.story3P;
 
       document.getElementById('i18n-batch-title').innerText = dict.batchTitle;
       document.getElementById('i18n-batch-sub').innerText = dict.batchSub;
