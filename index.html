@@ -62,7 +62,7 @@
       font-family: var(--font-serif-tc);
     }
 
-    /* 響應式主舞台：手機 100%，桌機最大 1080px */
+    /* 響應式主容器：手機 100%，桌機最大 1080px */
     .page-wrapper {
       width: 100%;
       max-width: 1080px;
@@ -94,33 +94,35 @@
       display: flex;
       justify-content: space-between;
       align-items: center;
-      padding: 12px 24px;
+      padding: 12px 20px;
       border-bottom: 1px solid var(--c-border);
+      gap: 10px;
     }
 
     .nav-left {
       display: flex;
       align-items: center;
-      gap: 14px;
+      gap: 8px;
     }
 
-    /* 返回上一頁按鈕 (日式常見精緻按鈕) */
-    .back-btn {
+    /* 導航輔助小按鈕（返回上一頁 & 主頁） */
+    .nav-ctrl-btn {
       display: inline-flex;
       align-items: center;
-      gap: 6px;
+      gap: 5px;
       background: #EAE5DC;
       border: 1px solid rgba(197, 160, 89, 0.4);
       color: var(--c-navy);
       text-decoration: none;
-      font-size: 12px;
+      font-size: 11.5px;
       font-weight: 600;
-      padding: 5px 12px;
-      border-radius: 20px;
+      padding: 5px 10px;
+      border-radius: 18px;
       transition: all 0.2s ease;
       cursor: pointer;
+      white-space: nowrap;
     }
-    .back-btn:hover {
+    .nav-ctrl-btn:hover {
       background: var(--c-navy);
       color: #FFF;
       border-color: var(--c-navy);
@@ -131,24 +133,25 @@
       align-items: center;
       gap: 10px;
       text-decoration: none;
+      margin-left: 6px;
     }
 
-    .brand-svg { width: 24px; height: 32px; flex-shrink: 0; }
+    .brand-svg { width: 22px; height: 30px; flex-shrink: 0; }
     .brand-text-block { display: flex; flex-direction: column; }
 
     .brand-name-en {
       font-family: var(--font-en);
-      font-size: 13px;
+      font-size: 12.5px;
       font-weight: 700;
-      letter-spacing: 0.18em;
+      letter-spacing: 0.16em;
       color: var(--c-navy);
       line-height: 1.1;
     }
 
     .brand-name-sub {
       font-family: var(--font-en);
-      font-size: 9px;
-      letter-spacing: 0.15em;
+      font-size: 8.5px;
+      letter-spacing: 0.12em;
       color: var(--c-gold-dark);
       font-weight: 600;
     }
@@ -159,12 +162,13 @@
       border-radius: 20px;
       padding: 2px;
       border: 1px solid rgba(197, 160, 89, 0.3);
+      flex-shrink: 0;
     }
 
     .lang-btn {
       border: none;
       background: transparent;
-      padding: 4px 12px;
+      padding: 4px 10px;
       font-size: 11px;
       font-family: var(--font-en);
       font-weight: 600;
@@ -182,7 +186,7 @@
 
     /* 原民會官方橫額 */
     .cip-banner-box {
-      padding: 16px 24px 0;
+      padding: 16px 20px 0;
       background: #EAE5DC;
       text-align: center;
     }
@@ -198,7 +202,7 @@
 
     /* Hero 封面區 */
     .hero-editorial {
-      padding: 36px 24px 28px;
+      padding: 36px 20px 28px;
       text-align: center;
       background: linear-gradient(180deg, #EAE5DC 0%, var(--c-paper) 100%);
     }
@@ -245,7 +249,7 @@
       box-shadow: 0 3px 12px rgba(0,0,0,0.04);
     }
 
-    .section-block { padding: 36px 24px; }
+    .section-block { padding: 36px 20px; }
     .content-container { max-width: 960px; margin: 0 auto; }
 
     .sec-header-row {
@@ -271,7 +275,6 @@
       font-size: clamp(18px, 2.4vw, 22px);
       font-weight: 700;
       color: var(--c-navy);
-      position: relative;
     }
 
     .mascot-icon {
@@ -303,7 +306,7 @@
     .spec-title { font-size: 12.5px; font-weight: 700; color: var(--c-navy); }
     .spec-sub { font-size: 10.5px; color: #777; margin-top: 2px; }
 
-    /* 達人卡片（桌機支援橫向排版） */
+    /* 達人卡片（支援 RWD 橫向排版） */
     .expert-card {
       background: #FFF;
       border-radius: 14px;
@@ -536,7 +539,7 @@
 
     /* 頁尾認證資訊 */
     .footer-official-badge {
-      padding: 32px 24px 24px;
+      padding: 32px 20px 24px;
       background-color: #EDE8DF;
       border-top: 1px solid rgba(197, 160, 89, 0.28);
       text-align: center;
@@ -597,7 +600,7 @@
       background: rgba(255, 255, 255, 0.97);
       backdrop-filter: blur(10px);
       border-top: 1px solid var(--c-border);
-      padding: 12px 24px;
+      padding: 12px 20px;
       display: flex;
       gap: 12px;
       z-index: 100;
@@ -631,6 +634,14 @@
       pointer-events: none;
       z-index: 999;
     }
+
+    @media (max-width: 480px) {
+      .site-nav { padding: 10px 14px; }
+      .brand-name-en { font-size: 11px; }
+      .brand-name-sub { display: none; }
+      .nav-ctrl-btn span { display: none; }
+      .nav-ctrl-btn { padding: 6px 10px; }
+    }
   </style>
 </head>
 <body>
@@ -642,13 +653,20 @@
     <!-- 導航列 -->
     <nav class="site-nav">
       <div class="nav-left">
-        <!-- 左上角返回按鈕 -->
-        <a href="javascript:void(0);" onclick="goBackOrHome()" class="back-btn" id="btn-back">
+        <!-- 1. 返回上一頁 -->
+        <a href="javascript:void(0);" onclick="goBackOrHome()" class="nav-ctrl-btn" id="btn-back" title="上一頁">
           <i class="fa-solid fa-chevron-left"></i>
           <span id="btn-back-text">戻る</span>
         </a>
 
-        <a href="#" class="brand-group">
+        <!-- 2. 回到東京旅展首頁 -->
+        <a href="https://envoytraveltaiwan-walker.github.io/tokyo-expo/" class="nav-ctrl-btn" id="btn-home" title="東京旅展主頁">
+          <i class="fa-solid fa-house"></i>
+          <span id="btn-home-text">主頁</span>
+        </a>
+
+        <!-- 品牌識別 -->
+        <a href="https://envoytraveltaiwan-walker.github.io/tokyo-expo/" class="brand-group">
           <svg class="brand-svg" viewBox="0 0 100 140">
             <path d="M50 6 C51 15 52.5 21 55.5 25 C60 25.8 66 26 73 26.5 C66 28 60 29.2 56 31 C53.8 35 52 41 50 47 C48 41 46.2 35 44 31 C40 29.2 34 28 27 26.5 C34 26 40 25.8 44.5 25 C47.5 21 49 15 50 6 Z" fill="#C5A059"/>
             <path d="M46 48.5 C47.5 48 52.5 48 54 48.5 C54.8 49.2 54.5 51.5 53.8 52.2 C52 52.8 48 52.8 46.2 52.2 C45.5 51.5 45.2 49.2 46 48.5 Z" fill="#132438"/>
@@ -921,13 +939,13 @@
       </p>
     </footer>
 
-    <!-- 底部固定動作列 -->
+    <!-- 底部固定動作列（移除 B2B / B2C 標註，信箱更新為 envoytraveltaiwan@gmail.com） -->
     <div class="bottom-bar">
-      <a href="mailto:service@envoytravel.com.tw?subject=【東京旅展2026】桜の秘境ツアー・お問合せ" class="bar-btn btn-mail" id="i18n-btn-b2b">
-        ✉ メールでお見積り (B2B)
+      <a href="mailto:envoytraveltaiwan@gmail.com?subject=【東京旅展2026】桜の秘境ツアー・お問合せ" class="bar-btn btn-mail" id="i18n-btn-mail">
+        ✉ メールでお問合せ
       </a>
-      <a href="https://lin.ee/Z3c7Qam" target="_blank" class="bar-btn btn-line" id="i18n-btn-b2c">
-        💬 LINEで相談・予約 (B2C)
+      <a href="https://lin.ee/Z3c7Qam" target="_blank" class="bar-btn btn-line" id="i18n-btn-line">
+        💬 LINEで相談・予約
       </a>
     </div>
 
@@ -936,18 +954,19 @@
   <canvas id="sakura-canvas"></canvas>
 
   <script>
-    // 返回上一頁功能（若無歷史頁面則返回首頁或預設連結）
+    // 返回上一頁或回旅展主頁
     function goBackOrHome() {
       if (document.referrer && document.referrer.indexOf(window.location.host) !== -1) {
         window.history.back();
       } else {
-        window.location.href = '../index.html'; // 可依據實際上一層路徑調整
+        window.location.href = 'https://envoytraveltaiwan-walker.github.io/tokyo-expo/';
       }
     }
 
     const i18n = {
       ja: {
         backText: "戻る",
+        homeText: "主頁",
         navRegSub: "安捷旅遊 ‧ 甲種 5920 號",
         heroTag: "🌸 2027 桜の秘境雨 ‧ 2 Days",
         heroTitle: "桜樹下のタイヤル族マイクロツーリズム 2日間",
@@ -987,11 +1006,12 @@
         ftCompName: "台湾・安捷國際旅行社有限公司 ENVOY TRAVEL",
         ftLicInfo: "交通部観光署 登録旅行業 甲種 5920 号 ｜ 統一番号：16169138",
         ftEndorseText: "【推薦・公認】台湾 原住民族委員会 認定パートナーシップ企業",
-        btnB2B: "✉ メールでお見積り (B2B)",
-        btnB2C: "💬 LINEで相談・予約 (B2C)"
+        btnMail: "✉ メールでお問合せ",
+        btnLine: "💬 LINEで相談・予約"
       },
       zh: {
         backText: "返回",
+        homeText: "主頁",
         navRegSub: "安捷旅遊 ‧ 甲種 5920 號",
         heroTag: "🌸 2027 原鄉櫻花雨 ‧ 2 Days",
         heroTitle: "櫻花樹下的泰雅樂活微旅行 2日遊",
@@ -1031,8 +1051,8 @@
         ftCompName: "安捷國際旅行社有限公司 ENVOY TRAVEL",
         ftLicInfo: "交通部觀光署 註冊旅行業 甲種 5920 號 ｜ 統編：16169138",
         ftEndorseText: "【官方推薦】行政院原住民族委員會認證合作夥伴",
-        btnB2B: "✉ Email 專屬報價 (B2B)",
-        btnB2C: "💬 加 LINE 取得報價 (B2C)"
+        btnMail: "✉ Email 專屬洽詢",
+        btnLine: "💬 加 LINE 專人諮詢"
       }
     };
 
@@ -1054,6 +1074,7 @@
       }
 
       document.getElementById('btn-back-text').innerText = dict.backText;
+      document.getElementById('btn-home-text').innerText = dict.homeText;
       document.getElementById('nav-reg-sub').innerText = dict.navRegSub;
       document.getElementById('i18n-hero-tag').innerText = dict.heroTag;
       document.getElementById('i18n-hero-title').innerText = dict.heroTitle;
@@ -1111,8 +1132,8 @@
       document.getElementById('ft-lic-info').innerText = dict.ftLicInfo;
       document.getElementById('ft-endorse-text').innerText = dict.ftEndorseText;
 
-      document.getElementById('i18n-btn-b2b').innerText = dict.btnB2B;
-      document.getElementById('i18n-btn-b2c').innerText = dict.btnB2C;
+      document.getElementById('i18n-btn-mail').innerText = dict.btnMail;
+      document.getElementById('i18n-btn-line').innerText = dict.btnLine;
     }
 
     document.addEventListener('DOMContentLoaded', () => {
