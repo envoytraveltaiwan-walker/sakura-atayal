@@ -62,7 +62,7 @@
       font-family: var(--font-serif-tc);
     }
 
-    /* 響應式主容器：手機 100%，桌機最大 1080px */
+    /* 響應式主容器：手機 100%，桌機最大 1080px 置中 */
     .page-wrapper {
       width: 100%;
       max-width: 1080px;
@@ -939,7 +939,7 @@
       </p>
     </footer>
 
-    <!-- 底部固定動作列（移除 B2B / B2C 標註，信箱更新為 envoytraveltaiwan@gmail.com） -->
+    <!-- 底部固定動作列 -->
     <div class="bottom-bar">
       <a href="mailto:envoytraveltaiwan@gmail.com?subject=【東京旅展2026】桜の秘境ツアー・お問合せ" class="bar-btn btn-mail" id="i18n-btn-mail">
         ✉ メールでお問合せ
@@ -1096,11 +1096,11 @@
 
       document.getElementById('i18n-story-title').innerText = dict.storyTitle;
       document.getElementById('story-1-h').innerText = dict.story1H;
-      document.getElementById('story-1-p').innerHTML = dict.story1P;
+      document.getElementById('story-1-p').innerText = dict.story1P;
       document.getElementById('story-2-h').innerText = dict.story2H;
-      document.getElementById('story-2-p').innerHTML = dict.story2P;
+      document.getElementById('story-2-p').innerText = dict.story2P;
       document.getElementById('story-3-h').innerText = dict.story3H;
-      document.getElementById('story-3-p').innerHTML = dict.story3P;
+      document.getElementById('story-3-p').innerText = dict.story3P;
 
       document.getElementById('i18n-batch-title').innerText = dict.batchTitle;
       document.getElementById('i18n-batch-sub').innerText = dict.batchSub;
