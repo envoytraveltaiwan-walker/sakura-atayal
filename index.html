@@ -184,7 +184,7 @@
       box-shadow: 0 2px 6px rgba(19, 36, 56, 0.25);
     }
 
-    /* 原民會官方橫額 */
+    /* 原民會官方橫額（完整顯示無裁切） */
     .cip-banner-box {
       padding: 16px 20px 0;
       background: #EAE5DC;
@@ -192,8 +192,9 @@
     }
     .cip-banner-img {
       width: 100%;
-      max-height: 280px;
-      object-fit: cover;
+      height: auto;
+      max-height: none;
+      object-fit: contain;
       border-radius: 12px;
       box-shadow: 0 4px 14px rgba(0,0,0,0.06);
       display: block;
@@ -537,9 +538,9 @@
     .faq-q span { color: var(--c-sakura); }
     .faq-a { font-size: 12.5px; color: #555; line-height: 1.75; }
 
-    /* 官方認證統一頁尾（強化 Logo 顯示與比例） */
+    /* 官方認證統一頁尾 */
     .footer-official-badge {
-      padding: 32px 20px 24px;
+      padding: 34px 20px 24px;
       background-color: #EDE8DF;
       border-top: 1px solid rgba(197, 160, 89, 0.28);
       text-align: center;
@@ -559,33 +560,36 @@
       font-size: 12px;
       color: #666;
       letter-spacing: 0.03em;
-      margin-bottom: 8px;
+      margin-bottom: 10px;
     }
 
     .footer-official-badge .endorsement-box {
       display: flex;
       align-items: center;
       justify-content: center;
-      gap: 10px;
-      margin: 12px auto;
-      max-width: 600px;
+      gap: 12px;
+      margin: 14px auto;
+      max-width: 620px;
       flex-wrap: wrap;
     }
 
     .footer-official-badge .cip-logo-img {
-      height: 28px;
-      min-height: 26px;
+      height: 32px;
       width: auto;
-      max-width: 140px;
+      max-width: 100%;
       object-fit: contain;
       display: inline-block;
       vertical-align: middle;
+      flex-shrink: 0;
+      filter: drop-shadow(0 1px 2px rgba(0,0,0,0.05));
     }
 
     .footer-official-badge .endorsement-text {
       font-size: 12px;
       font-weight: 600;
       color: #8C6B2D;
+      display: inline-block;
+      vertical-align: middle;
     }
 
     .footer-official-badge .copyright-text {
@@ -593,6 +597,7 @@
       font-family: var(--font-en);
       color: #8E8E8E;
       letter-spacing: 0.05em;
+      margin-top: 4px;
     }
 
     /* 底部固定 CTA */
@@ -648,7 +653,7 @@
       .brand-name-sub { display: none; }
       .nav-ctrl-btn span { display: none; }
       .nav-ctrl-btn { padding: 6px 10px; }
-      .footer-official-badge .cip-logo-img { height: 24px; }
+      .footer-official-badge .cip-logo-img { height: 26px; }
     }
   </style>
 </head>
@@ -661,7 +666,7 @@
     <!-- 導航列 -->
     <nav class="site-nav">
       <div class="nav-left">
-        <!-- 1. 返回上一頁（點擊回到東京旅展首頁） -->
+        <!-- 1. 返回上一頁 -->
         <a href="javascript:void(0);" onclick="goBackOrHome()" class="nav-ctrl-btn" id="btn-back" title="上一頁">
           <i class="fa-solid fa-chevron-left"></i>
           <span id="btn-back-text">戻る</span>
@@ -696,10 +701,10 @@
       </div>
     </nav>
 
-    <!-- 原民會 2026 日本旅展「部行山海間」官方主視覺橫幅 -->
+    <!-- 原民會 2026 日本旅展「部行山海間」官方主視覺橫幅（已指定為 sakura-atayal 路徑） -->
     <div class="cip-banner-box">
-      <img src="https://raw.githubusercontent.com/envoytraveltaiwan-walker/healing-trip/main/%E7%B4%A0%E6%9D%90_2026%E6%97%A5%E6%9C%AC%E6%97%85%E5%B1%95(%E5%8E%9F%E6%B0%91%E6%9C%83)_%E7%B5%A6%E6%A5%AD%E8%80%85-07.jpg" 
-           alt="部行山海間" 
+      <img src="https://raw.githubusercontent.com/envoytraveltaiwan-walker/sakura-atayal/main/%E7%B4%A0%E6%9D%90_2026%E6%97%A5%E6%9C%AC%E6%97%85%E5%B1%95(%E5%8E%9F%E6%B0%91%E6%9C%83)_%E7%B5%A6%E6%A5%AD%E8%80%85-07.jpg" 
+           alt="部行山海間 - 山と海をめぐる、台湾原住民族の旅" 
            class="cip-banner-img">
     </div>
 
@@ -924,7 +929,7 @@
       </div>
     </section>
 
-    <!-- 官方認證與旅行業履約保證統一頁尾（原民會彩色標章強化容器） -->
+    <!-- 官方認證與旅行業履約保證統一頁尾 -->
     <footer class="footer-official-badge">
       <p class="company-name" id="ft-comp-name">
         台湾・安捷國際旅行社有限公司 ENVOY TRAVEL
